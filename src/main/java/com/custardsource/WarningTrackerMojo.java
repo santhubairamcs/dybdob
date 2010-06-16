@@ -6,12 +6,12 @@ import org.apache.maven.plugin.MojoExecutionException;
 import java.io.File;
 
 /**
- * Goal which fails the build if a compiler log has indicated any warnings
+ * Goal which retrieves a compiler warning count
  *
  * @goal failonwarnings
  * @phase compile
  */
-public class WarningFailerMojo extends AbstractMojo {
+public class WarningTrackerMojo extends AbstractMojo {
     /**
      * Location of the file.
      *
