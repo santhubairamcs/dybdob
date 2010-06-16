@@ -8,10 +8,10 @@ import java.io.File;
 /**
  * Goal which retrieves a compiler warning count
  *
- * @goal checkcount
+ * @goal failonwarnings
  * @phase compile
  */
-public class WarningTrackerMojo extends AbstractMojo {
+public class WarningFailerMojo extends AbstractMojo {
     /**
      * Location of the file.
      *
