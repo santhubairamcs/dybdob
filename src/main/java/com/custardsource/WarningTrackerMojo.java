@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
  * @goal checkcount
  * @phase compile
  */
-public class MyMojo
+public class WarningTrackerMojo
         extends AbstractMojo {
     /**
      * Location of the file.
@@ -37,6 +37,7 @@ public class MyMojo
         int warningCount = 0;
         try {
             for (String line : Files.readLines(outputDirectory, Charsets.UTF_8)) {
+
                 if (pattern.matcher(line).matches()) {
                     warningCount++;
                 }
