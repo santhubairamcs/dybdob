@@ -1,6 +1,8 @@
 package com.custardsource;
 
 import com.google.common.base.Charsets;
+import com.google.common.base.Predicate;
+import com.google.common.collect.Collections2;
 import com.google.common.io.Files;
 import org.apache.maven.plugin.MojoExecutionException;
 
@@ -22,17 +24,15 @@ public class WarningCounter {
             throw new MojoExecutionException("Could not read file " + compilerLog);
         }
 
-        int warningCount = 0;
         try {
-            for (String line : Files.readLines(compilerLog, Charsets.UTF_8)) {
-
-                if (WARNING_PATTERN.matcher(line).matches()) {
-                    warningCount++;
+            return Collections2.filter(Files.readLines(compilerLog, Charsets.UTF_8), new Predicate<String>() {
+                @Override
+                public boolean apply(String input) {
+                    return WARNING_PATTERN.matcher(input).matches();
                 }
-            }
+            }).size();
         } catch (IOException e) {
             throw new MojoExecutionException("Could not parse file " + compilerLog, e);
         }
-        return warningCount;
     }
 }
