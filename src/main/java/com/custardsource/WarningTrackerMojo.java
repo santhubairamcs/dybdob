@@ -25,10 +25,10 @@ public class WarningTrackerMojo extends AbstractMojo {
         int oldCount = oldWarningCount();
         int warningCount = new WarningCounter(warningLog).warningCount();
         if (warningCount < oldCount) {
-            System.out.println(String.format("Well done! Warning count decreased from %s to %s", oldCount, warningCount));
+            getLog().info(String.format("Well done! Warning count decreased from %s to %s", oldCount, warningCount));
             lowerWarningCount();
         } else if (oldCount == warningCount) {
-            System.out.println(String.format("Warning count remains steady at %s", warningCount));
+            getLog().info(String.format("Warning count remains steady at %s", warningCount));
         } else {
             throw new MojoExecutionException(String.format("Failing build with warning count %s higher than previous mark of %s; see %s for warning details", warningCount, oldCount, warningLog));
         }
