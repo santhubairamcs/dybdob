@@ -33,6 +33,6 @@ public class WarningCounter {
         } catch (IOException e) {
             throw new MojoExecutionException("Could not parse file " + compilerLog, e);
         }
-
+        return warningCount;
     }
 }
