@@ -6,9 +6,9 @@ import org.apache.maven.plugin.MojoExecutionException;
 import java.io.File;
 
 /**
- * Goal which retrieves a compiler warning count
+ * Goal which fails the build if the warning count has increased since last successful execution
  *
- * @goal failonwarnings
+ * @goal trackwarnings
  * @phase compile
  */
 public class WarningTrackerMojo extends AbstractMojo {
@@ -22,9 +22,22 @@ public class WarningTrackerMojo extends AbstractMojo {
 
 
     public void execute() throws MojoExecutionException {
+        int oldCount = oldWarningCount();
         int warningCount = new WarningCounter(warningLog).warningCount();
-        if (warningCount > 0) {
-            throw new MojoExecutionException(String.format("Failing build with warning count %s, no warnings permitted; see %s for warning details", warningCount, warningLog));
+        if (warningCount < oldCount) {
+            System.out.println(String.format("Well done! Warning count decreased from %s to %s", oldCount, warningCount));
+            lowerWarningCount();
+        } else if (oldCount == warningCount) {
+            System.out.println(String.format("Warning count remains steady at %s", warningCount));
+        } else {
+            throw new MojoExecutionException(String.format("Failing build with warning count %s higher than previous mark of %s; see %s for warning details", warningCount, oldCount, warningLog));
         }
+    }
+
+    private void lowerWarningCount() {
+    }
+
+    private int oldWarningCount() {
+        return 2;
     }
 }
