@@ -16,8 +16,7 @@ import java.util.regex.Pattern;
  * @goal checkcount
  * @phase compile
  */
-public class WarningTrackerMojo
-        extends AbstractMojo {
+public class WarningTrackerMojo extends AbstractMojo {
     /**
      * Location of the file.
      *
@@ -28,8 +27,7 @@ public class WarningTrackerMojo
 
     private final Pattern pattern = Pattern.compile(".*" + Pattern.quote("warning: [") + ".*");
 
-    public void execute()
-            throws MojoExecutionException {
+    public void execute() throws MojoExecutionException {
         if (!outputDirectory.exists()) {
             throw new MojoExecutionException("Could not read file " + outputDirectory);
         }
