@@ -18,13 +18,13 @@ public class WarningFailerMojo extends AbstractMojo {
      * @parameter expression="${project.build.directory}/javac.out"
      * @required
      */
-    private File outputDirectory;
+    private File warningLog;
 
 
     public void execute() throws MojoExecutionException {
-        int warningCount = new WarningCounter(outputDirectory).warningCount();
+        int warningCount = new WarningCounter(warningLog).warningCount();
         if (warningCount > 0) {
-            throw new MojoExecutionException(String.format("Failing build with warning count %s, no warnings permitted; see %s for warning details", warningCount, outputDirectory));
+            throw new MojoExecutionException(String.format("Failing build with warning count %s, no warnings permitted; see %s for warning details", warningCount, warningLog));
         }
     }
 }
