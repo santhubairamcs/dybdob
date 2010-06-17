@@ -1,4 +1,4 @@
-package com.custardsource;
+package com.custardsource.dybdob.mojo;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;

@@ -1,4 +1,4 @@
-package com.custardsource;
+package com.custardsource.dybdob.mojo;
 
 import com.google.common.base.Charsets;
 import com.google.common.base.Predicate;
