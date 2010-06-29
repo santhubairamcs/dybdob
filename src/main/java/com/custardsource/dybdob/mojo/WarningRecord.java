@@ -7,8 +7,13 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 import org.apache.maven.project.MavenProject;
+import org.hibernate.annotations.Index;
 
 @Entity
+@org.hibernate.annotations.Table(
+        appliesTo="WarningRecord",
+    indexes = { @Index(name="idx_WarningRecord", columnNames = { "groupId", "artifactId", "version", "dateLogged" } ) }
+    )
 public class WarningRecord {
     @Id
     private String id;
