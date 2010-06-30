@@ -13,6 +13,7 @@
   <name>dybdob</name>
   <description>Libraries to help track project warning signs ('broken windows') over time and enforce their cleanup</description>
   <modules>
+    <module>dybdob-core</module>
     <module>dybdob-mojo</module>
   </modules>
   <url>http://code.google.com/p/dybdob/</url>
