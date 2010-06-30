@@ -32,6 +32,7 @@ public class WarningTrackerMojo extends AbstractMojo {
     /**
      * DB driver to use when logging warnings
      *
+     * 
      * @parameter expression="${dybdob.db.driver}"
      * @required
      */
@@ -85,6 +86,10 @@ public class WarningTrackerMojo extends AbstractMojo {
     private DriverManagerDataSource dataSource;
 
     public void execute() throws MojoExecutionException {
+        if (!mavenProject.getPackaging().equals("jar")) {
+            getLog().info("Skipping warning count for non-jar packaging type " + mavenProject.getPackaging());
+            return;
+        }
         setupDatabaseTemplate();
         checkWarningCounts();
     }
