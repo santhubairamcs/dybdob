@@ -1,18 +1,9 @@
 package com.custardsource.dybdob.mojo;
 
 import java.io.File;
-import java.util.List;
-import java.util.Properties;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
-import org.hibernate.SessionFactory;
-import org.hibernate.criterion.DetachedCriteria;
-import org.hibernate.criterion.Order;
-import org.hibernate.criterion.Restrictions;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.orm.hibernate3.HibernateTemplate;
-import org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean;
 
 /**
  * Goal which fails the build if the warning count has increased since last successful execution
@@ -82,9 +73,9 @@ public class WarningTrackerMojo extends AbstractMojo {
      * */
     private org.apache.maven.project.MavenProject mavenProject;
 
-    private HibernateTemplate hibernateTemplate;
-    private DriverManagerDataSource dataSource;
     private ProjectVersion projectVersion;
+    private WarningRecordRepository repository;
+
 
     public void execute() throws MojoExecutionException {
         if (!mavenProject.getPackaging().equals("jar")) {
@@ -92,33 +83,12 @@ public class WarningTrackerMojo extends AbstractMojo {
             return;
         }
         projectVersion = new ProjectVersion(mavenProject.getGroupId(), mavenProject.getArtifactId(), mavenProject.getVersion());
-        setupDatabaseTemplate();
+        setupRepository();
         checkWarningCounts();
     }
 
-    private void setupDatabaseTemplate() throws MojoExecutionException {
-        try {
-            Class.forName(jdbcDriver);
-        } catch (ClassNotFoundException e) {
-            throw new MojoExecutionException("Cannot load specified JDBC driver: " + jdbcDriver, e);
-        }
-        dataSource = new DriverManagerDataSource(jdbcConnection, jdbcUser, jdbcPassword);
-
-        AnnotationSessionFactoryBean sessionFactoryBean = new AnnotationSessionFactoryBean();
-        sessionFactoryBean.setDataSource(dataSource);
-        Properties config = new Properties();
-        config.setProperty("hibernate.dialect", hibernateDialect);
-        config.setProperty("hibernate.connection.autocommit", "true");
-        config.setProperty("hibernate.hbm2ddl.auto", "update");
-        sessionFactoryBean.setHibernateProperties(config);
-
-        sessionFactoryBean.setAnnotatedClasses(new Class<?>[]{WarningRecord.class});
-        try {
-            sessionFactoryBean.afterPropertiesSet();
-        } catch (Exception e) {
-            throw new MojoExecutionException("Could not set up database connection", e);
-        }
-        hibernateTemplate = new HibernateTemplate((SessionFactory) sessionFactoryBean.getObject());
+    private void setupRepository() throws MojoExecutionException {
+        repository = new WarningRecordRepository(jdbcDriver, jdbcConnection, jdbcUser, jdbcPassword, hibernateDialect) ;
     }
 
     private void checkWarningCounts() throws MojoExecutionException {
@@ -145,19 +115,11 @@ public class WarningTrackerMojo extends AbstractMojo {
     }
 
     private void lowerWarningCount(int warningCount) {
-        hibernateTemplate.save(WarningRecord.newRecord(projectVersion, warningCount));
+        repository.recordWarningCount(projectVersion, warningCount);
+
     }
 
     private Integer oldWarningCount() {
-        DetachedCriteria c = DetachedCriteria.forClass(WarningRecord.class);
-        c.add(Restrictions.eq("groupId", mavenProject.getGroupId()));
-        c.add(Restrictions.eq("artifactId", mavenProject.getArtifactId()));
-        c.add(Restrictions.eq("version", mavenProject.getVersion()));
-        c.addOrder(Order.desc("dateLogged"));
-        List<WarningRecord> matches = hibernateTemplate.findByCriteria(c, 0, 1);
-        if (matches.isEmpty()) {
-            return null;
-        }
-        return matches.get(0).warningCount();
+        return repository.lastWarningCount(projectVersion);
     }
 }
