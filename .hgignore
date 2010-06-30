@@ -1,1 +1,5 @@
-target
+/target$
+.*\.iws
+.*\.iml
+.*\.ipr
+
