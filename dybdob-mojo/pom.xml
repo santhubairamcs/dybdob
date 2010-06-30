@@ -5,23 +5,13 @@
   <artifactId>dybdob-mojo</artifactId>
   <packaging>maven-plugin</packaging>
   <name>dybdob Maven Mojo</name>
-  <name>Maven plugins to fail a Maven build during compiler warnings, or to track them over time and fail if they increase</name>
+  <description>Maven plugins to fail a Maven build during compiler warnings, or to track them over time and fail if they increase</description>
   <parent>
     <groupId>com.custardsource</groupId>
     <artifactId>dybdob</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
   <dependencies>
-      <dependency>
-          <groupId>org.hibernate</groupId>
-          <artifactId>hibernate-annotations</artifactId>
-          <version>3.4.0.GA</version>
-      </dependency>
-      <dependency>
-          <groupId>javax.persistence</groupId>
-          <artifactId>persistence-api</artifactId>
-          <version>1.0</version>
-      </dependency>
       <dependency>
           <groupId>org.slf4j</groupId>
           <artifactId>slf4j-jdk14</artifactId>
@@ -57,6 +47,11 @@
           <groupId>org.hibernate</groupId>
           <artifactId>hibernate-core</artifactId>
           <version>3.3.2.GA</version>
+      </dependency>
+      <dependency>
+          <groupId>com.custardsource.dybdob</groupId>
+          <artifactId>dybdob-core</artifactId>
+          <version>${project.version}</version>
       </dependency>
   </dependencies>
 </project>

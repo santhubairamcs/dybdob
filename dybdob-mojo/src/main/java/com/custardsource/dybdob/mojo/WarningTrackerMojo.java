@@ -84,12 +84,14 @@ public class WarningTrackerMojo extends AbstractMojo {
 
     private HibernateTemplate hibernateTemplate;
     private DriverManagerDataSource dataSource;
+    private ProjectVersion projectVersion;
 
     public void execute() throws MojoExecutionException {
         if (!mavenProject.getPackaging().equals("jar")) {
             getLog().info("Skipping warning count for non-jar packaging type " + mavenProject.getPackaging());
             return;
         }
+        projectVersion = new ProjectVersion(mavenProject.getGroupId(), mavenProject.getArtifactId(), mavenProject.getVersion());
         setupDatabaseTemplate();
         checkWarningCounts();
     }
@@ -143,7 +145,7 @@ public class WarningTrackerMojo extends AbstractMojo {
     }
 
     private void lowerWarningCount(int warningCount) {
-        hibernateTemplate.save(WarningRecord.newRecord(mavenProject, warningCount));
+        hibernateTemplate.save(WarningRecord.newRecord(projectVersion, warningCount));
     }
 
     private Integer oldWarningCount() {
