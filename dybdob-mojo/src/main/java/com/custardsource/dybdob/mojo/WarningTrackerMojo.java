@@ -2,6 +2,8 @@ package com.custardsource.dybdob.mojo;
 
 import java.io.File;
 
+import com.custardsource.dybdob.ProjectVersion;
+import com.custardsource.dybdob.WarningRecordRepository;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 

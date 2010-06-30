@@ -1,4 +1,4 @@
-package com.custardsource.dybdob.mojo;
+package com.custardsource.dybdob;
 
 import javax.persistence.Embeddable;
 
