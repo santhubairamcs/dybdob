@@ -1,8 +1,13 @@
 package com.custardsource.dybdob.mojo;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 
 import com.custardsource.dybdob.ProjectVersion;
+import com.custardsource.dybdob.WarningCounter;
 import com.custardsource.dybdob.WarningRecordRepository;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
@@ -84,6 +89,7 @@ public class WarningTrackerMojo extends AbstractMojo {
             getLog().info("Skipping warning count for non-jar packaging type " + mavenProject.getPackaging());
             return;
         }
+        // mavenProject.getProperties().remove("dybdob.warnings.count");
         projectVersion = new ProjectVersion(mavenProject.getGroupId(), mavenProject.getArtifactId(), mavenProject.getVersion());
         setupRepository();
         checkWarningCounts();
@@ -113,6 +119,17 @@ public class WarningTrackerMojo extends AbstractMojo {
             getLog().info(String.format("Warning count remains steady at %s", warningCount));
         } else {
             throw new MojoExecutionException(String.format("Failing build with warning count %s higher than previous mark of %s; see %s for warning details", warningCount, oldCount, warningLog));
+        }
+
+        mavenProject.getProperties().setProperty("dybdob.warnings.count", String.valueOf(warningCount));
+        File output = new File(mavenProject.getBuild().getDirectory(), "dybdob.warningcount");
+        Writer out = null;
+        try {
+            out = new OutputStreamWriter(new FileOutputStream(output, false), "UTF-8");
+            out.write(String.valueOf(warningCount));
+            out.close();
+        } catch (IOException e) {
+            throw new MojoExecutionException("Could not pass on warning count to subsequent plugins", e);
         }
     }
 

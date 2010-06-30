@@ -1,9 +1,10 @@
 package com.custardsource.dybdob.mojo;
 
+import java.io.File;
+
+import com.custardsource.dybdob.WarningCounter;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
-
-import java.io.File;
 
 /**
  * Goal which fails the build if a compiler log has indicated any warnings
@@ -22,9 +23,13 @@ public class WarningFailerMojo extends AbstractMojo {
 
 
     public void execute() throws MojoExecutionException {
-        int warningCount = new WarningCounter(warningLog).warningCount();
-        if (warningCount > 0) {
-            throw new MojoExecutionException(String.format("Failing build with warning count %s, no warnings permitted; see %s for warning details", warningCount, warningLog));
+        try {
+            int warningCount = new WarningCounter(warningLog).warningCount();
+            if (warningCount > 0) {
+                throw new MojoExecutionException(String.format("Failing build with warning count %s, no warnings permitted; see %s for warning details", warningCount, warningLog));
+            }
+        } catch (WarningCounter.CountException e) {
+            throw new MojoExecutionException("Count not count warnings", e);
         }
     }
 }

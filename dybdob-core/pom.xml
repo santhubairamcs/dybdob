@@ -42,6 +42,11 @@
           <artifactId>hibernate-core</artifactId>
           <version>3.3.2.GA</version>
         </dependency>
+        <dependency>
+          <groupId>com.google.guava</groupId>
+          <artifactId>guava</artifactId>
+          <version>r05</version>
+        </dependency>
     </dependencies>
 
 

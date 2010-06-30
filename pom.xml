@@ -15,6 +15,7 @@
   <modules>
     <module>dybdob-core</module>
     <module>dybdob-mojo</module>
+    <module>dybdob-sonar-plugin</module>
   </modules>
   <url>http://code.google.com/p/dybdob/</url>
   <inceptionYear>2010</inceptionYear>
