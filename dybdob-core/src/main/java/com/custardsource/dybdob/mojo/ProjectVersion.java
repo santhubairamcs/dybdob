@@ -10,6 +10,9 @@ public class ProjectVersion {
 
     private String version;
 
+    ProjectVersion() {
+    }
+    
     public ProjectVersion(String groupId, String artifactId, String version) {
         this.groupId = groupId;
         this.artifactId = artifactId;

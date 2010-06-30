@@ -46,9 +46,9 @@ public class WarningRecordRepository {
 
     public Integer lastWarningCount(ProjectVersion projectVersion) {
         DetachedCriteria c = DetachedCriteria.forClass(WarningRecord.class);
-        c.add(Restrictions.eq("groupId", projectVersion.getGroupId()));
-        c.add(Restrictions.eq("artifactId", projectVersion.getArtifactId()));
-        c.add(Restrictions.eq("version", projectVersion.getVersion()));
+        c.add(Restrictions.eq("projectVersion.groupId", projectVersion.getGroupId()));
+        c.add(Restrictions.eq("projectVersion.artifactId", projectVersion.getArtifactId()));
+        c.add(Restrictions.eq("projectVersion.version", projectVersion.getVersion()));
         c.addOrder(Order.desc("dateLogged"));
         List<WarningRecord> matches = hibernateTemplate.findByCriteria(c, 0, 1);
         if (matches.isEmpty()) {

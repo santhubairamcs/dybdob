@@ -3,6 +3,7 @@ package com.custardsource.dybdob.mojo;
 import java.util.Date;
 import java.util.UUID;
 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -17,6 +18,7 @@ public class WarningRecord {
     @Id
     private String id;
 
+    @Embedded
     private ProjectVersion projectVersion;
 
     private Date dateLogged;
