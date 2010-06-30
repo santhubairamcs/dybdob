@@ -5,6 +5,7 @@
   <artifactId>dybdob-mojo</artifactId>
   <packaging>maven-plugin</packaging>
   <name>dybdob Maven Mojo</name>
+  <name>Maven plugins to fail a Maven build during compiler warnings, or to track them over time and fail if they increase</name>
   <parent>
     <groupId>com.custardsource</groupId>
     <artifactId>dybdob</artifactId>
