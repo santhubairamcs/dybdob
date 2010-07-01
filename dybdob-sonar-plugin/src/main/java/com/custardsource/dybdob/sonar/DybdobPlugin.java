@@ -28,6 +28,7 @@ public class DybdobPlugin implements Plugin {
         extensions.add(WarningMetrics.class);
         extensions.add(WarningSensor.class);
         extensions.add(WarningDashboardWidget.class);
+        extensions.add(WarningDecorator.class);
         return extensions;
     }
 
