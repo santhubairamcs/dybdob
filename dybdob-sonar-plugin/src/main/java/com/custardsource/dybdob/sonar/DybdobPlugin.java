@@ -27,6 +27,7 @@ public class DybdobPlugin implements Plugin {
         List<Class<? extends Extension>> extensions = new ArrayList<Class<? extends Extension>>();
         extensions.add(WarningMetrics.class);
         extensions.add(WarningSensor.class);
+        extensions.add(WarningDashboardWidget.class);
         return extensions;
     }
 
