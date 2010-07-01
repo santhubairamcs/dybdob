@@ -9,6 +9,7 @@ import java.io.Writer;
 import com.custardsource.dybdob.ProjectVersion;
 import com.custardsource.dybdob.WarningCounter;
 import com.custardsource.dybdob.WarningRecordRepository;
+import com.google.common.base.Strings;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 
@@ -19,6 +20,12 @@ import org.apache.maven.plugin.MojoExecutionException;
  * @phase compile
  */
 public class WarningTrackerMojo extends AbstractMojo {
+    private static enum OperationMode {
+        COUNT,
+        CHECK,
+        TRACK
+    }
+
     /**
      * Location of the file.
      *
@@ -61,11 +68,13 @@ public class WarningTrackerMojo extends AbstractMojo {
     private String jdbcPassword;
 
     /**
-     * Should we write our changes back to the database?
+     * Mode of operation. Should be one of "count" (record count only, for later use), "check" (check
+     * the count, fail build if increased, but don't write updates to DB) or "track" (check the count,
+     * fail if increased, write decreases back to the database)
      *
-     * @parameter expression="${dybdob.readonly}"
+     * @parameter expression="${dybdob.mode}"
      */
-    private boolean readOnly = true;
+    private String mode = "";
 
     /**
      * Hibernate dialect to use for writing changes
@@ -82,14 +91,20 @@ public class WarningTrackerMojo extends AbstractMojo {
 
     private ProjectVersion projectVersion;
     private WarningRecordRepository repository;
+    private OperationMode operationMode = OperationMode.COUNT;
 
 
     public void execute() throws MojoExecutionException {
+        if (!Strings.isNullOrEmpty(mode)) {
+            operationMode = OperationMode.valueOf(mode.toUpperCase());
+        }
+        getLog().info("Running in mode " + operationMode);
+
         if (!mavenProject.getPackaging().equals("jar")) {
             getLog().info("Skipping warning count for non-jar packaging type " + mavenProject.getPackaging());
             return;
         }
-        // mavenProject.getProperties().remove("dybdob.warnings.count");
+
         projectVersion = new ProjectVersion(mavenProject.getGroupId(), mavenProject.getArtifactId(), mavenProject.getVersion());
         setupRepository();
         checkWarningCounts();
@@ -102,6 +117,14 @@ public class WarningTrackerMojo extends AbstractMojo {
     private void checkWarningCounts() throws MojoExecutionException {
         Integer oldCount = oldWarningCount();
         int warningCount = new WarningCounter(warningLog).warningCount();
+
+        writeWarningCountToLogFile(warningCount);
+        if (operationMode == OperationMode.COUNT) {
+            return;
+        }
+
+        boolean readOnly = (operationMode == OperationMode.CHECK);
+        
         if (oldCount == null) {
             if (readOnly) {
                 getLog().warn(String.format("Unable to obtain old warning count; may be first run of this artifact version. New count would be %s", warningCount));
@@ -120,8 +143,11 @@ public class WarningTrackerMojo extends AbstractMojo {
         } else {
             throw new MojoExecutionException(String.format("Failing build with warning count %s higher than previous mark of %s; see %s for warning details", warningCount, oldCount, warningLog));
         }
+    }
 
-        mavenProject.getProperties().setProperty("dybdob.warnings.count", String.valueOf(warningCount));
+
+
+    private void writeWarningCountToLogFile(int warningCount) throws MojoExecutionException {
         File output = new File(mavenProject.getBuild().getDirectory(), "dybdob.warningcount");
         Writer out = null;
         try {
