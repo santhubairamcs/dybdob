@@ -23,7 +23,8 @@ public class WarningTrackerMojo extends AbstractMojo {
     private static enum OperationMode {
         COUNT,
         CHECK,
-        TRACK
+        TRACK,
+        FORCE
     }
 
     /**
@@ -69,8 +70,10 @@ public class WarningTrackerMojo extends AbstractMojo {
 
     /**
      * Mode of operation. Should be one of "count" (record count only, for later use), "check" (check
-     * the count, fail build if increased, but don't write updates to DB) or "track" (check the count,
-     * fail if increased, write decreases back to the database)
+     * the count, fail build if increased, but don't write updates to DB), "track" (check the count,
+     * fail if increased, write decreases back to the database), or "force" (check the count, never
+     * fail the build, always write back to the database — used as a one-off process to allow warning
+     * count to increase)
      *
      * @parameter expression="${dybdob.mode}"
      */
@@ -130,18 +133,23 @@ public class WarningTrackerMojo extends AbstractMojo {
                 getLog().warn(String.format("Unable to obtain old warning count; may be first run of this artifact version. New count would be %s", warningCount));
             } else {
                 getLog().info(String.format("Unable to obtain old warning count; may be first run of this artifact version. New count is %s", warningCount));
-                lowerWarningCount(warningCount);
+                recordWarningCountInDatabase(warningCount);
             }
         }
         else if (warningCount < oldCount) {
             getLog().info(String.format("Well done! Warning count decreased from %s to %s", oldCount, warningCount));
             if (!readOnly) {
-                lowerWarningCount(warningCount);
+                recordWarningCountInDatabase(warningCount);
             }
         } else if (oldCount == warningCount) {
             getLog().info(String.format("Warning count remains steady at %s", warningCount));
         } else {
-            throw new MojoExecutionException(String.format("Failing build with warning count %s higher than previous mark of %s; see %s for warning details", warningCount, oldCount, warningLog));
+            if (operationMode == OperationMode.FORCE) {
+                getLog().warn(String.format("Against my better judgement, forcing warning count increase from %s to %s", oldCount, warningCount));
+                recordWarningCountInDatabase(warningCount);
+            } else {
+                throw new MojoExecutionException(String.format("Failing build with warning count %s higher than previous mark of %s; see %s for warning details", warningCount, oldCount, warningLog));
+            }
         }
     }
 
@@ -159,7 +167,7 @@ public class WarningTrackerMojo extends AbstractMojo {
         }
     }
 
-    private void lowerWarningCount(int warningCount) {
+    private void recordWarningCountInDatabase(int warningCount) {
         repository.recordWarningCount(projectVersion, warningCount);
 
     }
