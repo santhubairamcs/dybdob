@@ -12,7 +12,13 @@ import org.hibernate.annotations.Index;
 @Entity
 @org.hibernate.annotations.Table(
         appliesTo="WarningRecord",
-    indexes = { @Index(name="idx_WarningRecord", columnNames = { "groupId", "artifactId", "version", "dateLogged" } ) }
+        /* Note: this should result in an index being created on these columns, but due to a bug in Hibernate
+         * (http://opensource.atlassian.com/projects/hibernate/browse/HHH-1012) this doesn't happen on auto-schema
+         * update. Need to create the equivalent index manually on any table which is going to grow substantially.
+         * Example Transact-SQL:
+         *   CREATE INDEX idx_warningrecord ON WarningRecord(groupId, artifactId, version, dateLogged)
+         */
+        indexes = { @Index(name="idx_WarningRecord", columnNames = { "groupId", "artifactId", "version", "dateLogged" } ) }
     )
 public class WarningRecord {
     @Id
