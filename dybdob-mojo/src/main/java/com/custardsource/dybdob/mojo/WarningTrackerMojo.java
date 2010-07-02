@@ -123,6 +123,7 @@ public class WarningTrackerMojo extends AbstractMojo {
 
         writeWarningCountToLogFile(warningCount);
         if (operationMode == OperationMode.COUNT) {
+            getLog().info(String.format("Warnings found: %s", warningCount));
             return;
         }
 
