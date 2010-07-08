@@ -32,5 +32,10 @@
         <artifactId>dybdob-core</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <dependency>
+        <groupId>com.custardsource.dybdob</groupId>
+        <artifactId>dybdob-detectors</artifactId>
+        <version>${project.version}</version>
+      </dependency>
   </dependencies>
 </project>

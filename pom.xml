@@ -14,6 +14,7 @@
   <description>Libraries to help track project warning signs ('broken windows') over time and enforce their cleanup</description>
   <modules>
     <module>dybdob-core</module>
+    <module>dybdob-detectors</module>
     <module>dybdob-mojo</module>
     <module>dybdob-sonar-plugin</module>
   </modules>

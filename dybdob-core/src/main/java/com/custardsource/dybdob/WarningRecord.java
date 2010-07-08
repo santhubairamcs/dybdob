@@ -37,7 +37,7 @@ public class WarningRecord {
     WarningRecord() {
     }
 
-    static WarningRecord newRecord(ProjectVersion projectVersion, WarningSource source, int warningCount) {
+    public static WarningRecord newRecord(ProjectVersion projectVersion, WarningSource source, int warningCount) {
         WarningRecord record = new WarningRecord();
         record.projectVersion = projectVersion;
         record.dateLogged = new Date();
