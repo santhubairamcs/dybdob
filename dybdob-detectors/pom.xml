@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.custardsource.dybdob</groupId>
+  <artifactId>dybdob-detectors</artifactId>
+  <packaging>jar</packaging>
+  <name>dybdob Warning Detectors</name>
+  <description>Utility classes to identify bug patters in static code check logs</description>
+  <parent>
+    <groupId>com.custardsource</groupId>
+    <artifactId>dybdob</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <dependencies>
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>r05</version>
+      </dependency>
+      <dependency>
+        <groupId>com.custardsource.dybdob</groupId>
+        <artifactId>dybdob-core</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+  </dependencies>
+</project>
