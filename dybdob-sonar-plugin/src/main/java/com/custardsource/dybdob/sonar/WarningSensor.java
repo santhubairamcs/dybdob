@@ -17,13 +17,16 @@ import org.sonar.api.resources.Project;
 public class WarningSensor implements Sensor {
     @Override
     public void analyse(Project project, SensorContext context) {
-        String foundWarnings;
-        File input = new File(project.getFileSystem().getBuildDir(), "dybdob.warningcount");
+        String foundWarnings = null;
+        File input = new File(project.getFileSystem().getBuildDir(), "dybdob.warnings");
         try {
             LineNumberReader reader = new LineNumberReader(new InputStreamReader(new FileInputStream(input), "UTF-8"));
-            foundWarnings = reader.readLine();
+            String line = reader.readLine();
+            if (line.startsWith("javac:warnings\t")) {
+                foundWarnings = line.replace("javac:warnings\t", "");
+            }
         } catch (FileNotFoundException e) {
-            LoggerFactory.getLogger(WarningSensor.class).warn("Warning count file dybdob.warningcount not found; not recording metric");
+            LoggerFactory.getLogger(WarningSensor.class).warn("Warning count file dybdob.warnings not found; not recording metric");
             return;
         } catch (UnsupportedEncodingException e) {
             throw new RuntimeException(e);
@@ -32,7 +35,7 @@ public class WarningSensor implements Sensor {
         }
 
         if (StringUtils.isEmpty(foundWarnings)) {
-            LoggerFactory.getLogger(WarningSensor.class).info("No warnings count found in file {}; not recording metric", input);
+            LoggerFactory.getLogger(WarningSensor.class).info("No javac.warnings count found in file {}; not recording metric", input);
             return;
         }
         double warningCount = Double.valueOf(foundWarnings);

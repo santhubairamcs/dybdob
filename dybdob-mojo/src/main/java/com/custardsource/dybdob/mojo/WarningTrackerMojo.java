@@ -1,10 +1,6 @@
 package com.custardsource.dybdob.mojo;
 
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
 
 import com.custardsource.dybdob.WarningRecord;
 import com.custardsource.dybdob.WarningRecordRepository;
@@ -16,11 +12,10 @@ import org.apache.maven.plugin.MojoExecutionException;
  * Goal which fails the build if the warning count has increased since last successful execution
  *
  * @goal trackwarnings
- * @phase compile
+ * @phase verify
  */
 public class WarningTrackerMojo extends DybdobMojo {
     private static enum OperationMode {
-        COUNT,
         CHECK,
         TRACK,
         FORCE
@@ -79,7 +74,7 @@ public class WarningTrackerMojo extends DybdobMojo {
     private String hibernateDialect;
 
 
-    private OperationMode operationMode = OperationMode.COUNT;
+    private OperationMode operationMode = OperationMode.CHECK;
 
     private WarningRecordRepository repository;
 
@@ -99,11 +94,6 @@ public class WarningTrackerMojo extends DybdobMojo {
     @Override
     protected void checkSingleRecord(WarningRecord record, File logFile, WarningDetector warningDetector) throws MojoExecutionException {
         Integer oldCount = oldWarningCountFor(record);
-        writeWarningCountToLogFile(record);
-        if (operationMode == OperationMode.COUNT) {
-            getLog().info(String.format("Warnings found for metric %s: %s", record.source(), record.warningCount()));
-            return;
-        }
 
         boolean readOnly = (operationMode == OperationMode.CHECK);
 
@@ -132,18 +122,6 @@ public class WarningTrackerMojo extends DybdobMojo {
         }
     }
 
-    private void writeWarningCountToLogFile(WarningRecord record) throws MojoExecutionException {
-        File output = new File(mavenProject.getBuild().getDirectory(), "dybdob.warningcount");
-        Writer out = null;
-        try {
-            out = new OutputStreamWriter(new FileOutputStream(output, false), "UTF-8");
-            out.write(String.valueOf(record.warningCount()));
-            out.close();
-        } catch (IOException e) {
-            throw new MojoExecutionException("Could not pass on warning count to subsequent plugins", e);
-        }
-    }
-
     private void recordWarningCountInDatabase(WarningRecord record) {
         repository.recordWarningCount(record);
 
@@ -151,5 +129,9 @@ public class WarningTrackerMojo extends DybdobMojo {
 
     private Integer oldWarningCountFor(WarningRecord record) {
         return repository.lastWarningCountFor(record);
+    }
+
+    @Override
+    protected void tearDown() {
     }
 }

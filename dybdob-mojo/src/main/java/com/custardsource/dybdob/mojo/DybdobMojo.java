@@ -48,7 +48,10 @@ public abstract class DybdobMojo extends AbstractMojo {
         projectVersion = DybdobMojoUtils.buildProjectVersionFrom(mavenProject);
         initialize();
         checkWarningCounts();
+        tearDown();
     }
+
+    protected abstract void tearDown();
 
     private void checkWarningCounts() throws MojoExecutionException {
         for (Detector detector : detectors) {

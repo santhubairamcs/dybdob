@@ -10,7 +10,7 @@ import org.apache.maven.plugin.MojoExecutionException;
  * Goal which fails the build if a compiler log has indicated any warnings
  *
  * @goal failonwarnings
- * @phase compile
+ * @phase verify
  */
 public class WarningFailerMojo extends DybdobMojo {
     @Override
@@ -24,4 +24,9 @@ public class WarningFailerMojo extends DybdobMojo {
     @Override
     protected void initialize() throws MojoExecutionException {
     }
+
+    @Override
+    protected void tearDown() {
+    }
+
 }
