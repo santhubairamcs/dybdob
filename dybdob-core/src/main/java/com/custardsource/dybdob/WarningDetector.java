@@ -1,9 +1,10 @@
 package com.custardsource.dybdob;
 
 import java.io.File;
+import java.util.Collection;
 
 public interface WarningDetector {
-    public WarningRecord getRecords(ProjectVersion version, File log);
+    public Collection<WarningRecord> getRecords(ProjectVersion version, File log);
 
     public static class CountException extends RuntimeException {
 

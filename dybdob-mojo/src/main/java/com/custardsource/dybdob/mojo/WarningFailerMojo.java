@@ -4,6 +4,7 @@ import java.io.File;
 
 import com.custardsource.dybdob.JavacWarningDetector;
 import com.custardsource.dybdob.WarningDetector;
+import com.custardsource.dybdob.WarningRecord;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 
@@ -29,10 +30,17 @@ public class WarningFailerMojo extends AbstractMojo {
 
 
     public void execute() throws MojoExecutionException {
+        if (!mavenProject.getPackaging().equals("jar")) {
+            getLog().info("Skipping warning count for non-jar packaging type " + mavenProject.getPackaging());
+            return;
+        }
+
         try {
-            int warningCount = new JavacWarningDetector().getRecords(DybdobMojoUtils.buildProjectVersionFrom(mavenProject), warningLog).warningCount();
-            if (warningCount > 0) {
-                throw new MojoExecutionException(String.format("Failing build with warning count %s, no warnings permitted; see %s for warning details", warningCount, warningLog));
+            for (WarningRecord record : new JavacWarningDetector().getRecords(DybdobMojoUtils.buildProjectVersionFrom(mavenProject), warningLog)) {
+                int warningCount = record.warningCount();
+                if (warningCount > 0) {
+                    throw new MojoExecutionException(String.format("Failing build with warning count %s for metric %s, no warnings permitted; see %s for warning details", warningCount, record.source(), warningLog));
+                }
             }
         } catch (WarningDetector.CountException e) {
             throw new MojoExecutionException("Count not count warnings", e);

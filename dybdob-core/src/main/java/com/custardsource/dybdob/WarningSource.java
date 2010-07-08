@@ -10,9 +10,14 @@ public class WarningSource {
 
     WarningSource() {
     }
-    
+
     public WarningSource(String source, String metric) {
         this.source = source;
         this.metric = metric;
+    }
+
+    @Override
+    public String toString() {
+        return source + ':' + metric;
     }
 }

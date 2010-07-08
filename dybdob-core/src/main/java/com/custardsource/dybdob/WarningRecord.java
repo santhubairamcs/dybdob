@@ -50,4 +50,8 @@ public class WarningRecord {
     public int warningCount() {
         return warningCount;
     }
+
+    public WarningSource source() {
+        return source;
+    }
 }

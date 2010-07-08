@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.util.Collection;
 
 import com.custardsource.dybdob.JavacWarningDetector;
 import com.custardsource.dybdob.ProjectVersion;
@@ -120,37 +121,40 @@ public class WarningTrackerMojo extends AbstractMojo {
 
     private void checkWarningCounts() throws MojoExecutionException {
         Integer oldCount = oldWarningCount();
-        WarningRecord record = new JavacWarningDetector().getRecords(DybdobMojoUtils.buildProjectVersionFrom(mavenProject), warningLog);
 
-        writeWarningCountToLogFile(record);
-        if (operationMode == OperationMode.COUNT) {
-            getLog().info(String.format("Warnings found: %s", record.warningCount()));
-            return;
-        }
+        Collection<WarningRecord> records = new JavacWarningDetector().getRecords(DybdobMojoUtils.buildProjectVersionFrom(mavenProject), warningLog);
 
-        boolean readOnly = (operationMode == OperationMode.CHECK);
-        
-        if (oldCount == null) {
-            if (readOnly) {
-                getLog().warn(String.format("Unable to obtain old warning count; may be first run of this artifact version. New count would be %s", record.warningCount()));
-            } else {
-                getLog().info(String.format("Unable to obtain old warning count; may be first run of this artifact version. New count is %s", record.warningCount()));
-                recordWarningCountInDatabase(record);
+        for (WarningRecord record : records) {
+            writeWarningCountToLogFile(record);
+            if (operationMode == OperationMode.COUNT) {
+                getLog().info(String.format("Warnings found for metric %s: %s", record.source(), record.warningCount()));
+                return;
             }
-        }
-        else if (record.warningCount() < oldCount) {
-            getLog().info(String.format("Well done! Warning count decreased from %s to %s", oldCount, record.warningCount()));
-            if (!readOnly) {
-                recordWarningCountInDatabase(record);
+
+            boolean readOnly = (operationMode == OperationMode.CHECK);
+
+            if (oldCount == null) {
+                if (readOnly) {
+                    getLog().warn(String.format("Unable to obtain old warning count for %s; may be first run of this artifact version. New count would be %s", record.source(), record.warningCount()));
+                } else {
+                    getLog().info(String.format("Unable to obtain old warning count for %s; may be first run of this artifact version. New count is %s", record.source(), record.warningCount()));
+                    recordWarningCountInDatabase(record);
+                }
             }
-        } else if (oldCount == record.warningCount()) {
-            getLog().info(String.format("Warning count remains steady at %s", record.warningCount()));
-        } else {
-            if (operationMode == OperationMode.FORCE) {
-                getLog().warn(String.format("Against my better judgement, forcing warning count increase from %s to %s", oldCount, record.warningCount()));
-                recordWarningCountInDatabase(record);
+            else if (record.warningCount() < oldCount) {
+                getLog().info(String.format("Well done! Warning count for %s decreased from %s to %s", record.source(), oldCount, record.warningCount()));
+                if (!readOnly) {
+                    recordWarningCountInDatabase(record);
+                }
+            } else if (oldCount == record.warningCount()) {
+                getLog().info(String.format("Warning count for %s remains steady at %s", record.source(), record.warningCount()));
             } else {
-                throw new MojoExecutionException(String.format("Failing build with warning count %s higher than previous mark of %s; see %s for warning details", record.warningCount(), oldCount, warningLog));
+                if (operationMode == OperationMode.FORCE) {
+                    getLog().warn(String.format("Against my better judgement, forcing warning count increase for %s from %s to %s", record.source(), oldCount, record.warningCount()));
+                    recordWarningCountInDatabase(record);
+                } else {
+                    throw new MojoExecutionException(String.format("Failing build with %s warning count %s higher than previous mark of %s; see %s for warning details", record.source(), record.warningCount(), oldCount, warningLog));
+                }
             }
         }
     }
