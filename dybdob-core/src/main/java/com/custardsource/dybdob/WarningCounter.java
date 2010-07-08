@@ -10,7 +10,7 @@ import com.google.common.collect.Collections2;
 import com.google.common.io.Files;
 
 public class WarningCounter {
-    private static final Pattern WARNING_PATTERN = Pattern.compile(".*" + Pattern.quote(": :qwarning: [") + ".*");
+    private static final Pattern WARNING_PATTERN = Pattern.compile(".*" + Pattern.quote(": warning: [") + ".*");
 
     private final File compilerLog;
 

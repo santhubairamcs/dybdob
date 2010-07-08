@@ -18,7 +18,7 @@ import org.hibernate.annotations.Index;
          * Example Transact-SQL:
          *   CREATE INDEX idx_warningrecord ON WarningRecord(groupId, artifactId, version, source, qualifier, dateLogged)
          */
-        indexes = { @Index(name="idx_WarningRecord", columnNames = { "groupId", "artifactId", "version", "source", "qualifier", "dateLogged" } ) }
+        indexes = { @Index(name="idx_WarningRecord", columnNames = { "groupId", "artifactId", "version", "source", "metric", "dateLogged" } ) }
     )
 public class WarningRecord {
     @Id

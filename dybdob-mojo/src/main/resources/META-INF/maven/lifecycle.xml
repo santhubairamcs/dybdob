@@ -1,0 +1,15 @@
+<lifecycles>
+  <lifecycle>
+    <id>cleancompile</id>
+    <phases>
+      <phase>
+        <id>clean</id>
+      </phase>
+      <phase>
+        <id>compile</id>
+      </phase>
+    </phases>
+    <configuration>
+    </configuration>
+  </lifecycle>
+</lifecycles>

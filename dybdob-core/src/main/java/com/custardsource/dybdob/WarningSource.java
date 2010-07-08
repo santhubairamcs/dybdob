@@ -5,11 +5,14 @@ import javax.persistence.Embeddable;
 @SuppressWarnings({"FieldCanBeLocal"})
 @Embeddable
 public class WarningSource {
-    private final String source;
-    private final String classifier;
+    private String source;
+    private String metric;
 
-    public WarningSource(String source, String classifier) {
+    WarningSource() {
+    }
+    
+    public WarningSource(String source, String metric) {
         this.source = source;
-        this.classifier = classifier;
+        this.metric = metric;
     }
 }
