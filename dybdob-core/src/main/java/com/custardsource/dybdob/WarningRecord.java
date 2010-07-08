@@ -16,9 +16,9 @@ import org.hibernate.annotations.Index;
          * (http://opensource.atlassian.com/projects/hibernate/browse/HHH-1012) this doesn't happen on auto-schema
          * update. Need to create the equivalent index manually on any table which is going to grow substantially.
          * Example Transact-SQL:
-         *   CREATE INDEX idx_warningrecord ON WarningRecord(groupId, artifactId, version, dateLogged)
+         *   CREATE INDEX idx_warningrecord ON WarningRecord(groupId, artifactId, version, source, qualifier, dateLogged)
          */
-        indexes = { @Index(name="idx_WarningRecord", columnNames = { "groupId", "artifactId", "version", "dateLogged" } ) }
+        indexes = { @Index(name="idx_WarningRecord", columnNames = { "groupId", "artifactId", "version", "source", "qualifier", "dateLogged" } ) }
     )
 public class WarningRecord {
     @Id
@@ -31,14 +31,18 @@ public class WarningRecord {
 
     private int warningCount;
 
+    @Embedded
+    private WarningSource source;
+
     WarningRecord() {
     }
 
-    static WarningRecord newRecord(ProjectVersion projectVersion, int warningCount) {
+    static WarningRecord newRecord(ProjectVersion projectVersion, WarningSource source, int warningCount) {
         WarningRecord record = new WarningRecord();
         record.projectVersion = projectVersion;
         record.dateLogged = new Date();
         record.warningCount = warningCount;
+        record.source = source;
         record.id = UUID.randomUUID() + "-" + System.nanoTime();
         return record;
     }
