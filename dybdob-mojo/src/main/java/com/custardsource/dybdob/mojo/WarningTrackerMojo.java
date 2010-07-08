@@ -10,6 +10,7 @@ import java.util.List;
 
 import com.custardsource.dybdob.detectors.CheckstyleDetector;
 import com.custardsource.dybdob.detectors.CpdDetector;
+import com.custardsource.dybdob.detectors.FindBugsDetector;
 import com.custardsource.dybdob.detectors.JavacWarningDetector;
 import com.custardsource.dybdob.detectors.PmdDetector;
 import com.custardsource.dybdob.ProjectVersion;
@@ -36,7 +37,8 @@ public class WarningTrackerMojo extends AbstractMojo {
     }
 
     private static final List<WarningDetector> KNOWN_DETECTORS = ImmutableList.<WarningDetector>of(
-            new JavacWarningDetector(), new CheckstyleDetector(), new CpdDetector(), new PmdDetector());
+            new JavacWarningDetector(), new CheckstyleDetector(), new CpdDetector(), new PmdDetector(),
+            new FindBugsDetector());
 
     /**
      * DB driver to use when logging warnings
