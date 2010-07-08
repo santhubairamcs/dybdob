@@ -40,8 +40,8 @@ public class WarningRecordRepository {
         hibernateTemplate = new HibernateTemplate((SessionFactory) sessionFactoryBean.getObject());
     }
 
-    public void recordWarningCount(ProjectVersion projectVersion, int warningCount) {
-        hibernateTemplate.save(WarningRecord.newRecord(projectVersion, new WarningSource("javac", "warnings"), warningCount));
+    public void recordWarningCount(WarningRecord record) {
+        hibernateTemplate.save(record);
     }
 
     public Integer lastWarningCount(ProjectVersion projectVersion) {
