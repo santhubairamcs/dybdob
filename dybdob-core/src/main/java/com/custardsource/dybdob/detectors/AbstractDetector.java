@@ -1,9 +1,12 @@
-package com.custardsource.dybdob;
+package com.custardsource.dybdob.detectors;
 
 import java.io.File;
 import java.util.Collection;
 import java.util.Map;
 
+import com.custardsource.dybdob.ProjectVersion;
+import com.custardsource.dybdob.WarningRecord;
+import com.custardsource.dybdob.WarningSource;
 import com.google.common.base.Function;
 import com.google.common.collect.Collections2;
 

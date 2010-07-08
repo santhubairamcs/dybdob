@@ -8,12 +8,12 @@ import java.io.Writer;
 import java.util.Collection;
 import java.util.List;
 
-import com.custardsource.dybdob.CheckstyleDetector;
-import com.custardsource.dybdob.CpdDetector;
-import com.custardsource.dybdob.JavacWarningDetector;
-import com.custardsource.dybdob.PmdDetector;
+import com.custardsource.dybdob.detectors.CheckstyleDetector;
+import com.custardsource.dybdob.detectors.CpdDetector;
+import com.custardsource.dybdob.detectors.JavacWarningDetector;
+import com.custardsource.dybdob.detectors.PmdDetector;
 import com.custardsource.dybdob.ProjectVersion;
-import com.custardsource.dybdob.WarningDetector;
+import com.custardsource.dybdob.detectors.WarningDetector;
 import com.custardsource.dybdob.WarningRecord;
 import com.custardsource.dybdob.WarningRecordRepository;
 import com.google.common.base.Strings;
@@ -139,7 +139,7 @@ public class WarningTrackerMojo extends AbstractMojo {
 
     private void checkWarningCountForDetector(Detector detector) throws MojoExecutionException {
         File logFile = detector.logFile();
-        WarningDetector warningDetector = getDetectorById(detector.id()); 
+        WarningDetector warningDetector = getDetectorById(detector.id());
 
         Collection<WarningRecord> records = warningDetector.getRecords(DybdobMojoUtils.buildProjectVersionFrom(mavenProject), logFile);
 

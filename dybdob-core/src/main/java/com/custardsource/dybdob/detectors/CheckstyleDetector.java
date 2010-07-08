@@ -1,4 +1,4 @@
-package com.custardsource.dybdob;
+package com.custardsource.dybdob.detectors;
 
 import java.util.regex.Pattern;
 

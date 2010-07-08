@@ -1,7 +1,10 @@
-package com.custardsource.dybdob;
+package com.custardsource.dybdob.detectors;
 
 import java.io.File;
 import java.util.Collection;
+
+import com.custardsource.dybdob.ProjectVersion;
+import com.custardsource.dybdob.WarningRecord;
 
 public interface WarningDetector {
     public String getId();

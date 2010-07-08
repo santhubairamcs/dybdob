@@ -2,8 +2,8 @@ package com.custardsource.dybdob.mojo;
 
 import java.io.File;
 
-import com.custardsource.dybdob.JavacWarningDetector;
-import com.custardsource.dybdob.WarningDetector;
+import com.custardsource.dybdob.detectors.JavacWarningDetector;
+import com.custardsource.dybdob.detectors.WarningDetector;
 import com.custardsource.dybdob.WarningRecord;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
