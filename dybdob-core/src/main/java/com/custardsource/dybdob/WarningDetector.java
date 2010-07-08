@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.Collection;
 
 public interface WarningDetector {
+    public String getId();
     public Collection<WarningRecord> getRecords(ProjectVersion version, File log);
 
     public static class CountException extends RuntimeException {

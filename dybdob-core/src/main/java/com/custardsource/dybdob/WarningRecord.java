@@ -54,4 +54,8 @@ public class WarningRecord {
     public WarningSource source() {
         return source;
     }
+
+    public ProjectVersion projectVersion() {
+        return projectVersion;
+    }
 }

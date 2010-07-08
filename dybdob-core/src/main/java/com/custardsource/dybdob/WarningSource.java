@@ -16,6 +16,14 @@ public class WarningSource {
         this.metric = metric;
     }
 
+    public String getSource() {
+        return source;
+    }
+
+    public String getMetric() {
+        return metric;
+    }
+
     @Override
     public String toString() {
         return source + ':' + metric;

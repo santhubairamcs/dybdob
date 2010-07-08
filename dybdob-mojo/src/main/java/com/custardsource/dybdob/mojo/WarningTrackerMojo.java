@@ -6,12 +6,16 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.util.Collection;
+import java.util.List;
 
+import com.custardsource.dybdob.CheckstyleDetector;
 import com.custardsource.dybdob.JavacWarningDetector;
 import com.custardsource.dybdob.ProjectVersion;
+import com.custardsource.dybdob.WarningDetector;
 import com.custardsource.dybdob.WarningRecord;
 import com.custardsource.dybdob.WarningRecordRepository;
 import com.google.common.base.Strings;
+import com.google.common.collect.ImmutableList;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 
@@ -29,13 +33,7 @@ public class WarningTrackerMojo extends AbstractMojo {
         FORCE
     }
 
-    /**
-     * Location of the file.
-     *
-     * @parameter expression="${projectWrapper.build.directory}/javac.out"
-     * @required
-     */
-    private File warningLog;
+    private static final List<WarningDetector> KNOWN_DETECTORS = ImmutableList.<WarningDetector>of(new JavacWarningDetector(), new CheckstyleDetector());
 
     /**
      * DB driver to use when logging warnings
@@ -94,6 +92,14 @@ public class WarningTrackerMojo extends AbstractMojo {
      * */
     private org.apache.maven.project.MavenProject mavenProject;
 
+    /**
+     * Which detectors are enabled
+     *
+     * @parameter
+     * @required
+     */
+    private List<Detector> detectors;
+
     private ProjectVersion projectVersion;
     private WarningRecordRepository repository;
     private OperationMode operationMode = OperationMode.COUNT;
@@ -120,11 +126,22 @@ public class WarningTrackerMojo extends AbstractMojo {
     }
 
     private void checkWarningCounts() throws MojoExecutionException {
-        Integer oldCount = oldWarningCount();
 
-        Collection<WarningRecord> records = new JavacWarningDetector().getRecords(DybdobMojoUtils.buildProjectVersionFrom(mavenProject), warningLog);
+        for (Detector detector : detectors) {
+            getLog().debug("Running detector " + detector);
+            checkWarningCountForDetector(detector);
+        }
+
+    }
+
+    private void checkWarningCountForDetector(Detector detector) throws MojoExecutionException {
+        File logFile = detector.logFile();
+        WarningDetector warningDetector = getDetectorById(detector.id()); 
+
+        Collection<WarningRecord> records = warningDetector.getRecords(DybdobMojoUtils.buildProjectVersionFrom(mavenProject), logFile);
 
         for (WarningRecord record : records) {
+            Integer oldCount = oldWarningCountFor(record);
             writeWarningCountToLogFile(record);
             if (operationMode == OperationMode.COUNT) {
                 getLog().info(String.format("Warnings found for metric %s: %s", record.source(), record.warningCount()));
@@ -153,13 +170,20 @@ public class WarningTrackerMojo extends AbstractMojo {
                     getLog().warn(String.format("Against my better judgement, forcing warning count increase for %s from %s to %s", record.source(), oldCount, record.warningCount()));
                     recordWarningCountInDatabase(record);
                 } else {
-                    throw new MojoExecutionException(String.format("Failing build with %s warning count %s higher than previous mark of %s; see %s for warning details", record.source(), record.warningCount(), oldCount, warningLog));
+                    throw new MojoExecutionException(String.format("Failing build with %s warning count %s higher than previous mark of %s; see %s for warning details", record.source(), record.warningCount(), oldCount, logFile));
                 }
             }
         }
     }
 
-
+    private WarningDetector getDetectorById(String id) throws MojoExecutionException {
+        for (WarningDetector detector : KNOWN_DETECTORS) {
+            if (detector.getId().equals(id)) {
+                return detector;
+            }
+        }
+        throw new MojoExecutionException("Unknown detector id '" + id + "'; check your configuration");
+    }
 
     private void writeWarningCountToLogFile(WarningRecord record) throws MojoExecutionException {
         File output = new File(mavenProject.getBuild().getDirectory(), "dybdob.warningcount");
@@ -178,7 +202,7 @@ public class WarningTrackerMojo extends AbstractMojo {
 
     }
 
-    private int oldWarningCount() {
-        return repository.lastWarningCount(projectVersion);
+    private Integer oldWarningCountFor(WarningRecord record) {
+        return repository.lastWarningCountFor(record);
     }
 }
