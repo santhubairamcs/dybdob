@@ -4,7 +4,6 @@ import java.io.File;
 import java.util.Collection;
 import java.util.List;
 
-import com.custardsource.dybdob.ProjectVersion;
 import com.custardsource.dybdob.WarningRecord;
 import com.custardsource.dybdob.detectors.CheckstyleDetector;
 import com.custardsource.dybdob.detectors.CpdDetector;
@@ -17,6 +16,7 @@ import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
 
+@SuppressWarnings({"JavaDoc"})
 public abstract class DybdobMojo extends AbstractMojo {
     private static final List<WarningDetector> KNOWN_DETECTORS = ImmutableList.<WarningDetector>of(
             new JavacWarningDetector(), new CheckstyleDetector(), new CpdDetector(), new PmdDetector(),
@@ -27,8 +27,6 @@ public abstract class DybdobMojo extends AbstractMojo {
      * @readonly
      * */
     org.apache.maven.project.MavenProject mavenProject;
-
-    private ProjectVersion projectVersion;
 
     /**
      * Which detectors are enabled
@@ -45,7 +43,6 @@ public abstract class DybdobMojo extends AbstractMojo {
             return;
         }
 
-        projectVersion = DybdobMojoUtils.buildProjectVersionFrom(mavenProject);
         initialize();
         checkWarningCounts();
         tearDown();

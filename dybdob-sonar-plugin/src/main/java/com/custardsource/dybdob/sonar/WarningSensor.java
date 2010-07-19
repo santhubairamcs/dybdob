@@ -19,8 +19,9 @@ public class WarningSensor implements Sensor {
     public void analyse(Project project, SensorContext context) {
         String foundWarnings = null;
         File input = new File(project.getFileSystem().getBuildDir(), "dybdob.warnings");
+        LineNumberReader reader = null;
         try {
-            LineNumberReader reader = new LineNumberReader(new InputStreamReader(new FileInputStream(input), "UTF-8"));
+            reader = new LineNumberReader(new InputStreamReader(new FileInputStream(input), "UTF-8"));
             String line = reader.readLine();
             if (line.startsWith("javac:warnings\t")) {
                 foundWarnings = line.replace("javac:warnings\t", "");
@@ -32,6 +33,14 @@ public class WarningSensor implements Sensor {
             throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
+        } finally {
+           if (reader != null) {
+               try {
+                  reader.close();
+               } catch (IOException e) {
+                   throw new RuntimeException(e);
+               }
+           }
         }
 
         if (StringUtils.isEmpty(foundWarnings)) {

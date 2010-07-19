@@ -25,7 +25,7 @@ public class WarningLoggerMojo extends DybdobMojo {
      * @parameter expression="${project.build.directory}/dybdob.warnings"
      * @required
      */
-    private File outputFile;
+    private File outputFile = null;
 
     private Writer writer;
 

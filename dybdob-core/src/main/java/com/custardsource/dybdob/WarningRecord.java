@@ -20,6 +20,7 @@ import org.hibernate.annotations.Index;
          */
         indexes = { @Index(name="idx_WarningRecord", columnNames = { "groupId", "artifactId", "version", "source", "metric", "dateLogged" } ) }
     )
+@SuppressWarnings("unused")
 public class WarningRecord {
     @Id
     private String id;

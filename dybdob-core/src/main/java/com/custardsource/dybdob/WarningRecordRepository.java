@@ -13,7 +13,6 @@ import org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBea
 
 public class WarningRecordRepository {
     private HibernateTemplate hibernateTemplate;
-    private DriverManagerDataSource dataSource;
 
     public WarningRecordRepository(String jdbcDriver, String jdbcConnection, String jdbcUser, String jdbcPassword, String hibernateDialect) {
         try {
@@ -21,7 +20,7 @@ public class WarningRecordRepository {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException("Cannot load specified JDBC driver: " + jdbcDriver, e);
         }
-        dataSource = new DriverManagerDataSource(jdbcConnection, jdbcUser, jdbcPassword);
+        DriverManagerDataSource dataSource=new DriverManagerDataSource(jdbcConnection, jdbcUser, jdbcPassword);
 
         AnnotationSessionFactoryBean sessionFactoryBean = new AnnotationSessionFactoryBean();
         sessionFactoryBean.setDataSource(dataSource);
