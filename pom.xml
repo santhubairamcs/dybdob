@@ -17,6 +17,7 @@
     <module>dybdob-detectors</module>
     <module>dybdob-mojo</module>
     <module>dybdob-sonar-plugin</module>
+      <module>dybdob-util-mojos</module>
   </modules>
   <url>http://code.google.com/p/dybdob/</url>
   <inceptionYear>2010</inceptionYear>
