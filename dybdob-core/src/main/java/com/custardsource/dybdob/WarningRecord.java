@@ -59,4 +59,9 @@ public class WarningRecord {
     public ProjectVersion projectVersion() {
         return projectVersion;
     }
+
+    @Override
+    public String toString() {
+        return source + ":" + warningCount;
+    }
 }

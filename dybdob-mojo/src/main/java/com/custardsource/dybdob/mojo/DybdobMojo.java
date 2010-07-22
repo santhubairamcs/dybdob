@@ -35,7 +35,7 @@ public abstract class DybdobMojo extends AbstractMojo {
      * @required
      */
     private List<Detector> detectors;
-    
+
     @Override
     public final void execute() throws MojoExecutionException, MojoFailureException {
         if (!mavenProject.getPackaging().equals("jar")) {
@@ -64,7 +64,11 @@ public abstract class DybdobMojo extends AbstractMojo {
         Collection<WarningRecord> records = warningDetector.getRecords(DybdobMojoUtils.buildProjectVersionFrom(mavenProject), logFile);
 
         for (WarningRecord record : records) {
-            checkSingleRecord(record, logFile, warningDetector);
+            if (detector.isCheckEnabled(record.source().getMetric())) {
+                checkSingleRecord(record, logFile, warningDetector);
+            } else {
+                getLog().debug("Skipping check for record " + record);
+            }
         }
     }
 
