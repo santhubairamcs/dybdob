@@ -129,8 +129,8 @@ public class WarningTrackerMojo extends DybdobMojo {
                 getLog().warn(String.format("Against my better judgement, forcing warning count increase for %s from %s to %s; new warnings:\n%s", record.source(), oldCount.warningCount(), record.warningCount(), diff));
                 recordWarningCountInDatabase(record);
             } else {
-                getLog().error(String.format("Failing build with increate for %s from %s to %s; changed warnings:\n%s", record.source(), oldCount.warningCount(), record.warningCount(), diff));
-                throw new MojoExecutionException(String.format("Failing build with %s warning count %s higher than previous mark of %s; see %s for warning details", record.source(), record.warningCount(), oldCount.warningCount(), logFile));
+                getLog().error(String.format("Failing build with increase for %s from %s to %s; changed warnings:\n%s", record.source(), oldCount.warningCount(), record.warningCount(), diff));
+                addFailure(String.format("Failing build with %s warning count %s higher than previous mark of %s; see %s for warning details", record.source(), record.warningCount(), oldCount.warningCount(), logFile));
             }
         }
     }
