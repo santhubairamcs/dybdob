@@ -11,7 +11,9 @@ import com.custardsource.dybdob.detectors.FindBugsDetector;
 import com.custardsource.dybdob.detectors.JavacWarningDetector;
 import com.custardsource.dybdob.detectors.PmdDetector;
 import com.custardsource.dybdob.detectors.WarningDetector;
+import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Lists;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
@@ -36,6 +38,8 @@ public abstract class DybdobMojo extends AbstractMojo {
      */
     private List<Detector> detectors;
 
+    private final List<String> failureMessages = Lists.newArrayList();
+
     @Override
     public final void execute() throws MojoExecutionException, MojoFailureException {
         if (!mavenProject.getPackaging().equals("jar")) {
@@ -55,6 +59,7 @@ public abstract class DybdobMojo extends AbstractMojo {
             getLog().debug("Running detector " + detector);
             checkWarningCountForDetector(detector);
         }
+        failIfAnyRecordFailures();
     }
 
     private void checkWarningCountForDetector(Detector detector) throws MojoExecutionException {
@@ -84,4 +89,15 @@ public abstract class DybdobMojo extends AbstractMojo {
     }
     
     protected abstract void initialize() throws MojoExecutionException;
+
+    void addFailure(String message) {
+        failureMessages.add(message);
+    }
+
+    private void failIfAnyRecordFailures() throws MojoExecutionException {
+        if (!failureMessages.isEmpty()) {
+            throw new MojoExecutionException("Failing with errors: \n" + Joiner.on("\n").join(failureMessages));
+        }
+    }
+
 }

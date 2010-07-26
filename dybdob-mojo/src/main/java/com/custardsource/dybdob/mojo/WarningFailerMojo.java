@@ -17,7 +17,7 @@ public class WarningFailerMojo extends DybdobMojo {
     protected void checkSingleRecord(WarningRecord record, File logFile, WarningDetector warningDetector) throws MojoExecutionException {
         int warningCount = record.warningCount();
         if (warningCount > 0) {
-            throw new MojoExecutionException(String.format("Failing build with warning count %s for metric %s, no warnings permitted; see %s for warning details", warningCount, record.source(), logFile));
+            addFailure(String.format("Failing build with warning count %s for metric %s, no warnings permitted; see %s for warning details", warningCount, record.source(), logFile));
         }
     }
 
