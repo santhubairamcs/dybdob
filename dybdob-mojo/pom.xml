@@ -20,7 +20,7 @@
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
-        <version>r05</version>
+        <version>r06</version>
       </dependency>
       <dependency>
         <groupId>org.apache.maven</groupId>
@@ -36,6 +36,11 @@
         <groupId>com.custardsource.dybdob</groupId>
         <artifactId>dybdob-detectors</artifactId>
         <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.googlecode.java-diff-utils</groupId>
+        <artifactId>diffutils</artifactId>
+        <version>1.2-SNAPSHOT</version>
       </dependency>
   </dependencies>
 </project>
