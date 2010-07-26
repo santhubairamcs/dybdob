@@ -1,11 +1,18 @@
 package com.custardsource.dybdob.mojo;
 
 import java.io.File;
+import java.util.List;
 
 import com.custardsource.dybdob.WarningRecord;
 import com.custardsource.dybdob.WarningRecordRepository;
 import com.custardsource.dybdob.detectors.WarningDetector;
+import com.google.common.base.CharMatcher;
+import com.google.common.base.Joiner;
+import com.google.common.base.Splitter;
 import com.google.common.base.Strings;
+import com.google.common.collect.Lists;
+import difflib.DiffUtils;
+import difflib.Patch;
 import org.apache.maven.plugin.MojoExecutionException;
 
 /**
@@ -15,6 +22,10 @@ import org.apache.maven.plugin.MojoExecutionException;
  * @phase verify
  */
 public class WarningTrackerMojo extends DybdobMojo {
+    private static final int DIFF_CONTEXT_LINES = 5;
+    private static final String DIFF_NEW_FILE_NAME = "new";
+    private static final String DIFF_OLD_FILE_NAME = "old";
+
     private static enum OperationMode {
         CHECK,
         TRACK,
@@ -93,7 +104,7 @@ public class WarningTrackerMojo extends DybdobMojo {
 
     @Override
     protected void checkSingleRecord(WarningRecord record, File logFile, WarningDetector warningDetector) throws MojoExecutionException {
-        Integer oldCount = oldWarningCountFor(record);
+        WarningRecord oldCount = oldWarningCountFor(record);
 
         boolean readOnly = (operationMode == OperationMode.CHECK);
 
@@ -105,21 +116,36 @@ public class WarningTrackerMojo extends DybdobMojo {
                 recordWarningCountInDatabase(record);
             }
         }
-        else if (record.warningCount() < oldCount) {
-            getLog().info(String.format("Well done! Warning count for %s decreased from %s to %s", record.source(), oldCount, record.warningCount()));
+        else if (record.warningCount() < oldCount.warningCount()) {
+            getLog().info(String.format("Well done! Warning count for %s decreased from %s to %s", record.source(), oldCount.warningCount(), record.warningCount()));
             if (!readOnly) {
                 recordWarningCountInDatabase(record);
             }
-        } else if (oldCount == record.warningCount()) {
+        } else if (oldCount.warningCount() == record.warningCount()) {
             getLog().info(String.format("Warning count for %s remains steady at %s", record.source(), record.warningCount()));
         } else {
+            String diff = generateDiff(oldCount, record);
             if (operationMode == OperationMode.FORCE) {
-                getLog().warn(String.format("Against my better judgement, forcing warning count increase for %s from %s to %s", record.source(), oldCount, record.warningCount()));
+                getLog().warn(String.format("Against my better judgement, forcing warning count increase for %s from %s to %s; new warnings:\n%s", record.source(), oldCount.warningCount(), record.warningCount(), diff));
                 recordWarningCountInDatabase(record);
             } else {
-                addFailure(String.format("Failing build with %s warning count %s higher than previous mark of %s; see %s for warning details", record.source(), record.warningCount(), oldCount, logFile));
+                getLog().error(String.format("Failing build with increate for %s from %s to %s; changed warnings:\n%s", record.source(), oldCount.warningCount(), record.warningCount(), diff));
+                throw new MojoExecutionException(String.format("Failing build with %s warning count %s higher than previous mark of %s; see %s for warning details", record.source(), record.warningCount(), oldCount.warningCount(), logFile));
             }
         }
+    }
+
+    private String generateDiff(WarningRecord oldCount, WarningRecord record) {
+        if (oldCount == null || oldCount.toolOutput() == null) {
+            return record.toolOutput();
+        }
+        Splitter splitter = Splitter.on(CharMatcher.anyOf("\r\n"));
+
+        List<String> oldLines = Lists.newArrayList(splitter.split(oldCount.toolOutput()));
+        List<String> newLines = Lists.newArrayList(splitter.split(record.toolOutput()));
+        Patch diffs = DiffUtils.diff(oldLines, newLines);
+        return Joiner.on("\n").join(DiffUtils.generateUnifiedDiff(DIFF_OLD_FILE_NAME, DIFF_NEW_FILE_NAME, oldLines,
+                diffs, DIFF_CONTEXT_LINES));
     }
 
     private void recordWarningCountInDatabase(WarningRecord record) {
@@ -127,8 +153,8 @@ public class WarningTrackerMojo extends DybdobMojo {
 
     }
 
-    private Integer oldWarningCountFor(WarningRecord record) {
-        return repository.lastWarningCountFor(record);
+    private WarningRecord oldWarningCountFor(WarningRecord record) {
+        return repository.lastWarningRecordFor(record);
     }
 
     @Override

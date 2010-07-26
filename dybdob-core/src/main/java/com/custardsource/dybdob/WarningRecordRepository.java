@@ -44,7 +44,7 @@ public class WarningRecordRepository {
     }
 
 
-    public Integer lastWarningCountFor(WarningRecord record) {
+    public WarningRecord lastWarningRecordFor(WarningRecord record) {
         DetachedCriteria c = DetachedCriteria.forClass(WarningRecord.class);
         ProjectVersion projectVersion = record.projectVersion();
         WarningSource source = record.source();
@@ -58,6 +58,6 @@ public class WarningRecordRepository {
         if (matches.isEmpty()) {
             return null;
         }
-        return matches.get(0).warningCount();
+        return matches.get(0);
     }
 }
