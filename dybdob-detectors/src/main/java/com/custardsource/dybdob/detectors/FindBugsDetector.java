@@ -56,4 +56,9 @@ public class FindBugsDetector extends AbstractDetector {
         NodeList results = (NodeList) xpath.evaluate(query, document, XPathConstants.NODESET);
         return results == null ? 0 : results.getLength();
     }
+
+    @Override
+    protected String readOutputFrom(File log) {
+        return super.readOutputFrom(log).replaceAll("<", "\n<");
+    }
 }
