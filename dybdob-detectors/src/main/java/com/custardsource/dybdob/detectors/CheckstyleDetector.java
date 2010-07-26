@@ -11,6 +11,6 @@ public class CheckstyleDetector extends LineMatchingDetector {
     private static final Pattern INFO_PATTERN = Pattern.compile("<error.*" + Pattern.quote("severity=\"info\"") + ".*");
 
     public CheckstyleDetector() {
-        super("checkstyle", ImmutableMap.of("all", ALL_PATTERN, "error", ERROR_PATTERN, "warning", WARNING_PATTERN, "info", INFO_PATTERN));
+        super("checkstyle", DiffAlgorithm.XML, ImmutableMap.of("all", ALL_PATTERN, "error", ERROR_PATTERN, "warning", WARNING_PATTERN, "info", INFO_PATTERN));
     }
 }

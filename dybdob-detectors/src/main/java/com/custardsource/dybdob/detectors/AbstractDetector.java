@@ -15,9 +15,11 @@ import com.google.common.io.Files;
 
 abstract class AbstractDetector implements WarningDetector {
     private final String id;
+    private final DiffAlgorithm diffAlgorithm;
 
-    protected AbstractDetector(String id) {
+    protected AbstractDetector(String id, DiffAlgorithm diffAlgorithm) {
         this.id = id;
+        this.diffAlgorithm = diffAlgorithm;
     }
 
     @Override
@@ -45,5 +47,9 @@ abstract class AbstractDetector implements WarningDetector {
         return id;
     }
 
+    public DiffAlgorithm getDiffAlgorithm() {
+        return this.diffAlgorithm;
+    }
+    
     protected abstract Map<String, Integer> getResultsFrom(File log);
 }

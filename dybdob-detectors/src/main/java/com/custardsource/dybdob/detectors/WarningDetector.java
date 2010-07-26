@@ -7,8 +7,9 @@ import com.custardsource.dybdob.ProjectVersion;
 import com.custardsource.dybdob.WarningRecord;
 
 public interface WarningDetector {
-    public String getId();
-    public Collection<WarningRecord> getRecords(ProjectVersion version, File log);
+    String getId();
+    Collection<WarningRecord> getRecords(ProjectVersion version, File log);
+    DiffAlgorithm getDiffAlgorithm();
 
     public static class CountException extends RuntimeException {
 
@@ -20,4 +21,5 @@ public interface WarningDetector {
             super(message, cause);
         }
     }
+
 }
