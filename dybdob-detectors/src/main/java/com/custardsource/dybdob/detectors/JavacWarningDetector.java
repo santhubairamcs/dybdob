@@ -8,7 +8,7 @@ public class JavacWarningDetector extends LineMatchingDetector {
     private static final Pattern WARNING_PATTERN = Pattern.compile(".*" + Pattern.quote(": warning: [") + ".*");
 
     public JavacWarningDetector() {
-        super("javac", DiffAlgorithm.TEXT, ImmutableMap.of("warnings", WARNING_PATTERN));
+        super("javac", new DiffAlgorithm.TextAlgorithm(), ImmutableMap.of("warnings", WARNING_PATTERN));
     }
 
 }

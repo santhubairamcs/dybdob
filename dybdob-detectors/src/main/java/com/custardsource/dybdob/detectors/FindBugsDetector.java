@@ -19,7 +19,7 @@ import org.xml.sax.SAXException;
 
 public class FindBugsDetector extends AbstractDetector {
     public FindBugsDetector() {
-        super("findbugs", DiffAlgorithm.XML);
+        super("findbugs", new DiffAlgorithm.XmlDiffAlgorithm());
     }
 
     @Override

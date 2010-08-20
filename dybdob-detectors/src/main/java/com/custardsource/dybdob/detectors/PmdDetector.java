@@ -24,7 +24,7 @@ public class PmdDetector extends LineMatchingDetector {
     }
 
     public PmdDetector() {
-        super("pmd", DiffAlgorithm.XML, ImmutableMap.copyOf(PATTERNS));
+        super("pmd", new DiffAlgorithm.XmlDiffAlgorithm(), ImmutableMap.copyOf(PATTERNS));
     }
 
 }
