@@ -36,10 +36,5 @@
         <artifactId>dybdob-detectors</artifactId>
         <version>${project.version}</version>
       </dependency>
-      <dependency>
-        <groupId>com.googlecode.java-diff-utils</groupId>
-        <artifactId>diffutils</artifactId>
-        <version>1.2-SNAPSHOT</version>
-      </dependency>
   </dependencies>
 </project>

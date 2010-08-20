@@ -12,8 +12,8 @@ import com.google.common.io.Files;
 class LineMatchingDetector extends AbstractDetector {
     private final Map<String, Pattern> metricMatchers;
 
-    protected LineMatchingDetector(String detectorName, Map<String, Pattern> metricMatchers) {
-        super(detectorName);
+    protected LineMatchingDetector(String detectorName, DiffAlgorithm diffAlgorithm, Map<String, Pattern> metricMatchers) {
+        super(detectorName, diffAlgorithm);
         this.metricMatchers = metricMatchers;
     }
 

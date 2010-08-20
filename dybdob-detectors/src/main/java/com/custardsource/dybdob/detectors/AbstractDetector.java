@@ -14,10 +14,12 @@ import com.google.common.collect.Collections2;
 import com.google.common.io.Files;
 
 abstract class AbstractDetector implements WarningDetector {
-    protected final String id;
+    private final String id;
+    private final DiffAlgorithm diffAlgorithm;
 
-    protected AbstractDetector(String id) {
+    protected AbstractDetector(String id, DiffAlgorithm diffAlgorithm) {
         this.id = id;
+        this.diffAlgorithm = diffAlgorithm;
     }
 
     @Override
@@ -32,7 +34,7 @@ abstract class AbstractDetector implements WarningDetector {
         });
     }
 
-    protected String readOutputFrom(File log) {
+    private String readOutputFrom(File log) {
         try {
             return Files.toString(log, Charsets.UTF_8);
         } catch (IOException e) {
@@ -45,5 +47,9 @@ abstract class AbstractDetector implements WarningDetector {
         return id;
     }
 
+    public DiffAlgorithm getDiffAlgorithm() {
+        return this.diffAlgorithm;
+    }
+    
     protected abstract Map<String, Integer> getResultsFrom(File log);
 }
