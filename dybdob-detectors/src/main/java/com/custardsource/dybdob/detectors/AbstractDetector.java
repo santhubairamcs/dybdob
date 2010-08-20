@@ -14,7 +14,7 @@ import com.google.common.collect.Collections2;
 import com.google.common.io.Files;
 
 abstract class AbstractDetector implements WarningDetector {
-    private final String id;
+    protected final String id;
 
     protected AbstractDetector(String id) {
         this.id = id;
