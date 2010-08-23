@@ -34,7 +34,7 @@ abstract class AbstractDetector implements WarningDetector {
         });
     }
 
-    private String readOutputFrom(File log) {
+    protected String readOutputFrom(File log) {
         try {
             return Files.toString(log, Charsets.UTF_8);
         } catch (IOException e) {

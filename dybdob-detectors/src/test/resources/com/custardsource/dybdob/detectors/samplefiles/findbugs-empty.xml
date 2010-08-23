@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BugCollection version='1.3.9' threshold='low' effort='min'><Error></Error><Project><SrcDir>/home/pcowan/intellij-workspace/maventest/test/src/main/java</SrcDir></Project></BugCollection>
