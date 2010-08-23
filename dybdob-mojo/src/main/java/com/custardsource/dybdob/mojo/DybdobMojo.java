@@ -66,7 +66,8 @@ public abstract class DybdobMojo extends AbstractMojo {
         File logFile = detector.logFile();
         WarningDetector warningDetector = getDetectorById(detector.id());
 
-        Collection<WarningRecord> records = warningDetector.getRecords(DybdobMojoUtils.buildProjectVersionFrom(mavenProject), logFile);
+        Collection<WarningRecord> records = warningDetector.getRecords(DybdobMojoUtils.buildProjectVersionFrom(mavenProject), logFile,
+                mavenProject.getBasedir());
 
         for (WarningRecord record : records) {
             if (detector.isCheckEnabled(record.source().getMetric())) {

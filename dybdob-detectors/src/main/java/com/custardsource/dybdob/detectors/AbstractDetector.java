@@ -21,13 +21,14 @@ abstract class AbstractDetector implements WarningDetector {
     }
 
     @Override
-    public final Collection<WarningRecord> getRecords(final ProjectVersion version, final File log) {
+    public final Collection<WarningRecord> getRecords(final ProjectVersion version, final File log, final File baseDir) {
         Map<String, Integer> results = getResultsFrom(log);
         final String rawOutput = readOutputFrom(log);
         return Collections2.transform(results.entrySet(), new Function<Map.Entry<String, Integer>, WarningRecord>(){
             @Override
             public WarningRecord apply(Map.Entry<String, Integer> from) {
-                return WarningRecord.newRecord(version, new WarningSource(id, from.getKey()), from.getValue(), rawOutput);
+                return WarningRecord.newRecord(version, new WarningSource(id, from.getKey()), from.getValue(), rawOutput,
+                        baseDir);
             }
         });
     }

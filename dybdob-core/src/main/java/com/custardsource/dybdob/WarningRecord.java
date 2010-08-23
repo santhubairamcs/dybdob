@@ -1,5 +1,6 @@
 package com.custardsource.dybdob;
 
+import java.io.File;
 import java.util.Date;
 import java.util.UUID;
 
@@ -40,10 +41,14 @@ public class WarningRecord {
     @Lob
     private String toolOutput;
 
+    @Column(length = 200)
+    private String executionPath;
+
     WarningRecord() {
     }
 
-    public static WarningRecord newRecord(ProjectVersion projectVersion, WarningSource source, int warningCount, String toolOutput) {
+    public static WarningRecord newRecord(ProjectVersion projectVersion, WarningSource source, int warningCount, String toolOutput,
+            File executionPath) {
         WarningRecord record = new WarningRecord();
         record.projectVersion = projectVersion;
         record.dateLogged = new Date();
@@ -51,6 +56,7 @@ public class WarningRecord {
         record.source = source;
         record.id = UUID.randomUUID() + "-" + System.nanoTime();
         record.toolOutput = toolOutput;
+        record.executionPath = executionPath.getAbsolutePath();
         return record;
     }
 
@@ -73,5 +79,9 @@ public class WarningRecord {
     @Override
     public String toString() {
         return source + ":" + warningCount;
+    }
+
+    public String executionPath() {
+        return executionPath;
     }
 }
