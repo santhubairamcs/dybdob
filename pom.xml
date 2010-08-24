@@ -26,4 +26,21 @@
     <developerConnection>scm:hg:https://dybdob.googlecode.com/hg</developerConnection>
     <url>http://code.google.com/p/dybdob/source/browse/</url>
   </scm>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>5.8</version>
+        <classifier>jdk15</classifier>
+        <optional>true</optional>
+      </dependency>
+      <dependency>
+        <groupId>org.hamcrest</groupId>
+        <artifactId>hamcrest-all</artifactId>
+        <version>1.1</version>
+        <optional>true</optional>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 </project>
