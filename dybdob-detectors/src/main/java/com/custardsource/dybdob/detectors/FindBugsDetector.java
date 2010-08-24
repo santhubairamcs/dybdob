@@ -1,8 +1,11 @@
 package com.custardsource.dybdob.detectors;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.Map;
+import com.google.common.base.Preconditions;
+import com.google.common.collect.Maps;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -11,11 +14,9 @@ import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
-
-import com.google.common.collect.Maps;
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
+import java.io.File;
+import java.io.IOException;
+import java.util.Map;
 
 public class FindBugsDetector extends AbstractDetector {
     public FindBugsDetector() {
@@ -24,7 +25,7 @@ public class FindBugsDetector extends AbstractDetector {
 
     @Override
     protected Map<String, Integer> getResultsFrom(File log) {
-        
+
         Map<String, Integer> results = Maps.newHashMap();
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         factory.setNamespaceAware(false);
@@ -35,10 +36,11 @@ public class FindBugsDetector extends AbstractDetector {
             XPathFactory xpathFactory = XPathFactory.newInstance();
             XPath xpath = xpathFactory.newXPath();
 
-            results.put("all", countMatches("//BugInstance", xpath, document));
-            results.put("high", countMatches("//BugInstance[@priority='High']", xpath, document));
-            results.put("normal", countMatches("//BugInstance[@priority='Normal']", xpath, document));
-            results.put("low", countMatches("//BugInstance[@priority='Low']", xpath, document));
+            Node summaryNode = getSummaryNode(xpath, document);
+            results.put("all", getIntAttribute(summaryNode, "total_bugs"));
+            results.put("high", getIntAttribute(summaryNode, "priority_1"));
+            results.put("normal", getIntAttribute(summaryNode, "priority_2"));
+            results.put("low", getIntAttribute(summaryNode, "priority_3"));
 
         } catch (ParserConfigurationException e) {
             throw new CountException("Could not parse findbugs XML " + log, e);
@@ -52,9 +54,14 @@ public class FindBugsDetector extends AbstractDetector {
         return results;
     }
 
-    private int countMatches(String query, XPath xpath, Document document) throws XPathExpressionException {
-        NodeList results = (NodeList) xpath.evaluate(query, document, XPathConstants.NODESET);
-        return results == null ? 0 : results.getLength();
+    private Integer getIntAttribute(Node node, String attributeName) {
+        return Integer.valueOf(node.getAttributes().getNamedItem(attributeName).getTextContent());
+    }
+
+    private Node getSummaryNode(XPath xpath, Document document) throws XPathExpressionException {
+        NodeList summaryNodes = (NodeList) xpath.evaluate("//FindBugsSummary", document, XPathConstants.NODESET);
+        Preconditions.checkArgument(summaryNodes.getLength() == 1, "Invalid length for summary node list %d", summaryNodes.getLength());
+        return summaryNodes.item(0);
     }
 
     @Override

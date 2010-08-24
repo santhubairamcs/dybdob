@@ -9,17 +9,29 @@
     <groupId>com.custardsource</groupId>
     <artifactId>dybdob</artifactId>
     <version>1.0.1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
   </parent>
   <dependencies>
-      <dependency>
-        <groupId>com.google.guava</groupId>
-        <artifactId>guava</artifactId>
-        <version>r05</version>
-      </dependency>
-      <dependency>
-        <groupId>com.custardsource.dybdob</groupId>
-        <artifactId>dybdob-core</artifactId>
-        <version>${project.version}</version>
-      </dependency>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>r05</version>
+    </dependency>
+    <dependency>
+      <groupId>com.custardsource.dybdob</groupId>
+      <artifactId>dybdob-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <classifier>jdk15</classifier>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest-all</artifactId>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 </project>
