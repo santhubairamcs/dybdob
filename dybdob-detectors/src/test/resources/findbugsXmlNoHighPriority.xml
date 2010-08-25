@@ -1,0 +1,1642 @@
+<BugCollection timestamp='1282545580000' analysisTimestamp='1282545593845' sequence='0' release='' version='1.3.9'>
+  <Project projectName=''>
+    <Jar>/home/ykulbak/dev/babylon-git/utilities/aconex-utils/target/classes</Jar>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/org/apache/maven/reporting/maven-reporting-impl/2.0/maven-reporting-impl-2.0.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/commons-validator/commons-validator/1.1.4/commons-validator-1.1.4.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/oro/oro/2.0.7/oro-2.0.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/doxia/doxia-core/1.0-alpha-4/doxia-core-1.0-alpha-4.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/org/apache/maven/shared/maven-doxia-tools/1.0/maven-doxia-tools-1.0.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/commons-io/commons-io/1.4/commons-io-1.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/org/apache/maven/doxia/doxia-decoration-model/1.0-alpha-11/doxia-decoration-model-1.0-alpha-11.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/org/codehaus/plexus/plexus-i18n/1.0-beta-7/plexus-i18n-1.0-beta-7.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/com/google/code/findbugs/findbugs-ant/1.3.9/findbugs-ant-1.3.9.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/com/google/code/findbugs/findbugs/1.3.9/findbugs-1.3.9.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/com/google/code/findbugs/bcel/1.3.9/bcel-1.3.9.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/com/google/code/findbugs/jFormatString/1.3.9/jFormatString-1.3.9.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/com/google/code/findbugs/annotations/1.3.9/annotations-1.3.9.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/jaxen/jaxen/1.1.1/jaxen-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/jdom/jdom/1.0/jdom-1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/xerces/xercesImpl/2.6.2/xercesImpl-2.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/xom/xom/1.0/xom-1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/xalan/xalan/2.6.0/xalan-2.6.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/com/ibm/icu/icu4j/2.6.1/icu4j-2.6.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/asm/asm/3.1/asm-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/asm/asm-analysis/3.1/asm-analysis-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/asm/asm-tree/3.1/asm-tree-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/asm/asm-commons/3.1/asm-commons-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/asm/asm-util/3.1/asm-util-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/asm/asm-xml/3.1/asm-xml-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/jgoodies/plastic/1.2.0/plastic-1.2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/org/codehaus/groovy/maven/gmaven-mojo/1.0-rc-3/gmaven-mojo-1.0-rc-3.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/org/codehaus/groovy/maven/runtime/gmaven-runtime-api/1.0-rc-3/gmaven-runtime-api-1.0-rc-3.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/org/codehaus/groovy/maven/feature/gmaven-feature-api/1.0-rc-3/gmaven-feature-api-1.0-rc-3.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/org/codehaus/groovy/maven/runtime/gmaven-runtime-default/1.0-rc-3/gmaven-runtime-default-1.0-rc-3.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/org/slf4j/slf4j-api/1.5.0/slf4j-api-1.5.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/org/codehaus/groovy/maven/runtime/gmaven-runtime-1.5/1.0-rc-3/gmaven-runtime-1.5-1.0-rc-3.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/org/codehaus/groovy/maven/feature/gmaven-feature-support/1.0-rc-3/gmaven-feature-support-1.0-rc-3.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/org/codehaus/groovy/maven/runtime/gmaven-runtime-support/1.0-rc-3/gmaven-runtime-support-1.0-rc-3.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/org/codehaus/groovy/maven/gmaven-common/1.0-rc-3/gmaven-common-1.0-rc-3.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/com/thoughtworks/qdox/qdox/1.6.3/qdox-1.6.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/org/codehaus/groovy/groovy-all-minimal/1.5.6/groovy-all-minimal-1.5.6.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/org/apache/ant/ant/1.7.1/ant-1.7.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/org/apache/ant/ant-launcher/1.7.1/ant-launcher-1.7.1.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/org/codehaus/plexus/plexus-resources/1.0-alpha-4/plexus-resources-1.0-alpha-4.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/dev/java/apache-maven-2.2.1/lib/maven-2.2.1-uber.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/com/aconex/utils/aconex-intelligent-test/1.0.0/aconex-intelligent-test-1.0.0.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/javax/mail/mail/1.4/mail-1.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/org/springframework/spring/2.5.6/spring-2.5.6.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/org/hibernate/hibernate-core/3.3.1.GA/hibernate-core-3.3.1.GA.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/antlr/antlr/2.7.6/antlr-2.7.6.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/javax/transaction/jta/1.1/jta-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/commons-codec/commons-codec/1.3/commons-codec-1.3.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/log4j/log4j/1.2.14/log4j-1.2.14.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/org/apache/ant/ant/1.7.0/ant-1.7.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/org/apache/ant/ant-launcher/1.7.0/ant-launcher-1.7.0.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/commons-dbutils/commons-dbutils/1.1/commons-dbutils-1.1.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/xpp3/xpp3_min/1.1.3.4.O/xpp3_min-1.1.3.4.O.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/org/apache/velocity/velocity/1.5/velocity-1.5.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/commons-math/commons-math/1.2/commons-math-1.2.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/org/apache/velocity/velocity-tools/1.3/velocity-tools-1.3.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/commons-digester/commons-digester/1.8/commons-digester-1.8.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/commons-validator/commons-validator/1.3.1/commons-validator-1.3.1.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/sslext/sslext/1.2-0/sslext-1.2-0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/struts/struts/1.2.9/struts-1.2.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/commons-fileupload/commons-fileupload/1.0/commons-fileupload-1.0.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/xalan/xalan/2.5.1/xalan-2.5.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/velocity/velocity/1.4/velocity-1.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/org/hibernate/hibernate-annotations/3.4.0.GA/hibernate-annotations-3.4.0.GA.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/org/hibernate/hibernate-commons-annotations/3.3.0.ga/hibernate-commons-annotations-3.3.0.ga.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/com/aconex/aconex-spring-utils/1.9/aconex-spring-utils-1.9.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/javax/persistence/persistence-api/1.0/persistence-api-1.0.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/com/aconex/utils/aconex-utils-lang/1.0.8/aconex-utils-lang-1.0.8.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/joda-time/joda-time/1.2.1.20071016/joda-time-1.2.1.20071016.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/com/aconex/utils/aconex-utils-collections/1.0.14/aconex-utils-collections-1.0.14.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/com/aconex/aconex-assert/1.3/aconex-assert-1.3.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/com/aconex/aconex-applicationexception/1.1/aconex-applicationexception-1.1.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/com/google/guava/guava/r05/guava-r05.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/com/aconex/utils/aconex-utils-db/1.2/aconex-utils-db-1.2.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/org/hamcrest/hamcrest-all/1.1/hamcrest-all-1.1.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/org/mockito/mockito-core/1.8.0/mockito-core-1.8.0.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/org/objenesis/objenesis/1.0/objenesis-1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/hsqldb/hsqldb/1.8.0.7/hsqldb-1.8.0.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/c3p0/c3p0/0.9.1.2/c3p0-0.9.1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/com/aconex/aconex-jtds/1.2.1.7/aconex-jtds-1.2.1.7.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/org/samba/jcifs/jcifs/1.2.15/jcifs-1.2.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/com/custardsource/parfait/parfait-core/0.2.2-SNAPSHOT/parfait-core-0.2.2-SNAPSHOT.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/javax/measure/jsr-275/0.9.1/jsr-275-0.9.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/com/custardsource/parfait/parfait-pcp/0.2.2-SNAPSHOT/parfait-pcp-0.2.2-SNAPSHOT.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/com/custardsource/parfait/dxm/0.2.2-SNAPSHOT/dxm-0.2.2-SNAPSHOT.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>
+      /home/ykulbak/.m2/repository/com/custardsource/parfait/parfait-spring/0.2.2-SNAPSHOT/parfait-spring-0.2.2-SNAPSHOT.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/org/aspectj/aspectjweaver/1.6.1/aspectjweaver-1.6.1.jar
+    </AuxClasspathEntry>
+    <AuxClasspathEntry>/home/ykulbak/.m2/repository/com/aconex/aconex-i18n-utils/1.0.10/aconex-i18n-utils-1.0.10.jar
+    </AuxClasspathEntry>
+    <SrcDir>/home/ykulbak/dev/babylon-git/utilities/aconex-utils/src/main/java</SrcDir>
+    <WrkDir>/home/ykulbak/dev/babylon-git/utilities/aconex-utils/target</WrkDir>
+  </Project>
+  <BugInstance category='CORRECTNESS' instanceHash='700a71ba286b5cae4962b2f59b772eb5' instanceOccurrenceNum='0' priority='2' abbrev='UwF' type='UWF_UNWRITTEN_FIELD' instanceOccurrenceMax='0'>
+    <ShortMessage>Unwritten field</ShortMessage>
+    <LongMessage>Unwritten field: com.aconex.db.JdbcSettingsMBean.instance</LongMessage>
+    <Class classname='com.aconex.db.JdbcSettingsMBean' primary='true'>
+      <SourceLine start='7' classname='com.aconex.db.JdbcSettingsMBean' sourcepath='com/aconex/db/JdbcSettingsMBean.java' sourcefile='JdbcSettingsMBean.java' end='37'>
+        <Message>At JdbcSettingsMBean.java:[lines 7-37]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.db.JdbcSettingsMBean</Message>
+    </Class>
+    <Field isStatic='true' classname='com.aconex.db.JdbcSettingsMBean' name='instance' primary='true' signature='Lcom/aconex/db/JdbcSettingsMBean;'>
+      <SourceLine classname='com.aconex.db.JdbcSettingsMBean' sourcepath='com/aconex/db/JdbcSettingsMBean.java' sourcefile='JdbcSettingsMBean.java'>
+        <Message>In JdbcSettingsMBean.java</Message>
+      </SourceLine>
+      <Message>Field com.aconex.db.JdbcSettingsMBean.instance</Message>
+    </Field>
+    <SourceLine endBytecode='0' startBytecode='0' start='12' classname='com.aconex.db.JdbcSettingsMBean' primary='true' sourcepath='com/aconex/db/JdbcSettingsMBean.java' sourcefile='JdbcSettingsMBean.java' end='12'>
+      <Message>At JdbcSettingsMBean.java:[line 12]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='STYLE' instanceHash='6dd87f6a319d350d0484b038ec9b6d08' instanceOccurrenceNum='0' priority='3' abbrev='REC' type='REC_CATCH_EXCEPTION' instanceOccurrenceMax='0'>
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in
+      com.aconex.db.LegacyService.installAsStaticInstance()
+    </LongMessage>
+    <Class classname='com.aconex.db.LegacyService' primary='true'>
+      <SourceLine start='31' classname='com.aconex.db.LegacyService' sourcepath='com/aconex/db/LegacyService.java' sourcefile='LegacyService.java' end='133'>
+        <Message>At LegacyService.java:[lines 31-133]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.db.LegacyService</Message>
+    </Class>
+    <Method isStatic='false' classname='com.aconex.db.LegacyService' name='installAsStaticInstance' primary='true' signature='()V'>
+      <SourceLine endBytecode='169' startBytecode='0' start='109' classname='com.aconex.db.LegacyService' sourcepath='com/aconex/db/LegacyService.java' sourcefile='LegacyService.java' end='116'></SourceLine>
+      <Message>In method com.aconex.db.LegacyService.installAsStaticInstance()</Message>
+    </Method>
+    <SourceLine endBytecode='52' startBytecode='52' start='113' classname='com.aconex.db.LegacyService' primary='true' sourcepath='com/aconex/db/LegacyService.java' sourcefile='LegacyService.java' end='113'>
+      <Message>At LegacyService.java:[line 113]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='STYLE' instanceHash='4d23aeaaf1a8a49ff660ee05e4542b9' instanceOccurrenceNum='0' priority='3' abbrev='REC' type='REC_CATCH_EXCEPTION' instanceOccurrenceMax='0'>
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in
+      com.aconex.db.LegacyService.uninstallAsStaticInstance()
+    </LongMessage>
+    <Class classname='com.aconex.db.LegacyService' primary='true'>
+      <SourceLine start='31' classname='com.aconex.db.LegacyService' sourcepath='com/aconex/db/LegacyService.java' sourcefile='LegacyService.java' end='133'>
+        <Message>At LegacyService.java:[lines 31-133]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.db.LegacyService</Message>
+    </Class>
+    <Method isStatic='false' classname='com.aconex.db.LegacyService' name='uninstallAsStaticInstance' primary='true' signature='()V'>
+      <SourceLine endBytecode='195' startBytecode='0' start='120' classname='com.aconex.db.LegacyService' sourcepath='com/aconex/db/LegacyService.java' sourcefile='LegacyService.java' end='128'></SourceLine>
+      <Message>In method com.aconex.db.LegacyService.uninstallAsStaticInstance()</Message>
+    </Method>
+    <SourceLine endBytecode='61' startBytecode='61' start='125' classname='com.aconex.db.LegacyService' primary='true' sourcepath='com/aconex/db/LegacyService.java' sourcefile='LegacyService.java' end='125'>
+      <Message>At LegacyService.java:[line 125]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='MALICIOUS_CODE' instanceHash='d4eafdd8d320bab2e1e0af42e567af45' instanceOccurrenceNum='0' priority='2' abbrev='EI2' type='EI_EXPOSE_REP2' instanceOccurrenceMax='0'>
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new com.aconex.db.hibernate.BaseInExpression(Object[], Criterion) may expose internal representation by
+      storing an externally mutable object into BaseInExpression.values
+    </LongMessage>
+    <Class classname='com.aconex.db.hibernate.BaseInExpression' primary='true'>
+      <SourceLine start='30' classname='com.aconex.db.hibernate.BaseInExpression' sourcepath='com/aconex/db/hibernate/BaseInExpression.java' sourcefile='BaseInExpression.java' end='99'>
+        <Message>At BaseInExpression.java:[lines 30-99]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.db.hibernate.BaseInExpression</Message>
+    </Class>
+    <Method isStatic='false' classname='com.aconex.db.hibernate.BaseInExpression' name='&lt;init&gt;' primary='true' signature='([Ljava/lang/Object;Lorg/hibernate/criterion/Criterion;)V'>
+      <SourceLine endBytecode='88' startBytecode='0' start='30' classname='com.aconex.db.hibernate.BaseInExpression' sourcepath='com/aconex/db/hibernate/BaseInExpression.java' sourcefile='BaseInExpression.java' end='33'></SourceLine>
+      <Message>In method new com.aconex.db.hibernate.BaseInExpression(Object[], Criterion)</Message>
+    </Method>
+    <Field isStatic='false' classname='com.aconex.db.hibernate.BaseInExpression' name='values' primary='true' signature='[Ljava/lang/Object;'>
+      <SourceLine classname='com.aconex.db.hibernate.BaseInExpression' sourcepath='com/aconex/db/hibernate/BaseInExpression.java' sourcefile='BaseInExpression.java'>
+        <Message>In BaseInExpression.java</Message>
+      </SourceLine>
+      <Message>Field com.aconex.db.hibernate.BaseInExpression.values</Message>
+    </Field>
+    <LocalVariable register='1' name='values' pc='6' role='LOCAL_VARIABLE_NAMED'>
+      <Message>Local variable named values</Message>
+    </LocalVariable>
+    <SourceLine endBytecode='6' startBytecode='6' start='31' classname='com.aconex.db.hibernate.BaseInExpression' primary='true' sourcepath='com/aconex/db/hibernate/BaseInExpression.java' sourcefile='BaseInExpression.java' end='31'>
+      <Message>At BaseInExpression.java:[line 31]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='MALICIOUS_CODE' instanceHash='8c159f580ea7284066808f78a827105e' instanceOccurrenceNum='0' priority='2' abbrev='EI' type='EI_EXPOSE_REP' instanceOccurrenceMax='0'>
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>com.aconex.db.usertypes.KeyedEnumUserType.sqlTypes() may expose internal representation by returning
+      KeyedEnumUserType.RETURN_TYPE
+    </LongMessage>
+    <Class classname='com.aconex.db.usertypes.KeyedEnumUserType' primary='true'>
+      <SourceLine start='37' classname='com.aconex.db.usertypes.KeyedEnumUserType' sourcepath='com/aconex/db/usertypes/KeyedEnumUserType.java' sourcefile='KeyedEnumUserType.java' end='150'>
+        <Message>At KeyedEnumUserType.java:[lines 37-150]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.db.usertypes.KeyedEnumUserType</Message>
+    </Class>
+    <Method isStatic='false' classname='com.aconex.db.usertypes.KeyedEnumUserType' name='sqlTypes' primary='true' signature='()[I'>
+      <SourceLine endBytecode='45' startBytecode='0' start='93' classname='com.aconex.db.usertypes.KeyedEnumUserType' sourcepath='com/aconex/db/usertypes/KeyedEnumUserType.java' sourcefile='KeyedEnumUserType.java' end='93'></SourceLine>
+      <Message>In method com.aconex.db.usertypes.KeyedEnumUserType.sqlTypes()</Message>
+    </Method>
+    <Field isStatic='true' classname='com.aconex.db.usertypes.KeyedEnumUserType' name='RETURN_TYPE' primary='true' signature='[I'>
+      <SourceLine classname='com.aconex.db.usertypes.KeyedEnumUserType' sourcepath='com/aconex/db/usertypes/KeyedEnumUserType.java' sourcefile='KeyedEnumUserType.java'>
+        <Message>In KeyedEnumUserType.java</Message>
+      </SourceLine>
+      <Message>Field com.aconex.db.usertypes.KeyedEnumUserType.RETURN_TYPE</Message>
+    </Field>
+    <SourceLine endBytecode='3' startBytecode='3' start='93' classname='com.aconex.db.usertypes.KeyedEnumUserType' primary='true' sourcepath='com/aconex/db/usertypes/KeyedEnumUserType.java' sourcefile='KeyedEnumUserType.java' end='93'>
+      <Message>At KeyedEnumUserType.java:[line 93]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='MALICIOUS_CODE' instanceHash='6cbe066798c4abb901a3d6e15aa0ec6b' instanceOccurrenceNum='0' priority='2' abbrev='EI' type='EI_EXPOSE_REP' instanceOccurrenceMax='0'>
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>com.aconex.db.usertypes.XStreamUserType.sqlTypes() may expose internal representation by returning
+      XStreamUserType.SQL_TYPES
+    </LongMessage>
+    <Class classname='com.aconex.db.usertypes.XStreamUserType' primary='true'>
+      <SourceLine start='27' classname='com.aconex.db.usertypes.XStreamUserType' sourcepath='com/aconex/db/usertypes/XStreamUserType.java' sourcefile='XStreamUserType.java' end='86'>
+        <Message>At XStreamUserType.java:[lines 27-86]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.db.usertypes.XStreamUserType</Message>
+    </Class>
+    <Method isStatic='false' classname='com.aconex.db.usertypes.XStreamUserType' name='sqlTypes' primary='true' signature='()[I'>
+      <SourceLine endBytecode='45' startBytecode='0' start='76' classname='com.aconex.db.usertypes.XStreamUserType' sourcepath='com/aconex/db/usertypes/XStreamUserType.java' sourcefile='XStreamUserType.java' end='76'></SourceLine>
+      <Message>In method com.aconex.db.usertypes.XStreamUserType.sqlTypes()</Message>
+    </Method>
+    <Field isStatic='true' classname='com.aconex.db.usertypes.XStreamUserType' name='SQL_TYPES' primary='true' signature='[I'>
+      <SourceLine classname='com.aconex.db.usertypes.XStreamUserType' sourcepath='com/aconex/db/usertypes/XStreamUserType.java' sourcefile='XStreamUserType.java'>
+        <Message>In XStreamUserType.java</Message>
+      </SourceLine>
+      <Message>Field com.aconex.db.usertypes.XStreamUserType.SQL_TYPES</Message>
+    </Field>
+    <SourceLine endBytecode='3' startBytecode='3' start='76' classname='com.aconex.db.usertypes.XStreamUserType' primary='true' sourcepath='com/aconex/db/usertypes/XStreamUserType.java' sourcefile='XStreamUserType.java' end='76'>
+      <Message>At XStreamUserType.java:[line 76]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='MT_CORRECTNESS' instanceHash='9b40d3bceffe850e64c00078ddebc8f5' instanceOccurrenceNum='0' priority='3' abbrev='IS' type='IS2_INCONSISTENT_SYNC' instanceOccurrenceMax='0'>
+    <ShortMessage>Inconsistent synchronization</ShortMessage>
+    <LongMessage>Inconsistent synchronization of com.aconex.lockable.LockableSupport.lockedPermanently; locked 66% of
+      time
+    </LongMessage>
+    <Class classname='com.aconex.lockable.LockableSupport' primary='true'>
+      <SourceLine start='13' classname='com.aconex.lockable.LockableSupport' sourcepath='com/aconex/lockable/LockableSupport.java' sourcefile='LockableSupport.java' end='77'>
+        <Message>At LockableSupport.java:[lines 13-77]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.lockable.LockableSupport</Message>
+    </Class>
+    <Field isStatic='false' classname='com.aconex.lockable.LockableSupport' name='lockedPermanently' primary='true' signature='Z'>
+      <SourceLine classname='com.aconex.lockable.LockableSupport' sourcepath='com/aconex/lockable/LockableSupport.java' sourcefile='LockableSupport.java'>
+        <Message>In LockableSupport.java</Message>
+      </SourceLine>
+      <Message>Field com.aconex.lockable.LockableSupport.lockedPermanently</Message>
+    </Field>
+    <Int value='66' role='INT_SYNC_PERCENT'>
+      <Message>Synchronized 66% of the time</Message>
+    </Int>
+    <SourceLine endBytecode='1' startBytecode='1' start='34' classname='com.aconex.lockable.LockableSupport' primary='true' sourcepath='com/aconex/lockable/LockableSupport.java' role='SOURCE_LINE_UNSYNC_ACCESS' sourcefile='LockableSupport.java' end='34'>
+      <Message>Unsynchronized access at LockableSupport.java:[line 34]</Message>
+    </SourceLine>
+    <SourceLine endBytecode='2' startBytecode='2' start='50' classname='com.aconex.lockable.LockableSupport' sourcepath='com/aconex/lockable/LockableSupport.java' role='SOURCE_LINE_SYNC_ACCESS' sourcefile='LockableSupport.java' end='50'>
+      <Message>Synchronized access at LockableSupport.java:[line 50]</Message>
+    </SourceLine>
+    <SourceLine endBytecode='11' startBytecode='11' start='15' classname='com.aconex.lockable.LockableSupport' sourcepath='com/aconex/lockable/LockableSupport.java' role='SOURCE_LINE_SYNC_ACCESS' sourcefile='LockableSupport.java' end='15'>
+      <Message>Synchronized access at LockableSupport.java:[line 15]</Message>
+    </SourceLine>
+    <SourceLine endBytecode='1' startBytecode='1' start='61' classname='com.aconex.lockable.LockableSupport' sourcepath='com/aconex/lockable/LockableSupport.java' role='SOURCE_LINE_SYNC_ACCESS' sourcefile='LockableSupport.java' end='61'>
+      <Message>Synchronized access at LockableSupport.java:[line 61]</Message>
+    </SourceLine>
+    <Property name='edu.umd.cs.findbugs.detect.InconsistentSyncWarningProperty.ONLY_UNSYNC_IN_GETTERS' value='true'></Property>
+  </BugInstance>
+  <BugInstance category='BAD_PRACTICE' instanceHash='7450e7e4f7615faea8e7c626fd718cd5' instanceOccurrenceNum='0' priority='2' abbrev='Se' type='SE_INNER_CLASS' instanceOccurrenceMax='0'>
+    <ShortMessage>Serializable inner class</ShortMessage>
+    <LongMessage>com.aconex.pdf.jobTicket.XMLElement$AllowedStringsPredicate is serializable and an inner class
+    </LongMessage>
+    <Class classname='com.aconex.pdf.jobTicket.XMLElement$AllowedStringsPredicate' primary='true'>
+      <SourceLine start='156' classname='com.aconex.pdf.jobTicket.XMLElement$AllowedStringsPredicate' sourcepath='com/aconex/pdf/jobTicket/XMLElement.java' sourcefile='XMLElement.java' end='175'>
+        <Message>At XMLElement.java:[lines 156-175]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.pdf.jobTicket.XMLElement$AllowedStringsPredicate</Message>
+    </Class>
+    <SourceLine start='156' classname='com.aconex.pdf.jobTicket.XMLElement$AllowedStringsPredicate' sourcepath='com/aconex/pdf/jobTicket/XMLElement.java' synthetic='true' sourcefile='XMLElement.java' end='175'>
+      <Message>At XMLElement.java:[lines 156-175]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='PERFORMANCE' instanceHash='fcc958dd49589a3a85dab990634c275c' instanceOccurrenceNum='0' priority='2' abbrev='SIC' type='SIC_INNER_SHOULD_BE_STATIC' instanceOccurrenceMax='0'>
+    <ShortMessage>Should be a static inner class</ShortMessage>
+    <LongMessage>Should com.aconex.pdf.jobTicket.XMLElement$AllowedStringsPredicate be a _static_ inner class?
+    </LongMessage>
+    <Class classname='com.aconex.pdf.jobTicket.XMLElement$AllowedStringsPredicate' primary='true'>
+      <SourceLine start='156' classname='com.aconex.pdf.jobTicket.XMLElement$AllowedStringsPredicate' sourcepath='com/aconex/pdf/jobTicket/XMLElement.java' sourcefile='XMLElement.java' end='175'>
+        <Message>At XMLElement.java:[lines 156-175]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.pdf.jobTicket.XMLElement$AllowedStringsPredicate</Message>
+    </Class>
+    <SourceLine start='156' classname='com.aconex.pdf.jobTicket.XMLElement$AllowedStringsPredicate' sourcepath='com/aconex/pdf/jobTicket/XMLElement.java' synthetic='true' sourcefile='XMLElement.java' end='175'>
+      <Message>At XMLElement.java:[lines 156-175]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='BAD_PRACTICE' instanceHash='12b2510f81587883108009bfd6cf8631' instanceOccurrenceNum='0' priority='1' abbrev='Nm' type='NM_SAME_SIMPLE_NAME_AS_SUPERCLASS' instanceOccurrenceMax='0'>
+    <ShortMessage>Class names shouldn't shadow simple name of superclass</ShortMessage>
+    <LongMessage>The class name com.aconex.utilities.BeanUtils shadows the simple name of the superclass
+      org.apache.commons.beanutils.BeanUtils
+    </LongMessage>
+    <Class classname='com.aconex.utilities.BeanUtils' primary='true'>
+      <SourceLine start='13' classname='com.aconex.utilities.BeanUtils' sourcepath='com/aconex/utilities/BeanUtils.java' sourcefile='BeanUtils.java' end='32'>
+        <Message>At BeanUtils.java:[lines 13-32]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.BeanUtils</Message>
+    </Class>
+    <Class classname='org.apache.commons.beanutils.BeanUtils'>
+      <SourceLine start='42' classname='org.apache.commons.beanutils.BeanUtils' sourcepath='org/apache/commons/beanutils/BeanUtils.java' sourcefile='BeanUtils.java' end='314'>
+        <Message>At BeanUtils.java:[lines 42-314]</Message>
+      </SourceLine>
+      <Message>In class org.apache.commons.beanutils.BeanUtils</Message>
+    </Class>
+    <SourceLine start='13' classname='com.aconex.utilities.BeanUtils' sourcepath='com/aconex/utilities/BeanUtils.java' synthetic='true' sourcefile='BeanUtils.java' end='32'>
+      <Message>At BeanUtils.java:[lines 13-32]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='BAD_PRACTICE' instanceHash='291b69d322e177eaaa3f2b8ab2ac80f' instanceOccurrenceNum='0' priority='1' abbrev='Nm' type='NM_SAME_SIMPLE_NAME_AS_SUPERCLASS' instanceOccurrenceMax='0'>
+    <ShortMessage>Class names shouldn't shadow simple name of superclass</ShortMessage>
+    <LongMessage>The class name com.aconex.utilities.NumberUtils shadows the simple name of the superclass
+      org.apache.commons.lang.math.NumberUtils
+    </LongMessage>
+    <Class classname='com.aconex.utilities.NumberUtils' primary='true'>
+      <SourceLine start='3' classname='com.aconex.utilities.NumberUtils' sourcepath='com/aconex/utilities/NumberUtils.java' sourcefile='NumberUtils.java' end='19'>
+        <Message>At NumberUtils.java:[lines 3-19]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.NumberUtils</Message>
+    </Class>
+    <Class classname='org.apache.commons.lang.math.NumberUtils'>
+      <SourceLine start='41' classname='org.apache.commons.lang.math.NumberUtils' sourcepath='org/apache/commons/lang/math/NumberUtils.java' sourcefile='NumberUtils.java' end='1479'>
+        <Message>At NumberUtils.java:[lines 41-1479]</Message>
+      </SourceLine>
+      <Message>In class org.apache.commons.lang.math.NumberUtils</Message>
+    </Class>
+    <SourceLine start='3' classname='com.aconex.utilities.NumberUtils' sourcepath='com/aconex/utilities/NumberUtils.java' synthetic='true' sourcefile='NumberUtils.java' end='19'>
+      <Message>At NumberUtils.java:[lines 3-19]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='BAD_PRACTICE' instanceHash='4df0695eacb85cd9e071c34b0a4d9870' instanceOccurrenceNum='0' priority='1' abbrev='Nm' type='NM_SAME_SIMPLE_NAME_AS_SUPERCLASS' instanceOccurrenceMax='0'>
+    <ShortMessage>Class names shouldn't shadow simple name of superclass</ShortMessage>
+    <LongMessage>The class name com.aconex.utilities.StringEscapeUtils shadows the simple name of the superclass
+      org.apache.commons.lang.StringEscapeUtils
+    </LongMessage>
+    <Class classname='com.aconex.utilities.StringEscapeUtils' primary='true'>
+      <SourceLine start='9' classname='com.aconex.utilities.StringEscapeUtils' sourcepath='com/aconex/utilities/StringEscapeUtils.java' sourcefile='StringEscapeUtils.java' end='35'>
+        <Message>At StringEscapeUtils.java:[lines 9-35]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.StringEscapeUtils</Message>
+    </Class>
+    <Class classname='org.apache.commons.lang.StringEscapeUtils'>
+      <SourceLine start='45' classname='org.apache.commons.lang.StringEscapeUtils' sourcepath='org/apache/commons/lang/StringEscapeUtils.java' sourcefile='StringEscapeUtils.java' end='858'>
+        <Message>At StringEscapeUtils.java:[lines 45-858]</Message>
+      </SourceLine>
+      <Message>In class org.apache.commons.lang.StringEscapeUtils</Message>
+    </Class>
+    <SourceLine start='9' classname='com.aconex.utilities.StringEscapeUtils' sourcepath='com/aconex/utilities/StringEscapeUtils.java' synthetic='true' sourcefile='StringEscapeUtils.java' end='35'>
+      <Message>At StringEscapeUtils.java:[lines 9-35]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='MALICIOUS_CODE' instanceHash='14eaa16dd47838de6319b1b27953b534' instanceOccurrenceNum='0' priority='2' abbrev='EI2' type='EI_EXPOSE_REP2' instanceOccurrenceMax='0'>
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>com.aconex.utilities.TimingStatistics.recordEvent(Date) may expose internal representation by storing
+      an externally mutable object into TimingStatistics.lastEventStart
+    </LongMessage>
+    <Class classname='com.aconex.utilities.TimingStatistics' primary='true'>
+      <SourceLine start='25' classname='com.aconex.utilities.TimingStatistics' sourcepath='com/aconex/utilities/TimingStatistics.java' sourcefile='TimingStatistics.java' end='121'>
+        <Message>At TimingStatistics.java:[lines 25-121]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.TimingStatistics</Message>
+    </Class>
+    <Method isStatic='false' classname='com.aconex.utilities.TimingStatistics' name='recordEvent' primary='true' signature='(Ljava/util/Date;)V'>
+      <SourceLine endBytecode='212' startBytecode='0' start='86' classname='com.aconex.utilities.TimingStatistics' sourcepath='com/aconex/utilities/TimingStatistics.java' sourcefile='TimingStatistics.java' end='94'></SourceLine>
+      <Message>In method com.aconex.utilities.TimingStatistics.recordEvent(Date)</Message>
+    </Method>
+    <Field isStatic='false' classname='com.aconex.utilities.TimingStatistics' name='lastEventStart' primary='true' signature='Ljava/util/Date;'>
+      <SourceLine classname='com.aconex.utilities.TimingStatistics' sourcepath='com/aconex/utilities/TimingStatistics.java' sourcefile='TimingStatistics.java'>
+        <Message>In TimingStatistics.java</Message>
+      </SourceLine>
+      <Message>Field com.aconex.utilities.TimingStatistics.lastEventStart</Message>
+    </Field>
+    <LocalVariable register='1' name='eventStart' pc='68' role='LOCAL_VARIABLE_NAMED'>
+      <Message>Local variable named eventStart</Message>
+    </LocalVariable>
+    <SourceLine endBytecode='68' startBytecode='68' start='92' classname='com.aconex.utilities.TimingStatistics' primary='true' sourcepath='com/aconex/utilities/TimingStatistics.java' sourcefile='TimingStatistics.java' end='92'>
+      <Message>At TimingStatistics.java:[line 92]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='STYLE' instanceHash='37142248cb7bd8f07c0a7bc2743eb416' instanceOccurrenceNum='0' priority='3' abbrev='REC' type='REC_CATCH_EXCEPTION' instanceOccurrenceMax='0'>
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in com.aconex.utilities.URLUtils.isDir(String)
+    </LongMessage>
+    <Class classname='com.aconex.utilities.URLUtils' primary='true'>
+      <SourceLine start='22' classname='com.aconex.utilities.URLUtils' sourcepath='com/aconex/utilities/URLUtils.java' sourcefile='URLUtils.java' end='346'>
+        <Message>At URLUtils.java:[lines 22-346]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.URLUtils</Message>
+    </Class>
+    <Method isStatic='true' classname='com.aconex.utilities.URLUtils' name='isDir' primary='true' signature='(Ljava/lang/String;)Z'>
+      <SourceLine endBytecode='280' startBytecode='0' start='217' classname='com.aconex.utilities.URLUtils' sourcepath='com/aconex/utilities/URLUtils.java' sourcefile='URLUtils.java' end='237'></SourceLine>
+      <Message>In method com.aconex.utilities.URLUtils.isDir(String)</Message>
+    </Method>
+    <SourceLine endBytecode='86' startBytecode='86' start='235' classname='com.aconex.utilities.URLUtils' primary='true' sourcepath='com/aconex/utilities/URLUtils.java' sourcefile='URLUtils.java' end='235'>
+      <Message>At URLUtils.java:[line 235]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='STYLE' instanceHash='392eae7778bff9ffdf48af0f265c5898' instanceOccurrenceNum='0' priority='3' abbrev='REC' type='REC_CATCH_EXCEPTION' instanceOccurrenceMax='0'>
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in
+      com.aconex.utilities.XMLUtils.addElement(StringBuffer, String, Date)
+    </LongMessage>
+    <Class classname='com.aconex.utilities.XMLUtils' primary='true'>
+      <SourceLine start='14' classname='com.aconex.utilities.XMLUtils' sourcepath='com/aconex/utilities/XMLUtils.java' sourcefile='XMLUtils.java' end='66'>
+        <Message>At XMLUtils.java:[lines 14-66]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.XMLUtils</Message>
+    </Class>
+    <Method isStatic='true' classname='com.aconex.utilities.XMLUtils' name='addElement' primary='true' signature='(Ljava/lang/StringBuffer;Ljava/lang/String;Ljava/util/Date;)V'>
+      <SourceLine endBytecode='229' startBytecode='0' start='46' classname='com.aconex.utilities.XMLUtils' sourcepath='com/aconex/utilities/XMLUtils.java' sourcefile='XMLUtils.java' end='54'></SourceLine>
+      <Message>In method com.aconex.utilities.XMLUtils.addElement(StringBuffer, String, Date)</Message>
+    </Method>
+    <SourceLine endBytecode='62' startBytecode='62' start='51' classname='com.aconex.utilities.XMLUtils' primary='true' sourcepath='com/aconex/utilities/XMLUtils.java' sourcefile='XMLUtils.java' end='51'>
+      <Message>At XMLUtils.java:[line 51]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='I18N' instanceHash='2ca213d29bd65438d6c98b9f0fb0acee' instanceOccurrenceNum='0' priority='3' abbrev='Dm' type='DM_CONVERT_CASE' instanceOccurrenceMax='0'>
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase</LongMessage>
+    <Class classname='com.aconex.utilities.browser.BrowserProperties' primary='true'>
+      <SourceLine start='34' classname='com.aconex.utilities.browser.BrowserProperties' sourcepath='com/aconex/utilities/browser/BrowserProperties.java' sourcefile='BrowserProperties.java' end='222'>
+        <Message>At BrowserProperties.java:[lines 34-222]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.browser.BrowserProperties</Message>
+    </Class>
+    <Method isStatic='false' classname='com.aconex.utilities.browser.BrowserProperties' name='setUserAgent' primary='true' signature='(Ljava/lang/String;)V'>
+      <SourceLine endBytecode='64' startBytecode='0' start='63' classname='com.aconex.utilities.browser.BrowserProperties' sourcepath='com/aconex/utilities/browser/BrowserProperties.java' sourcefile='BrowserProperties.java' end='64'></SourceLine>
+      <Message>In method com.aconex.utilities.browser.BrowserProperties.setUserAgent(String)</Message>
+    </Method>
+    <SourceLine endBytecode='2' startBytecode='2' start='63' classname='com.aconex.utilities.browser.BrowserProperties' primary='true' sourcepath='com/aconex/utilities/browser/BrowserProperties.java' sourcefile='BrowserProperties.java' end='63'>
+      <Message>At BrowserProperties.java:[line 63]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='BAD_PRACTICE' instanceHash='e9cbb778c764ba18611328bf751e682f' instanceOccurrenceNum='0' priority='3' abbrev='ES' type='ES_COMPARING_STRINGS_WITH_EQ' instanceOccurrenceMax='0'>
+    <ShortMessage>Comparison of String objects using == or !=</ShortMessage>
+    <LongMessage>Comparison of String objects using == or != in com.aconex.utilities.browser.BrowserProperties.setName()
+    </LongMessage>
+    <Class classname='com.aconex.utilities.browser.BrowserProperties' primary='true'>
+      <SourceLine start='34' classname='com.aconex.utilities.browser.BrowserProperties' sourcepath='com/aconex/utilities/browser/BrowserProperties.java' sourcefile='BrowserProperties.java' end='222'>
+        <Message>At BrowserProperties.java:[lines 34-222]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.browser.BrowserProperties</Message>
+    </Class>
+    <Method isStatic='false' classname='com.aconex.utilities.browser.BrowserProperties' name='setName' primary='true' signature='()V'>
+      <SourceLine endBytecode='45' startBytecode='0' start='88' classname='com.aconex.utilities.browser.BrowserProperties' sourcepath='com/aconex/utilities/browser/BrowserProperties.java' sourcefile='BrowserProperties.java' end='101'></SourceLine>
+      <Message>In method com.aconex.utilities.browser.BrowserProperties.setName()</Message>
+    </Method>
+    <Type descriptor='Ljava/lang/String;' role='TYPE_FOUND'>
+      <SourceLine start='92' classname='java.lang.String' sourcepath='java/lang/String.java' sourcefile='String.java' end='2973'>
+        <Message>At String.java:[lines 92-2973]</Message>
+      </SourceLine>
+      <Message>Actual type String</Message>
+    </Type>
+    <SourceLine endBytecode='6' startBytecode='6' start='88' classname='com.aconex.utilities.browser.BrowserProperties' primary='true' sourcepath='com/aconex/utilities/browser/BrowserProperties.java' sourcefile='BrowserProperties.java' end='88'>
+      <Message>At BrowserProperties.java:[line 88]</Message>
+    </SourceLine>
+    <SourceLine endBytecode='24' startBytecode='24' start='90' classname='com.aconex.utilities.browser.BrowserProperties' sourcepath='com/aconex/utilities/browser/BrowserProperties.java' role='SOURCE_LINE_ANOTHER_INSTANCE' sourcefile='BrowserProperties.java' end='90'>
+      <Message>Another occurrence at BrowserProperties.java:[line 90]</Message>
+    </SourceLine>
+    <SourceLine endBytecode='42' startBytecode='42' start='92' classname='com.aconex.utilities.browser.BrowserProperties' sourcepath='com/aconex/utilities/browser/BrowserProperties.java' role='SOURCE_LINE_ANOTHER_INSTANCE' sourcefile='BrowserProperties.java' end='92'>
+      <Message>Another occurrence at BrowserProperties.java:[line 92]</Message>
+    </SourceLine>
+    <SourceLine endBytecode='82' startBytecode='82' start='96' classname='com.aconex.utilities.browser.BrowserProperties' sourcepath='com/aconex/utilities/browser/BrowserProperties.java' role='SOURCE_LINE_ANOTHER_INSTANCE' sourcefile='BrowserProperties.java' end='96'>
+      <Message>Another occurrence at BrowserProperties.java:[line 96]</Message>
+    </SourceLine>
+    <Property name='edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_UNKNOWN' value='true'></Property>
+  </BugInstance>
+  <BugInstance category='BAD_PRACTICE' instanceHash='2336d7e503ab8b66bd8bfc2cbcc0a2ae' instanceOccurrenceNum='0' priority='3' abbrev='ES' type='ES_COMPARING_STRINGS_WITH_EQ' instanceOccurrenceMax='0'>
+    <ShortMessage>Comparison of String objects using == or !=</ShortMessage>
+    <LongMessage>Comparison of String objects using == or != in
+      com.aconex.utilities.browser.BrowserProperties.setVersion()
+    </LongMessage>
+    <Class classname='com.aconex.utilities.browser.BrowserProperties' primary='true'>
+      <SourceLine start='34' classname='com.aconex.utilities.browser.BrowserProperties' sourcepath='com/aconex/utilities/browser/BrowserProperties.java' sourcefile='BrowserProperties.java' end='222'>
+        <Message>At BrowserProperties.java:[lines 34-222]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.browser.BrowserProperties</Message>
+    </Class>
+    <Method isStatic='false' classname='com.aconex.utilities.browser.BrowserProperties' name='setVersion' primary='true' signature='()V'>
+      <SourceLine endBytecode='50' startBytecode='0' start='114' classname='com.aconex.utilities.browser.BrowserProperties' sourcepath='com/aconex/utilities/browser/BrowserProperties.java' sourcefile='BrowserProperties.java' end='122'></SourceLine>
+      <Message>In method com.aconex.utilities.browser.BrowserProperties.setVersion()</Message>
+    </Method>
+    <Type descriptor='Ljava/lang/String;' role='TYPE_FOUND'>
+      <SourceLine start='92' classname='java.lang.String' sourcepath='java/lang/String.java' sourcefile='String.java' end='2973'>
+        <Message>At String.java:[lines 92-2973]</Message>
+      </SourceLine>
+      <Message>Actual type String</Message>
+    </Type>
+    <SourceLine endBytecode='6' startBytecode='6' start='114' classname='com.aconex.utilities.browser.BrowserProperties' primary='true' sourcepath='com/aconex/utilities/browser/BrowserProperties.java' sourcefile='BrowserProperties.java' end='114'>
+      <Message>At BrowserProperties.java:[line 114]</Message>
+    </SourceLine>
+    <Property name='edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.STATIC_AND_UNKNOWN' value='true'></Property>
+  </BugInstance>
+  <BugInstance category='I18N' instanceHash='434646ef370f5fe0483988cb6e01db45' instanceOccurrenceNum='0' priority='3' abbrev='Dm' type='DM_CONVERT_CASE' instanceOccurrenceMax='0'>
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase</LongMessage>
+    <Class classname='com.aconex.utilities.browser.BrowserSniffer' primary='true'>
+      <SourceLine start='13' classname='com.aconex.utilities.browser.BrowserSniffer' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='305'>
+        <Message>At BrowserSniffer.java:[lines 13-305]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.browser.BrowserSniffer</Message>
+    </Class>
+    <Method isStatic='true' classname='com.aconex.utilities.browser.BrowserSniffer' name='is_ie' primary='true' signature='(Ljavax/servlet/http/HttpServletRequest;)Z'>
+      <SourceLine endBytecode='139' startBytecode='0' start='60' classname='com.aconex.utilities.browser.BrowserSniffer' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='75'></SourceLine>
+      <Message>In method com.aconex.utilities.browser.BrowserSniffer.is_ie(HttpServletRequest)</Message>
+    </Method>
+    <SourceLine endBytecode='22' startBytecode='22' start='70' classname='com.aconex.utilities.browser.BrowserSniffer' primary='true' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='70'>
+      <Message>At BrowserSniffer.java:[line 70]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='I18N' instanceHash='45d59ba7b7f5f6080737550f66bd1065' instanceOccurrenceNum='0' priority='3' abbrev='Dm' type='DM_CONVERT_CASE' instanceOccurrenceMax='0'>
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase</LongMessage>
+    <Class classname='com.aconex.utilities.browser.BrowserSniffer' primary='true'>
+      <SourceLine start='13' classname='com.aconex.utilities.browser.BrowserSniffer' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='305'>
+        <Message>At BrowserSniffer.java:[lines 13-305]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.browser.BrowserSniffer</Message>
+    </Class>
+    <Method isStatic='true' classname='com.aconex.utilities.browser.BrowserSniffer' name='is_ie_4' primary='true' signature='(Ljavax/servlet/http/HttpServletRequest;)Z'>
+      <SourceLine endBytecode='146' startBytecode='0' start='87' classname='com.aconex.utilities.browser.BrowserSniffer' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='102'></SourceLine>
+      <Message>In method com.aconex.utilities.browser.BrowserSniffer.is_ie_4(HttpServletRequest)</Message>
+    </Method>
+    <SourceLine endBytecode='22' startBytecode='22' start='97' classname='com.aconex.utilities.browser.BrowserSniffer' primary='true' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='97'>
+      <Message>At BrowserSniffer.java:[line 97]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='I18N' instanceHash='db1c2266ed743a840341d0ede66c9eb6' instanceOccurrenceNum='0' priority='3' abbrev='Dm' type='DM_CONVERT_CASE' instanceOccurrenceMax='0'>
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase</LongMessage>
+    <Class classname='com.aconex.utilities.browser.BrowserSniffer' primary='true'>
+      <SourceLine start='13' classname='com.aconex.utilities.browser.BrowserSniffer' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='305'>
+        <Message>At BrowserSniffer.java:[lines 13-305]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.browser.BrowserSniffer</Message>
+    </Class>
+    <Method isStatic='true' classname='com.aconex.utilities.browser.BrowserSniffer' name='is_ie_5' primary='true' signature='(Ljavax/servlet/http/HttpServletRequest;)Z'>
+      <SourceLine endBytecode='146' startBytecode='0' start='114' classname='com.aconex.utilities.browser.BrowserSniffer' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='129'></SourceLine>
+      <Message>In method com.aconex.utilities.browser.BrowserSniffer.is_ie_5(HttpServletRequest)</Message>
+    </Method>
+    <SourceLine endBytecode='22' startBytecode='22' start='124' classname='com.aconex.utilities.browser.BrowserSniffer' primary='true' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='124'>
+      <Message>At BrowserSniffer.java:[line 124]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='I18N' instanceHash='35ed017a63e7e679c93a91f4976f110f' instanceOccurrenceNum='0' priority='3' abbrev='Dm' type='DM_CONVERT_CASE' instanceOccurrenceMax='0'>
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase</LongMessage>
+    <Class classname='com.aconex.utilities.browser.BrowserSniffer' primary='true'>
+      <SourceLine start='13' classname='com.aconex.utilities.browser.BrowserSniffer' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='305'>
+        <Message>At BrowserSniffer.java:[lines 13-305]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.browser.BrowserSniffer</Message>
+    </Class>
+    <Method isStatic='true' classname='com.aconex.utilities.browser.BrowserSniffer' name='is_ie_5_5' primary='true' signature='(Ljavax/servlet/http/HttpServletRequest;)Z'>
+      <SourceLine endBytecode='146' startBytecode='0' start='141' classname='com.aconex.utilities.browser.BrowserSniffer' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='156'></SourceLine>
+      <Message>In method com.aconex.utilities.browser.BrowserSniffer.is_ie_5_5(HttpServletRequest)</Message>
+    </Method>
+    <SourceLine endBytecode='22' startBytecode='22' start='151' classname='com.aconex.utilities.browser.BrowserSniffer' primary='true' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='151'>
+      <Message>At BrowserSniffer.java:[line 151]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='I18N' instanceHash='e58cfa76400f8cc05ff07751d03c5978' instanceOccurrenceNum='0' priority='3' abbrev='Dm' type='DM_CONVERT_CASE' instanceOccurrenceMax='0'>
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase</LongMessage>
+    <Class classname='com.aconex.utilities.browser.BrowserSniffer' primary='true'>
+      <SourceLine start='13' classname='com.aconex.utilities.browser.BrowserSniffer' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='305'>
+        <Message>At BrowserSniffer.java:[lines 13-305]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.browser.BrowserSniffer</Message>
+    </Class>
+    <Method isStatic='true' classname='com.aconex.utilities.browser.BrowserSniffer' name='is_mozilla' primary='true' signature='(Ljavax/servlet/http/HttpServletRequest;)Z'>
+      <SourceLine endBytecode='191' startBytecode='0' start='183' classname='com.aconex.utilities.browser.BrowserSniffer' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='201'></SourceLine>
+      <Message>In method com.aconex.utilities.browser.BrowserSniffer.is_mozilla(HttpServletRequest)</Message>
+    </Method>
+    <SourceLine endBytecode='22' startBytecode='22' start='193' classname='com.aconex.utilities.browser.BrowserSniffer' primary='true' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='193'>
+      <Message>At BrowserSniffer.java:[line 193]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='I18N' instanceHash='62a48ebb79f66fd63b5069188cd1b48f' instanceOccurrenceNum='0' priority='3' abbrev='Dm' type='DM_CONVERT_CASE' instanceOccurrenceMax='0'>
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase</LongMessage>
+    <Class classname='com.aconex.utilities.browser.BrowserSniffer' primary='true'>
+      <SourceLine start='13' classname='com.aconex.utilities.browser.BrowserSniffer' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='305'>
+        <Message>At BrowserSniffer.java:[lines 13-305]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.browser.BrowserSniffer</Message>
+    </Class>
+    <Method isStatic='true' classname='com.aconex.utilities.browser.BrowserSniffer' name='is_mozilla_1_3_up' primary='true' signature='(Ljavax/servlet/http/HttpServletRequest;)Z'>
+      <SourceLine endBytecode='218' startBytecode='0' start='214' classname='com.aconex.utilities.browser.BrowserSniffer' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='240'></SourceLine>
+      <Message>In method com.aconex.utilities.browser.BrowserSniffer.is_mozilla_1_3_up(HttpServletRequest)</Message>
+    </Method>
+    <SourceLine endBytecode='22' startBytecode='22' start='224' classname='com.aconex.utilities.browser.BrowserSniffer' primary='true' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='224'>
+      <Message>At BrowserSniffer.java:[line 224]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='I18N' instanceHash='61249ef7ad4252e18b8b8af7f3d9d7d' instanceOccurrenceNum='0' priority='3' abbrev='Dm' type='DM_CONVERT_CASE' instanceOccurrenceMax='0'>
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase</LongMessage>
+    <Class classname='com.aconex.utilities.browser.BrowserSniffer' primary='true'>
+      <SourceLine start='13' classname='com.aconex.utilities.browser.BrowserSniffer' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='305'>
+        <Message>At BrowserSniffer.java:[lines 13-305]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.browser.BrowserSniffer</Message>
+    </Class>
+    <Method isStatic='true' classname='com.aconex.utilities.browser.BrowserSniffer' name='is_ns_4' primary='true' signature='(Ljavax/servlet/http/HttpServletRequest;)Z'>
+      <SourceLine endBytecode='146' startBytecode='0' start='250' classname='com.aconex.utilities.browser.BrowserSniffer' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='265'></SourceLine>
+      <Message>In method com.aconex.utilities.browser.BrowserSniffer.is_ns_4(HttpServletRequest)</Message>
+    </Method>
+    <SourceLine endBytecode='22' startBytecode='22' start='260' classname='com.aconex.utilities.browser.BrowserSniffer' primary='true' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='260'>
+      <Message>At BrowserSniffer.java:[line 260]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='I18N' instanceHash='2bf6249e3fdf04fa0811caa16aeca12c' instanceOccurrenceNum='0' priority='3' abbrev='Dm' type='DM_CONVERT_CASE' instanceOccurrenceMax='0'>
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase</LongMessage>
+    <Class classname='com.aconex.utilities.browser.BrowserSniffer' primary='true'>
+      <SourceLine start='13' classname='com.aconex.utilities.browser.BrowserSniffer' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='305'>
+        <Message>At BrowserSniffer.java:[lines 13-305]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.browser.BrowserSniffer</Message>
+    </Class>
+    <Method isStatic='true' classname='com.aconex.utilities.browser.BrowserSniffer' name='is_wml' primary='true' signature='(Ljavax/servlet/http/HttpServletRequest;)Z'>
+      <SourceLine endBytecode='139' startBytecode='0' start='290' classname='com.aconex.utilities.browser.BrowserSniffer' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='305'></SourceLine>
+      <Message>In method com.aconex.utilities.browser.BrowserSniffer.is_wml(HttpServletRequest)</Message>
+    </Method>
+    <SourceLine endBytecode='22' startBytecode='22' start='300' classname='com.aconex.utilities.browser.BrowserSniffer' primary='true' sourcepath='com/aconex/utilities/browser/BrowserSniffer.java' sourcefile='BrowserSniffer.java' end='300'>
+      <Message>At BrowserSniffer.java:[line 300]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='SECURITY' instanceHash='5d7a3f985cc0b52663e723a6315706c1' instanceOccurrenceNum='0' priority='3' abbrev='SQL' type='SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE' instanceOccurrenceMax='0'>
+    <ShortMessage>Nonconstant string passed to execute method on an SQL statement</ShortMessage>
+    <LongMessage>Method com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler.execute(Connection, String)
+      passes a nonconstant String to an execute method on an SQL statement
+    </LongMessage>
+    <Class classname='com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler' primary='true'>
+      <SourceLine start='239' classname='com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler' sourcepath='com/aconex/utilities/db/LoggingDriver.java' sourcefile='LoggingDriver.java' end='351'>
+        <Message>At LoggingDriver.java:[lines 239-351]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler</Message>
+    </Class>
+    <Method isStatic='false' classname='com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler' name='execute' primary='true' signature='(Ljava/sql/Connection;Ljava/lang/String;)V'>
+      <SourceLine endBytecode='17' startBytecode='0' start='344' classname='com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler' sourcepath='com/aconex/utilities/db/LoggingDriver.java' sourcefile='LoggingDriver.java' end='351'></SourceLine>
+      <Message>In method com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler.execute(Connection, String)
+      </Message>
+    </Method>
+    <SourceLine endBytecode='11' startBytecode='11' start='347' classname='com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler' primary='true' sourcepath='com/aconex/utilities/db/LoggingDriver.java' sourcefile='LoggingDriver.java' end='347'>
+      <Message>At LoggingDriver.java:[line 347]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='PERFORMANCE' instanceHash='28cd6f1b56d5733fc52774acc7aa6829' instanceOccurrenceNum='0' priority='2' abbrev='SIC' type='SIC_INNER_SHOULD_BE_STATIC' instanceOccurrenceMax='0'>
+    <ShortMessage>Should be a static inner class</ShortMessage>
+    <LongMessage>Should com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler$ResultSetInvocationHandler be
+      a _static_ inner class?
+    </LongMessage>
+    <Class classname='com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler$ResultSetInvocationHandler' primary='true'>
+      <SourceLine start='431' classname='com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler$ResultSetInvocationHandler' sourcepath='com/aconex/utilities/db/LoggingDriver.java' sourcefile='LoggingDriver.java' end='455'>
+        <Message>At LoggingDriver.java:[lines 431-455]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler$ResultSetInvocationHandler
+      </Message>
+    </Class>
+    <SourceLine start='431' classname='com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler$ResultSetInvocationHandler' sourcepath='com/aconex/utilities/db/LoggingDriver.java' synthetic='true' sourcefile='LoggingDriver.java' end='455'>
+      <Message>At LoggingDriver.java:[lines 431-455]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='STYLE' instanceHash='9c8820b5f78e266093334b5a3dad842' instanceOccurrenceNum='0' priority='2' abbrev='NP' type='NP_LOAD_OF_KNOWN_NULL_VALUE' instanceOccurrenceMax='0'>
+    <ShortMessage>Load of known null value</ShortMessage>
+    <LongMessage>Load of known null value in
+      com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler$StatementInvocationHandler.invoke(Object,
+      Method, Object[])
+    </LongMessage>
+    <Class classname='com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler$StatementInvocationHandler' primary='true'>
+      <SourceLine start='366' classname='com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler$StatementInvocationHandler' sourcepath='com/aconex/utilities/db/LoggingDriver.java' sourcefile='LoggingDriver.java' end='417'>
+        <Message>At LoggingDriver.java:[lines 366-417]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler$StatementInvocationHandler
+      </Message>
+    </Class>
+    <Method isStatic='false' classname='com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler$StatementInvocationHandler' name='invoke' primary='true' signature='(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;'>
+      <SourceLine endBytecode='93' startBytecode='0' start='375' classname='com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler$StatementInvocationHandler' sourcepath='com/aconex/utilities/db/LoggingDriver.java' sourcefile='LoggingDriver.java' end='397'></SourceLine>
+      <Message>In method
+        com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler$StatementInvocationHandler.invoke(Object,
+        Method, Object[])
+      </Message>
+    </Method>
+    <SourceLine endBytecode='125' startBytecode='125' start='387' classname='com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler$StatementInvocationHandler' primary='true' sourcepath='com/aconex/utilities/db/LoggingDriver.java' sourcefile='LoggingDriver.java' end='387'>
+      <Message>At LoggingDriver.java:[line 387]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='BAD_PRACTICE' instanceHash='94bcf06bfd79f5dd103bb7a6bb938892' instanceOccurrenceNum='0' priority='2' abbrev='ODR' type='ODR_OPEN_DATABASE_RESOURCE' instanceOccurrenceMax='0'>
+    <ShortMessage>Method may fail to close database resource</ShortMessage>
+    <LongMessage>com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor.getBlockingInfo() may fail to close
+      CallableStatement
+    </LongMessage>
+    <Class classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor' primary='true'>
+      <SourceLine start='463' classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor' sourcepath='com/aconex/utilities/db/LoggingDriver.java' sourcefile='LoggingDriver.java' end='734'>
+        <Message>At LoggingDriver.java:[lines 463-734]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor</Message>
+    </Class>
+    <Method isStatic='false' classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor' name='getBlockingInfo' primary='true' signature='()Ljava/util/Map;'>
+      <SourceLine endBytecode='62' startBytecode='0' start='612' classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor' sourcepath='com/aconex/utilities/db/LoggingDriver.java' sourcefile='LoggingDriver.java' end='629'></SourceLine>
+      <Message>In method com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor.getBlockingInfo()</Message>
+    </Method>
+    <Type descriptor='Ljava/sql/CallableStatement;' role='TYPE_CLOSEIT'>
+      <SourceLine classname='java.sql.CallableStatement' sourcepath='java/sql/CallableStatement.java' sourcefile='CallableStatement.java'>
+        <Message>In CallableStatement.java</Message>
+      </SourceLine>
+      <Message>Need to close java.sql.CallableStatement</Message>
+    </Type>
+    <SourceLine endBytecode='17' startBytecode='17' start='615' classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor' primary='true' sourcepath='com/aconex/utilities/db/LoggingDriver.java' sourcefile='LoggingDriver.java' end='615'>
+      <Message>At LoggingDriver.java:[line 615]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='STYLE' instanceHash='3ba68cb497350c301e4f7a74c85fe4a3' instanceOccurrenceNum='0' priority='3' abbrev='PZLA' type='PZLA_PREFER_ZERO_LENGTH_ARRAYS' instanceOccurrenceMax='0'>
+    <ShortMessage>Consider returning a zero length array rather than null</ShortMessage>
+    <LongMessage>Should
+      com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog.collectWarningMessages(SQLWarning,
+      LoggingDriver$LoggingDriverMonitor$WarningFilter) return a zero length array rather than null?
+    </LongMessage>
+    <Class classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog' primary='true'>
+      <SourceLine start='764' classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog' sourcepath='com/aconex/utilities/db/LoggingDriver.java' sourcefile='LoggingDriver.java' end='940'>
+        <Message>At LoggingDriver.java:[lines 764-940]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog</Message>
+    </Class>
+    <Method isStatic='false' classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog' name='collectWarningMessages' primary='true' signature='(Ljava/sql/SQLWarning;Lcom/aconex/utilities/db/LoggingDriver$LoggingDriverMonitor$WarningFilter;)[Ljava/lang/String;'>
+      <SourceLine endBytecode='214' startBytecode='0' start='863' classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog' sourcepath='com/aconex/utilities/db/LoggingDriver.java' sourcefile='LoggingDriver.java' end='877'></SourceLine>
+      <Message>In method
+        com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog.collectWarningMessages(SQLWarning,
+        LoggingDriver$LoggingDriverMonitor$WarningFilter)
+      </Message>
+    </Method>
+    <SourceLine endBytecode='5' startBytecode='5' start='864' classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog' primary='true' sourcepath='com/aconex/utilities/db/LoggingDriver.java' sourcefile='LoggingDriver.java' end='864'>
+      <Message>At LoggingDriver.java:[line 864]</Message>
+    </SourceLine>
+    <SourceLine endBytecode='52' startBytecode='52' start='875' classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog' sourcepath='com/aconex/utilities/db/LoggingDriver.java' sourcefile='LoggingDriver.java' end='875'>
+      <Message>At LoggingDriver.java:[line 875]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='MT_CORRECTNESS' instanceHash='dc100a165fd98ccc6c063768c0b60131' instanceOccurrenceNum='0' priority='3' abbrev='VO' type='VO_VOLATILE_REFERENCE_TO_ARRAY' instanceOccurrenceMax='0'>
+    <ShortMessage>A volatile reference to an array doesn't treat the array elements as volatile</ShortMessage>
+    <LongMessage>com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog.cpuData is a volatile reference to
+      an array; the array elements are non-volatile
+    </LongMessage>
+    <Class classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog' primary='true'>
+      <SourceLine start='764' classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog' sourcepath='com/aconex/utilities/db/LoggingDriver.java' sourcefile='LoggingDriver.java' end='940'>
+        <Message>At LoggingDriver.java:[lines 764-940]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog</Message>
+    </Class>
+    <Field isStatic='false' classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog' name='cpuData' primary='true' signature='[Ljava/lang/String;'>
+      <SourceLine classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog' sourcepath='com/aconex/utilities/db/LoggingDriver.java' sourcefile='LoggingDriver.java'>
+        <Message>In LoggingDriver.java</Message>
+      </SourceLine>
+      <Message>Field com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog.cpuData</Message>
+    </Field>
+    <SourceLine classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog' sourcepath='com/aconex/utilities/db/LoggingDriver.java' synthetic='true' sourcefile='LoggingDriver.java'>
+      <Message>In LoggingDriver.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='MT_CORRECTNESS' instanceHash='101259f4738574d6cea384cfed745249' instanceOccurrenceNum='0' priority='3' abbrev='VO' type='VO_VOLATILE_REFERENCE_TO_ARRAY' instanceOccurrenceMax='0'>
+    <ShortMessage>A volatile reference to an array doesn't treat the array elements as volatile</ShortMessage>
+    <LongMessage>com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog.ioData is a volatile reference to
+      an array; the array elements are non-volatile
+    </LongMessage>
+    <Class classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog' primary='true'>
+      <SourceLine start='764' classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog' sourcepath='com/aconex/utilities/db/LoggingDriver.java' sourcefile='LoggingDriver.java' end='940'>
+        <Message>At LoggingDriver.java:[lines 764-940]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog</Message>
+    </Class>
+    <Field isStatic='false' classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog' name='ioData' primary='true' signature='[Ljava/lang/String;'>
+      <SourceLine classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog' sourcepath='com/aconex/utilities/db/LoggingDriver.java' sourcefile='LoggingDriver.java'>
+        <Message>In LoggingDriver.java</Message>
+      </SourceLine>
+      <Message>Field com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog.ioData</Message>
+    </Field>
+    <SourceLine classname='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog' sourcepath='com/aconex/utilities/db/LoggingDriver.java' synthetic='true' sourcefile='LoggingDriver.java'>
+      <Message>In LoggingDriver.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='BAD_PRACTICE' instanceHash='32b4b89479a45ec3c7f2e49d03fdd5c2' instanceOccurrenceNum='0' priority='2' abbrev='Eq' type='EQ_COMPARETO_USE_OBJECT_EQUALS' instanceOccurrenceMax='0'>
+    <ShortMessage>Class defines compareTo(...) and uses Object.equals()</ShortMessage>
+    <LongMessage>com.aconex.utilities.message.Message defines compareTo(Message) and uses Object.equals()</LongMessage>
+    <Class classname='com.aconex.utilities.message.Message' primary='true'>
+      <SourceLine start='13' classname='com.aconex.utilities.message.Message' sourcepath='com/aconex/utilities/message/Message.java' sourcefile='Message.java' end='55'>
+        <Message>At Message.java:[lines 13-55]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.utilities.message.Message</Message>
+    </Class>
+    <Method isStatic='false' classname='com.aconex.utilities.message.Message' name='compareTo' primary='true' signature='(Lcom/aconex/utilities/message/Message;)I'>
+      <SourceLine endBytecode='63' startBytecode='0' start='55' classname='com.aconex.utilities.message.Message' sourcepath='com/aconex/utilities/message/Message.java' sourcefile='Message.java' end='55'></SourceLine>
+      <Message>In method com.aconex.utilities.message.Message.compareTo(Message)</Message>
+    </Method>
+    <SourceLine endBytecode='63' startBytecode='0' start='55' classname='com.aconex.utilities.message.Message' sourcepath='com/aconex/utilities/message/Message.java' synthetic='true' sourcefile='Message.java' end='55'>
+      <Message>At Message.java:[line 55]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='BAD_PRACTICE' instanceHash='1814726daddb6450c0db73bc4162f85c' instanceOccurrenceNum='0' priority='3' abbrev='ISC' type='ISC_INSTANTIATE_STATIC_CLASS' instanceOccurrenceMax='2'>
+    <ShortMessage>Needless instantiation of class that only supplies static methods</ShortMessage>
+    <LongMessage>Method com.aconex.velocity.VelocityUtils.&lt;static initializer&gt;() needlessly instantiates a class
+      that only supplies static methods
+    </LongMessage>
+    <Class classname='com.aconex.velocity.VelocityUtils' primary='true'>
+      <SourceLine start='20' classname='com.aconex.velocity.VelocityUtils' sourcepath='com/aconex/velocity/VelocityUtils.java' sourcefile='VelocityUtils.java' end='74'>
+        <Message>At VelocityUtils.java:[lines 20-74]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.velocity.VelocityUtils</Message>
+    </Class>
+    <Method isStatic='true' classname='com.aconex.velocity.VelocityUtils' name='&lt;clinit&gt;' primary='true' signature='()V'>
+      <SourceLine endBytecode='405' startBytecode='0' start='20' classname='com.aconex.velocity.VelocityUtils' sourcepath='com/aconex/velocity/VelocityUtils.java' sourcefile='VelocityUtils.java' end='55'></SourceLine>
+      <Message>In method com.aconex.velocity.VelocityUtils.&lt;static initializer&gt;()</Message>
+    </Method>
+    <SourceLine endBytecode='173' startBytecode='173' start='48' classname='com.aconex.velocity.VelocityUtils' primary='true' sourcepath='com/aconex/velocity/VelocityUtils.java' sourcefile='VelocityUtils.java' end='48'>
+      <Message>At VelocityUtils.java:[line 48]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='BAD_PRACTICE' instanceHash='1814726daddb6450c0db73bc4162f85c' instanceOccurrenceNum='1' priority='3' abbrev='ISC' type='ISC_INSTANTIATE_STATIC_CLASS' instanceOccurrenceMax='2'>
+    <ShortMessage>Needless instantiation of class that only supplies static methods</ShortMessage>
+    <LongMessage>Method com.aconex.velocity.VelocityUtils.&lt;static initializer&gt;() needlessly instantiates a class
+      that only supplies static methods
+    </LongMessage>
+    <Class classname='com.aconex.velocity.VelocityUtils' primary='true'>
+      <SourceLine start='20' classname='com.aconex.velocity.VelocityUtils' sourcepath='com/aconex/velocity/VelocityUtils.java' sourcefile='VelocityUtils.java' end='74'>
+        <Message>At VelocityUtils.java:[lines 20-74]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.velocity.VelocityUtils</Message>
+    </Class>
+    <Method isStatic='true' classname='com.aconex.velocity.VelocityUtils' name='&lt;clinit&gt;' primary='true' signature='()V'>
+      <SourceLine endBytecode='405' startBytecode='0' start='20' classname='com.aconex.velocity.VelocityUtils' sourcepath='com/aconex/velocity/VelocityUtils.java' sourcefile='VelocityUtils.java' end='55'></SourceLine>
+      <Message>In method com.aconex.velocity.VelocityUtils.&lt;static initializer&gt;()</Message>
+    </Method>
+    <SourceLine endBytecode='191' startBytecode='191' start='49' classname='com.aconex.velocity.VelocityUtils' primary='true' sourcepath='com/aconex/velocity/VelocityUtils.java' sourcefile='VelocityUtils.java' end='49'>
+      <Message>At VelocityUtils.java:[line 49]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance category='BAD_PRACTICE' instanceHash='1814726daddb6450c0db73bc4162f85c' instanceOccurrenceNum='2' priority='3' abbrev='ISC' type='ISC_INSTANTIATE_STATIC_CLASS' instanceOccurrenceMax='2'>
+    <ShortMessage>Needless instantiation of class that only supplies static methods</ShortMessage>
+    <LongMessage>Method com.aconex.velocity.VelocityUtils.&lt;static initializer&gt;() needlessly instantiates a class
+      that only supplies static methods
+    </LongMessage>
+    <Class classname='com.aconex.velocity.VelocityUtils' primary='true'>
+      <SourceLine start='20' classname='com.aconex.velocity.VelocityUtils' sourcepath='com/aconex/velocity/VelocityUtils.java' sourcefile='VelocityUtils.java' end='74'>
+        <Message>At VelocityUtils.java:[lines 20-74]</Message>
+      </SourceLine>
+      <Message>In class com.aconex.velocity.VelocityUtils</Message>
+    </Class>
+    <Method isStatic='true' classname='com.aconex.velocity.VelocityUtils' name='&lt;clinit&gt;' primary='true' signature='()V'>
+      <SourceLine endBytecode='405' startBytecode='0' start='20' classname='com.aconex.velocity.VelocityUtils' sourcepath='com/aconex/velocity/VelocityUtils.java' sourcefile='VelocityUtils.java' end='55'></SourceLine>
+      <Message>In method com.aconex.velocity.VelocityUtils.&lt;static initializer&gt;()</Message>
+    </Method>
+    <SourceLine endBytecode='209' startBytecode='209' start='50' classname='com.aconex.velocity.VelocityUtils' primary='true' sourcepath='com/aconex/velocity/VelocityUtils.java' sourcefile='VelocityUtils.java' end='50'>
+      <Message>At VelocityUtils.java:[line 50]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category='MALICIOUS_CODE'>
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category='STYLE'>
+    <Description>Dodgy</Description>
+  </BugCategory>
+  <BugCategory category='BAD_PRACTICE'>
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category='CORRECTNESS'>
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category='I18N'>
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugCategory category='SECURITY'>
+    <Description>Security</Description>
+  </BugCategory>
+  <BugCategory category='PERFORMANCE'>
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category='MT_CORRECTNESS'>
+    <Description>Multithreaded correctness</Description>
+  </BugCategory>
+  <BugPattern category='MT_CORRECTNESS' abbrev='IS' type='IS2_INCONSISTENT_SYNC'>
+    <ShortDescription>Inconsistent synchronization</ShortDescription>
+    <Details>
+
+      &lt;p&gt; The fields of this class appear to be accessed inconsistently with respect
+      to synchronization.&amp;nbsp; This bug report indicates that the bug pattern detector
+      judged that
+      &lt;/p&gt;
+      &lt;ul&gt;
+      &lt;li&gt; The class contains a mix of locked and unlocked accesses,&lt;/li&gt;
+      &lt;li&gt; At least one locked access was performed by one of the class's own methods, and&lt;/li&gt;
+      &lt;li&gt; The number of unsynchronized field accesses (reads and writes) was no more than
+      one third of all accesses, with writes being weighed twice as high as reads&lt;/li&gt;
+      &lt;/ul&gt;
+
+      &lt;p&gt; A typical bug matching this bug pattern is forgetting to synchronize
+      one of the methods in a class that is intended to be thread-safe.&lt;/p&gt;
+
+      &lt;p&gt; You can select the nodes labeled "Unsynchronized access" to show the
+      code locations where the detector believed that a field was accessed
+      without synchronization.&lt;/p&gt;
+
+      &lt;p&gt; Note that there are various sources of inaccuracy in this detector;
+      for example, the detector cannot statically detect all situations in which
+      a lock is held.&amp;nbsp; Also, even when the detector is accurate in
+      distinguishing locked vs. unlocked accesses, the code in question may still
+      be correct.&lt;/p&gt;
+
+
+    </Details>
+  </BugPattern>
+  <BugPattern category='BAD_PRACTICE' abbrev='ISC' type='ISC_INSTANTIATE_STATIC_CLASS'>
+    <ShortDescription>Needless instantiation of class that only supplies static methods</ShortDescription>
+    <Details>
+
+      &lt;p&gt; This class allocates an object that is based on a class that only supplies static methods. This object
+      does not need to be created, just access the static methods directly using the class name as a qualifier.&lt;/p&gt;
+
+    </Details>
+  </BugPattern>
+  <BugPattern category='MALICIOUS_CODE' abbrev='EI' type='EI_EXPOSE_REP' cweid='374'>
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details>
+
+      &lt;p&gt; Returning a reference to a mutable object value stored in one of the object's fields
+      exposes the internal representation of the object.&amp;nbsp;
+      If instances
+      are accessed by untrusted code, and unchecked changes to
+      the mutable object would compromise security or other
+      important properties, you will need to do something different.
+      Returning a new copy of the object is better approach in many situations.&lt;/p&gt;
+
+    </Details>
+  </BugPattern>
+  <BugPattern category='BAD_PRACTICE' abbrev='Eq' type='EQ_COMPARETO_USE_OBJECT_EQUALS'>
+    <ShortDescription>Class defines compareTo(...) and uses Object.equals()</ShortDescription>
+    <Details>
+
+      &lt;p&gt; This class defines a &lt;code&gt;compareTo(...)&lt;/code&gt; method but inherits its
+      &lt;code&gt;equals()&lt;/code&gt; method from &lt;code&gt;java.lang.Object&lt;/code&gt;.
+      Generally, the value of compareTo should return zero if and only if
+      equals returns true. If this is violated, weird and unpredictable
+      failures will occur in classes such as PriorityQueue.
+      In Java 5 the PriorityQueue.remove method uses the compareTo method,
+      while in Java 6 it uses the equals method.
+
+      &lt;p&gt;From the JavaDoc for the compareTo method in the Comparable interface:
+      &lt;blockquote&gt;
+      It is strongly recommended, but not strictly required that &lt;code&gt;(x.compareTo(y)==0) == (x.equals(y))&lt;/code&gt;.
+      Generally speaking, any class that implements the Comparable interface and violates this condition
+      should clearly indicate this fact. The recommended language
+      is "Note: this class has a natural ordering that is inconsistent with equals."
+      &lt;/blockquote&gt;
+
+    </Details>
+  </BugPattern>
+  <BugPattern category='MALICIOUS_CODE' abbrev='EI2' type='EI_EXPOSE_REP2' cweid='374'>
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details>
+
+      &lt;p&gt; This code stores a reference to an externally mutable object into the
+      internal representation of the object.&amp;nbsp;
+      If instances
+      are accessed by untrusted code, and unchecked changes to
+      the mutable object would compromise security or other
+      important properties, you will need to do something different.
+      Storing a copy of the object is better approach in many situations.&lt;/p&gt;
+
+    </Details>
+  </BugPattern>
+  <BugPattern category='BAD_PRACTICE' abbrev='ES' type='ES_COMPARING_STRINGS_WITH_EQ'>
+    <ShortDescription>Comparison of String objects using == or !=</ShortDescription>
+    <Details>
+
+      &lt;p&gt;This code compares &lt;code&gt;java.lang.String&lt;/code&gt; objects for reference
+      equality using the == or != operators.
+      Unless both strings are either constants in a source file, or have been
+      interned using the &lt;code&gt;String.intern()&lt;/code&gt; method, the same string
+      value may be represented by two different String objects. Consider
+      using the &lt;code&gt;equals(Object)&lt;/code&gt; method instead.&lt;/p&gt;
+
+    </Details>
+  </BugPattern>
+  <BugPattern category='STYLE' abbrev='PZLA' type='PZLA_PREFER_ZERO_LENGTH_ARRAYS'>
+    <ShortDescription>Consider returning a zero length array rather than null</ShortDescription>
+    <Details>
+
+      &lt;p&gt; It is often a better design to
+      return a length zero array rather than a null reference to indicate that there
+      are no results (i.e., an empty list of results).
+      This way, no explicit check for null is needed by clients of the method.&lt;/p&gt;
+
+      &lt;p&gt;On the other hand, using null to indicate
+      "there is no answer to this question" is probably appropriate.
+      For example, &lt;code&gt;File.listFiles()&lt;/code&gt; returns an empty list
+      if given a directory containing no files, and returns null if the file
+      is not a directory.&lt;/p&gt;
+
+    </Details>
+  </BugPattern>
+  <BugPattern category='BAD_PRACTICE' abbrev='ODR' type='ODR_OPEN_DATABASE_RESOURCE'>
+    <ShortDescription>Method may fail to close database resource</ShortDescription>
+    <Details>
+
+      &lt;p&gt; The method creates a database resource (such as a database connection
+      or row set), does not assign it to any
+      fields, pass it to other methods, or return it, and does not appear to close
+      the object on all paths out of the method.&amp;nbsp; Failure to
+      close database resources on all paths out of a method may
+      result in poor performance, and could cause the application to
+      have problems communicating with the database.
+      &lt;/p&gt;
+
+    </Details>
+  </BugPattern>
+  <BugPattern category='I18N' abbrev='Dm' type='DM_CONVERT_CASE'>
+    <ShortDescription>Consider using Locale parameterized version of invoked method</ShortDescription>
+    <Details>
+
+      &lt;p&gt; A String is being converted to upper or lowercase, using the platform's default encoding. This may
+      result in improper conversions when used with international characters. Use the &lt;/p&gt;
+      &lt;ul&gt;
+      &lt;li&gt;String.toUpperCase( Locale l )&lt;/li&gt;
+      &lt;li&gt;String.toLowerCase( Locale l )&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;versions instead.&lt;/p&gt;
+
+    </Details>
+  </BugPattern>
+  <BugPattern category='MT_CORRECTNESS' abbrev='VO' type='VO_VOLATILE_REFERENCE_TO_ARRAY'>
+    <ShortDescription>A volatile reference to an array doesn't treat the array elements as volatile</ShortDescription>
+    <Details>
+
+      &lt;p&gt;This declares a volatile reference to an array, which might not be what
+      you want. With a volatile reference to an array, reads and writes of
+      the reference to the array are treated as volatile, but the array elements
+      are non-volatile. To get volatile array elements, you will need to use
+      one of the atomic array classes in java.util.concurrent (provided
+      in Java 5.0).&lt;/p&gt;
+
+    </Details>
+  </BugPattern>
+  <BugPattern category='BAD_PRACTICE' abbrev='Se' type='SE_INNER_CLASS'>
+    <ShortDescription>Serializable inner class</ShortDescription>
+    <Details>
+
+      &lt;p&gt; This Serializable class is an inner class. Any attempt to serialize
+      it will also serialize the associated outer instance. The outer instance is serializable,
+      so this won't fail, but it might serialize a lot more data than intended.
+      If possible, making the inner class a static inner class (also known as a nested class) should solve the
+      problem.
+
+    </Details>
+  </BugPattern>
+  <BugPattern category='CORRECTNESS' abbrev='UwF' type='UWF_UNWRITTEN_FIELD'>
+    <ShortDescription>Unwritten field</ShortDescription>
+    <Details>
+
+      &lt;p&gt; This field is never written.&amp;nbsp; All reads of it will return the default
+      value. Check for errors (should it have been initialized?), or remove it if it is useless.&lt;/p&gt;
+
+    </Details>
+  </BugPattern>
+  <BugPattern category='BAD_PRACTICE' abbrev='Nm' type='NM_SAME_SIMPLE_NAME_AS_SUPERCLASS'>
+    <ShortDescription>Class names shouldn't shadow simple name of superclass</ShortDescription>
+    <Details>
+
+      &lt;p&gt; This class has a simple name that is identical to that of its superclass, except
+      that its superclass is in a different package (e.g., &lt;code&gt;alpha.Foo&lt;/code&gt; extends &lt;code&gt;beta.Foo&lt;/code&gt;).
+      This can be exceptionally confusing, create lots of situations in which you have to look at import statements
+      to resolve references and creates many
+      opportunities to accidently define methods that do not override methods in their superclasses.
+      &lt;/p&gt;
+
+    </Details>
+  </BugPattern>
+  <BugPattern category='PERFORMANCE' abbrev='SIC' type='SIC_INNER_SHOULD_BE_STATIC'>
+    <ShortDescription>Should be a static inner class</ShortDescription>
+    <Details>
+
+      &lt;p&gt; This class is an inner class, but does not use its embedded reference
+      to the object which created it.&amp;nbsp; This reference makes the instances
+      of the class larger, and may keep the reference to the creator object
+      alive longer than necessary.&amp;nbsp; If possible, the class should be
+      made static.
+      &lt;/p&gt;
+
+    </Details>
+  </BugPattern>
+  <BugPattern category='STYLE' abbrev='NP' type='NP_LOAD_OF_KNOWN_NULL_VALUE'>
+    <ShortDescription>Load of known null value</ShortDescription>
+    <Details>
+
+      &lt;p&gt; The variable referenced at this point is known to be null due to an earlier
+      check against null. Although this is valid, it might be a mistake (perhaps you
+      intended to refer to a different variable, or perhaps the earlier check to see if the
+      variable is null should have been a check to see if it was nonnull).
+      &lt;/p&gt;
+
+    </Details>
+  </BugPattern>
+  <BugPattern category='SECURITY' abbrev='SQL' type='SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE' cweid='89'>
+    <ShortDescription>Nonconstant string passed to execute method on an SQL statement</ShortDescription>
+    <Details>
+
+      &lt;p&gt;The method invokes the execute method on an SQL statement with a String that seems
+      to be dynamically generated. Consider using
+      a prepared statement instead. It is more efficient and less vulnerable to
+      SQL injection attacks.
+      &lt;/p&gt;
+
+    </Details>
+  </BugPattern>
+  <BugPattern category='STYLE' abbrev='REC' type='REC_CATCH_EXCEPTION' cweid='396'>
+    <ShortDescription>Exception is caught when Exception is not thrown</ShortDescription>
+    <Details>
+
+      &lt;p&gt;
+      This method uses a try-catch block that catches Exception objects, but Exception is not
+      thrown within the try block, and RuntimeException is not explicitly caught. It is a common bug pattern to
+      say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+      each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+      masking potential bugs.
+      &lt;/p&gt;
+
+    </Details>
+  </BugPattern>
+  <BugCode abbrev='Se'>
+    <Description>Incorrect definition of Serializable class</Description>
+  </BugCode>
+  <BugCode abbrev='SQL'>
+    <Description>Potential SQL Problem</Description>
+  </BugCode>
+  <BugCode abbrev='VO'>
+    <Description>Use of volatile</Description>
+  </BugCode>
+  <BugCode abbrev='EI2'>
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <BugCode abbrev='IS' cweid='366'>
+    <Description>Inconsistent synchronization</Description>
+  </BugCode>
+  <BugCode abbrev='NP' cweid='476'>
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev='Eq'>
+    <Description>Problems with implementation of equals()</Description>
+  </BugCode>
+  <BugCode abbrev='Nm'>
+    <Description>Confusing method name</Description>
+  </BugCode>
+  <BugCode abbrev='Dm'>
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev='SIC'>
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <BugCode abbrev='ISC'>
+    <Description>Instantiated Static Class</Description>
+  </BugCode>
+  <BugCode abbrev='ES' cweid='597'>
+    <Description>Checking String equality using == or !=</Description>
+  </BugCode>
+  <BugCode abbrev='UwF'>
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev='PZLA'>
+    <Description>Prefer zero length arrays to null to indicate no results</Description>
+  </BugCode>
+  <BugCode abbrev='ODR'>
+    <Description>Database resource not closed on all paths</Description>
+  </BugCode>
+  <BugCode abbrev='REC'>
+    <Description>RuntimeException capture</Description>
+  </BugCode>
+  <BugCode abbrev='EI'>
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <Errors errors='0' missingClasses='1'>
+    <MissingClass>org.apache.commons.discovery.tools.DiscoverClass</MissingClass>
+  </Errors>
+  <FindBugsSummary alloc_mbytes='1365.38' priority_2='11' gc_seconds='0.15' peak_mbytes='395.80' total_bugs='37' priority_3='23' referenced_classes='507' timestamp='Mon, 23 Aug 2010 16:39:40 +1000' total_classes='135' num_packages='19' total_size='3444' cpu_seconds='26.16' clock_seconds='8.91' vm_version='16.3-b01'>
+    <FileStats path='com/aconex/db/BulkOperationHandler.java' bugCount='0' size='16'></FileStats>
+    <FileStats path='com/aconex/db/CompositeBulkOperationHandler.java' bugCount='0' size='26'></FileStats>
+    <FileStats path='com/aconex/db/DAO.java' bugCount='0' size='19'></FileStats>
+    <FileStats path='com/aconex/db/DatabaseConstants.java' bugCount='0' size='5'></FileStats>
+    <FileStats path='com/aconex/db/HibernateDAO.java' bugCount='0' size='295'></FileStats>
+    <FileStats path='com/aconex/db/JdbcDAO.java' bugCount='0' size='16'></FileStats>
+    <FileStats path='com/aconex/db/JdbcSettingsMBean.java' bugCount='1' bugHash='c5e12ef8b4c3b5761631ee80aa03ba0a' size='20'></FileStats>
+    <FileStats path='com/aconex/db/KeyedPersistable.java' bugCount='0' size='2'></FileStats>
+    <FileStats path='com/aconex/db/LegacyHibernateFlushingDAO.java' bugCount='0' size='12'></FileStats>
+    <FileStats path='com/aconex/db/LegacyService.java' bugCount='2' bugHash='12e55d926b38eb819d258c757ff8842d' size='73'></FileStats>
+    <FileStats path='com/aconex/db/OrderDirection.java' bugCount='0' size='11'></FileStats>
+    <FileStats path='com/aconex/db/hibernate/AconexInExpression.java' bugCount='0' size='9'></FileStats>
+    <FileStats path='com/aconex/db/hibernate/AconexLikeExpression.java' bugCount='0' size='12'></FileStats>
+    <FileStats path='com/aconex/db/hibernate/BaseInExpression.java' bugCount='1' bugHash='f98a9b1e595d46d6770b05fae4ec7e9a' size='35'></FileStats>
+    <FileStats path='com/aconex/db/hibernate/HibernateBulkOperationHandler.java' bugCount='0' size='58'></FileStats>
+    <FileStats path='com/aconex/db/hibernate/HibernateCallbackWithoutResult.java' bugCount='0' size='7'></FileStats>
+    <FileStats path='com/aconex/db/hibernate/HibernateKeyEqualityHelper.java' bugCount='0' size='12'></FileStats>
+    <FileStats path='com/aconex/db/hibernate/HibernatePausingBulkOperationHandler.java' bugCount='0' size='20'></FileStats>
+    <FileStats path='com/aconex/db/hibernate/IdentifierInExpression.java' bugCount='0' size='13'></FileStats>
+    <FileStats path='com/aconex/db/hibernate/NativeSQLOrder.java' bugCount='0' size='14'></FileStats>
+    <FileStats path='com/aconex/db/hibernate/OptionalRestrictions.java' bugCount='0' size='33'></FileStats>
+    <FileStats path='com/aconex/db/hibernate/OrderingUtils.java' bugCount='0' size='7'></FileStats>
+    <FileStats path='com/aconex/db/hibernate/Restrictions.java' bugCount='0' size='89'></FileStats>
+    <FileStats path='com/aconex/db/usertypes/KeyedEnumUserType.java' bugCount='1' bugHash='29ebc0e6cf8b9d964eead37d91cb6702' size='66'></FileStats>
+    <FileStats path='com/aconex/db/usertypes/XStreamUserType.java' bugCount='1' bugHash='c02a68e22c20663da99cecc766d4673c' size='37'></FileStats>
+    <FileStats path='com/aconex/lockable/Lockable.java' bugCount='0' size='7'></FileStats>
+    <FileStats path='com/aconex/lockable/LockableSupport.java' bugCount='1' bugHash='84009006b1915ceafcb90f3f55754296' size='29'></FileStats>
+    <FileStats path='com/aconex/lockable/LockedException.java' bugCount='0' size='8'></FileStats>
+    <FileStats path='com/aconex/monitoring/MonitoredBeanPredicates.java' bugCount='0' size='9'></FileStats>
+    <FileStats path='com/aconex/monitoring/RequestId.java' bugCount='0' size='6'></FileStats>
+    <FileStats path='com/aconex/monitoring/TimedRunnable.java' bugCount='0' size='18'></FileStats>
+    <FileStats path='com/aconex/pdf/jobTicket/XMLElement.java' bugCount='2' bugHash='b6186363a00367c77f5236cff985d159' size='68'></FileStats>
+    <FileStats path='com/aconex/security/util/PhoneticUtils.java' bugCount='0' size='12'></FileStats>
+    <FileStats path='com/aconex/specification/OrSpecification.java' bugCount='0' size='10'></FileStats>
+    <FileStats path='com/aconex/specification/Specification.java' bugCount='0' size='2'></FileStats>
+    <FileStats path='com/aconex/test/hamcrest/CollectionMatchers.java' bugCount='0' size='18'></FileStats>
+    <FileStats path='com/aconex/test/hamcrest/IsAnnotatedWithMatcher.java' bugCount='0' size='18'></FileStats>
+    <FileStats path='com/aconex/test/hamcrest/IsCollectionContainingInAnyOrderMatcher.java' bugCount='0' size='13'></FileStats>
+    <FileStats path='com/aconex/test/hamcrest/IsDeeplySerializableMatcher.java' bugCount='0' size='12'></FileStats>
+    <FileStats path='com/aconex/test/hamcrest/IsImmutableMatcher.java' bugCount='0' size='14'></FileStats>
+    <FileStats path='com/aconex/test/hamcrest/IsListContainingInOrderMatcher.java' bugCount='0' size='17'></FileStats>
+    <FileStats path='com/aconex/test/hamcrest/IsListEmptyMatcher.java' bugCount='0' size='9'></FileStats>
+    <FileStats path='com/aconex/test/hamcrest/IsMapEmptyMatcher.java' bugCount='0' size='9'></FileStats>
+    <FileStats path='com/aconex/test/hamcrest/IsMemberPackageProtectedMatcher.java' bugCount='0' size='12'></FileStats>
+    <FileStats path='com/aconex/test/hamcrest/IsMemberPublicMatcher.java' bugCount='0' size='11'></FileStats>
+    <FileStats path='com/aconex/test/hamcrest/IsOfLengthMatcher.java' bugCount='0' size='13'></FileStats>
+    <FileStats path='com/aconex/test/hamcrest/IsTransactionalMatcher.java' bugCount='0' size='30'></FileStats>
+    <FileStats path='com/aconex/test/hamcrest/IsUrlMatcher.java' bugCount='0' size='23'></FileStats>
+    <FileStats path='com/aconex/test/hamcrest/MapContainsEntriesMatcher.java' bugCount='0' size='18'></FileStats>
+    <FileStats path='com/aconex/test/hamcrest/MatchesRegexMatcher.java' bugCount='0' size='13'></FileStats>
+    <FileStats path='com/aconex/test/hamcrest/ReflectionMatchers.java' bugCount='0' size='14'></FileStats>
+    <FileStats path='com/aconex/test/hamcrest/StringMatchers.java' bugCount='0' size='8'></FileStats>
+    <FileStats path='com/aconex/test/hamcrest/TransactionalMatchers.java' bugCount='0' size='6'></FileStats>
+    <FileStats path='com/aconex/test/hamcrest/UrlMatchers.java' bugCount='0' size='6'></FileStats>
+    <FileStats path='com/aconex/test/mockito/ReflectionMatchers.java' bugCount='0' size='16'></FileStats>
+    <FileStats path='com/aconex/test/mockito/StringMatchers.java' bugCount='0' size='11'></FileStats>
+    <FileStats path='com/aconex/utilities/AnnotationEqualityHelper.java' bugCount='0' size='111'></FileStats>
+    <FileStats path='com/aconex/utilities/ArgumentValidator.java' bugCount='0' size='41'></FileStats>
+    <FileStats path='com/aconex/utilities/BeanUtils.java' bugCount='1' bugHash='57903c4cd534a91c3276cfdc1fd68481' size='9'></FileStats>
+    <FileStats path='com/aconex/utilities/ConfigConstants.java' bugCount='0' size='6'></FileStats>
+    <FileStats path='com/aconex/utilities/CryptographyException.java' bugCount='0' size='14'></FileStats>
+    <FileStats path='com/aconex/utilities/DataManipulation.java' bugCount='0' size='92'></FileStats>
+    <FileStats path='com/aconex/utilities/EnumUtils.java' bugCount='0' size='12'></FileStats>
+    <FileStats path='com/aconex/utilities/EqualityField.java' bugCount='0' size='1'></FileStats>
+    <FileStats path='com/aconex/utilities/FormUtils.java' bugCount='0' size='16'></FileStats>
+    <FileStats path='com/aconex/utilities/GuidGenerator.java' bugCount='0' size='5'></FileStats>
+    <FileStats path='com/aconex/utilities/HTMLFormat.java' bugCount='0' size='56'></FileStats>
+    <FileStats path='com/aconex/utilities/HTMLFormatRules.java' bugCount='0' size='13'></FileStats>
+    <FileStats path='com/aconex/utilities/JMXUtils.java' bugCount='0' size='25'></FileStats>
+    <FileStats path='com/aconex/utilities/NumberUtils.java' bugCount='1' bugHash='61c1c3f5ce459cc689664af48d0d4937' size='10'></FileStats>
+    <FileStats path='com/aconex/utilities/SHA1.java' bugCount='0' size='199'></FileStats>
+    <FileStats path='com/aconex/utilities/StringEscapeUtils.java' bugCount='1' bugHash='57c340add2bc35c912e992f3563bcc49' size='13'></FileStats>
+    <FileStats path='com/aconex/utilities/StringTrimingUtils.java' bugCount='0' size='20'></FileStats>
+    <FileStats path='com/aconex/utilities/TimingStatistics.java' bugCount='1' bugHash='d1af948812058a7cc55e1db4b430f739' size='49'></FileStats>
+    <FileStats path='com/aconex/utilities/TransientHolder.java' bugCount='0' size='13'></FileStats>
+    <FileStats path='com/aconex/utilities/URLUtils.java' bugCount='1' bugHash='4052709d5c28d2a20b24f26c3de7b610' size='137'></FileStats>
+    <FileStats path='com/aconex/utilities/ValidationUtils.java' bugCount='0' size='11'></FileStats>
+    <FileStats path='com/aconex/utilities/XMLUtils.java' bugCount='1' bugHash='35317315f7ba8f065bf25d8d053ab644' size='26'></FileStats>
+    <FileStats path='com/aconex/utilities/XStreamUtils.java' bugCount='0' size='24'></FileStats>
+    <FileStats path='com/aconex/utilities/browser/BrowserProperties.java' bugCount='3' bugHash='2c246e8b51cb9ef542b03f352e0eb65f' size='120'></FileStats>
+    <FileStats path='com/aconex/utilities/browser/BrowserSniffer.java' bugCount='8' bugHash='34c025ada75d51e089cffd88dcd045a7' size='115'></FileStats>
+    <FileStats path='com/aconex/utilities/db/ConnectionIdSource.java' bugCount='0' size='29'></FileStats>
+    <FileStats path='com/aconex/utilities/db/LoggingDriver.java' bugCount='7' bugHash='553a0de7c357f4c0f8f14ec7c2a7b861' size='560'></FileStats>
+    <FileStats path='com/aconex/utilities/db/MDCLoggerDataSource.java' bugCount='0' size='41'></FileStats>
+    <FileStats path='com/aconex/utilities/db/SQLServerUtils.java' bugCount='0' size='21'></FileStats>
+    <FileStats path='com/aconex/utilities/decorators/AbstractDecorator.java' bugCount='0' size='8'></FileStats>
+    <FileStats path='com/aconex/utilities/decorators/AbstractRunnableDecorator.java' bugCount='0' size='4'></FileStats>
+    <FileStats path='com/aconex/utilities/decorators/Decorator.java' bugCount='0' size='12'></FileStats>
+    <FileStats path='com/aconex/utilities/encoder/DigestUtils.java' bugCount='0' size='21'></FileStats>
+    <FileStats path='com/aconex/utilities/message/Message.java' bugCount='1' bugHash='1ca3517a1b6a4b2befa7a4eed133e621' size='35'></FileStats>
+    <FileStats path='com/aconex/utilities/message/MessageContainer.java' bugCount='0' size='60'></FileStats>
+    <FileStats path='com/aconex/utilities/message/MessageType.java' bugCount='0' size='23'></FileStats>
+    <FileStats path='com/aconex/utilities/tuples/Pair.java' bugCount='0' size='67'></FileStats>
+    <FileStats path='com/aconex/utilities/web/binding/editors/AbstractPropertyEditor.java' bugCount='0' size='22'></FileStats>
+    <FileStats path='com/aconex/velocity/VelocityUtils.java' bugCount='3' bugHash='6d4bb5d9a4f2f02a60a26dc816f71a93' size='36'></FileStats>
+    <PackageStats priority_2='1' total_size='495' package='com.aconex.db' total_bugs='3' priority_3='2' total_types='22'>
+      <ClassStats sourceFile='BulkOperationHandler.java' bugs='0' class='com.aconex.db.BulkOperationHandler' interface='true' size='7'></ClassStats>
+      <ClassStats sourceFile='BulkOperationHandler.java' bugs='0' class='com.aconex.db.BulkOperationHandler$1' interface='false' size='9'></ClassStats>
+      <ClassStats sourceFile='CompositeBulkOperationHandler.java' bugs='0' class='com.aconex.db.CompositeBulkOperationHandler' interface='false' size='26'></ClassStats>
+      <ClassStats sourceFile='DAO.java' bugs='0' class='com.aconex.db.DAO' interface='true' size='8'></ClassStats>
+      <ClassStats sourceFile='DAO.java' bugs='0' class='com.aconex.db.DAO$ObjectRetrievalState' interface='false' size='11'></ClassStats>
+      <ClassStats sourceFile='DatabaseConstants.java' bugs='0' class='com.aconex.db.DatabaseConstants' interface='false' size='5'></ClassStats>
+      <ClassStats sourceFile='HibernateDAO.java' bugs='0' class='com.aconex.db.HibernateDAO' interface='false' size='103'></ClassStats>
+      <ClassStats sourceFile='HibernateDAO.java' bugs='0' class='com.aconex.db.HibernateDAO$1' interface='false' size='11'></ClassStats>
+      <ClassStats sourceFile='HibernateDAO.java' bugs='0' class='com.aconex.db.HibernateDAO$2' interface='false' size='10'></ClassStats>
+      <ClassStats sourceFile='HibernateDAO.java' bugs='0' class='com.aconex.db.HibernateDAO$3' interface='false' size='6'></ClassStats>
+      <ClassStats sourceFile='HibernateDAO.java' bugs='0' class='com.aconex.db.HibernateDAO$4' interface='false' size='6'></ClassStats>
+      <ClassStats sourceFile='HibernateDAO.java' bugs='0' class='com.aconex.db.HibernateDAO$5' interface='false' size='11'></ClassStats>
+      <ClassStats sourceFile='HibernateDAO.java' bugs='0' class='com.aconex.db.HibernateDAO$Alias' interface='false' size='20'></ClassStats>
+      <ClassStats sourceFile='HibernateDAO.java' bugs='0' class='com.aconex.db.HibernateDAO$CriteriaSearch' interface='false' size='97'></ClassStats>
+      <ClassStats sourceFile='HibernateDAO.java' bugs='0' class='com.aconex.db.HibernateDAO$CriteriaSearchCallback' interface='false' size='13'></ClassStats>
+      <ClassStats sourceFile='HibernateDAO.java' bugs='0' class='com.aconex.db.HibernateDAO$JoinType' interface='false' size='18'></ClassStats>
+      <ClassStats sourceFile='JdbcDAO.java' bugs='0' class='com.aconex.db.JdbcDAO' interface='false' size='16'></ClassStats>
+      <ClassStats priority_2='1' sourceFile='JdbcSettingsMBean.java' bugs='1' class='com.aconex.db.JdbcSettingsMBean' interface='false' size='20'></ClassStats>
+      <ClassStats sourceFile='KeyedPersistable.java' bugs='0' class='com.aconex.db.KeyedPersistable' interface='true' size='2'></ClassStats>
+      <ClassStats sourceFile='LegacyHibernateFlushingDAO.java' bugs='0' class='com.aconex.db.LegacyHibernateFlushingDAO' interface='false' size='12'></ClassStats>
+      <ClassStats sourceFile='LegacyService.java' bugs='2' class='com.aconex.db.LegacyService' interface='false' priority_3='2' size='73'></ClassStats>
+      <ClassStats sourceFile='OrderDirection.java' bugs='0' class='com.aconex.db.OrderDirection' interface='false' size='11'></ClassStats>
+    </PackageStats>
+    <PackageStats priority_2='1' total_size='309' package='com.aconex.db.hibernate' total_bugs='1' total_types='17'>
+      <ClassStats sourceFile='AconexInExpression.java' bugs='0' class='com.aconex.db.hibernate.AconexInExpression' interface='false' size='9'></ClassStats>
+      <ClassStats sourceFile='AconexLikeExpression.java' bugs='0' class='com.aconex.db.hibernate.AconexLikeExpression' interface='false' size='12'></ClassStats>
+      <ClassStats priority_2='1' sourceFile='BaseInExpression.java' bugs='1' class='com.aconex.db.hibernate.BaseInExpression' interface='false' size='35'></ClassStats>
+      <ClassStats sourceFile='HibernateBulkOperationHandler.java' bugs='0' class='com.aconex.db.hibernate.HibernateBulkOperationHandler' interface='false' size='31'></ClassStats>
+      <ClassStats sourceFile='HibernateBulkOperationHandler.java' bugs='0' class='com.aconex.db.hibernate.HibernateBulkOperationHandler$1' interface='false' size='1'></ClassStats>
+      <ClassStats sourceFile='HibernateBulkOperationHandler.java' bugs='0' class='com.aconex.db.hibernate.HibernateBulkOperationHandler$SessionOperation' interface='false' size='13'></ClassStats>
+      <ClassStats sourceFile='HibernateBulkOperationHandler.java' bugs='0' class='com.aconex.db.hibernate.HibernateBulkOperationHandler$SessionOperation$1' interface='false' size='6'></ClassStats>
+      <ClassStats sourceFile='HibernateBulkOperationHandler.java' bugs='0' class='com.aconex.db.hibernate.HibernateBulkOperationHandler$SessionOperation$2' interface='false' size='7'></ClassStats>
+      <ClassStats sourceFile='HibernateCallbackWithoutResult.java' bugs='0' class='com.aconex.db.hibernate.HibernateCallbackWithoutResult' interface='false' size='7'></ClassStats>
+      <ClassStats sourceFile='HibernateKeyEqualityHelper.java' bugs='0' class='com.aconex.db.hibernate.HibernateKeyEqualityHelper' interface='false' size='12'></ClassStats>
+      <ClassStats sourceFile='HibernatePausingBulkOperationHandler.java' bugs='0' class='com.aconex.db.hibernate.HibernatePausingBulkOperationHandler' interface='false' size='15'></ClassStats>
+      <ClassStats sourceFile='HibernatePausingBulkOperationHandler.java' bugs='0' class='com.aconex.db.hibernate.HibernatePausingBulkOperationHandler$TransactionInProgressException' interface='false' size='5'></ClassStats>
+      <ClassStats sourceFile='IdentifierInExpression.java' bugs='0' class='com.aconex.db.hibernate.IdentifierInExpression' interface='false' size='13'></ClassStats>
+      <ClassStats sourceFile='NativeSQLOrder.java' bugs='0' class='com.aconex.db.hibernate.NativeSQLOrder' interface='false' size='14'></ClassStats>
+      <ClassStats sourceFile='OptionalRestrictions.java' bugs='0' class='com.aconex.db.hibernate.OptionalRestrictions' interface='false' size='33'></ClassStats>
+      <ClassStats sourceFile='OrderingUtils.java' bugs='0' class='com.aconex.db.hibernate.OrderingUtils' interface='false' size='7'></ClassStats>
+      <ClassStats sourceFile='Restrictions.java' bugs='0' class='com.aconex.db.hibernate.Restrictions' interface='false' size='89'></ClassStats>
+    </PackageStats>
+    <PackageStats priority_2='2' total_size='103' package='com.aconex.db.usertypes' total_bugs='2' total_types='2'>
+      <ClassStats priority_2='1' sourceFile='KeyedEnumUserType.java' bugs='1' class='com.aconex.db.usertypes.KeyedEnumUserType' interface='false' size='66'></ClassStats>
+      <ClassStats priority_2='1' sourceFile='XStreamUserType.java' bugs='1' class='com.aconex.db.usertypes.XStreamUserType' interface='false' size='37'></ClassStats>
+    </PackageStats>
+    <PackageStats total_size='44' package='com.aconex.lockable' total_bugs='1' priority_3='1' total_types='3'>
+      <ClassStats sourceFile='Lockable.java' bugs='0' class='com.aconex.lockable.Lockable' interface='true' size='7'></ClassStats>
+      <ClassStats sourceFile='LockableSupport.java' bugs='1' class='com.aconex.lockable.LockableSupport' interface='false' priority_3='1' size='29'></ClassStats>
+      <ClassStats sourceFile='LockedException.java' bugs='0' class='com.aconex.lockable.LockedException' interface='false' size='8'></ClassStats>
+    </PackageStats>
+    <PackageStats total_size='33' package='com.aconex.monitoring' total_bugs='0' total_types='3'>
+      <ClassStats sourceFile='MonitoredBeanPredicates.java' bugs='0' class='com.aconex.monitoring.MonitoredBeanPredicates' interface='false' size='9'></ClassStats>
+      <ClassStats sourceFile='RequestId.java' bugs='0' class='com.aconex.monitoring.RequestId' interface='false' size='6'></ClassStats>
+      <ClassStats sourceFile='TimedRunnable.java' bugs='0' class='com.aconex.monitoring.TimedRunnable' interface='false' size='18'></ClassStats>
+    </PackageStats>
+    <PackageStats priority_2='2' total_size='68' package='com.aconex.pdf.jobTicket' total_bugs='2' total_types='2'>
+      <ClassStats sourceFile='XMLElement.java' bugs='0' class='com.aconex.pdf.jobTicket.XMLElement' interface='false' size='50'></ClassStats>
+      <ClassStats priority_2='2' sourceFile='XMLElement.java' bugs='2' class='com.aconex.pdf.jobTicket.XMLElement$AllowedStringsPredicate' interface='false' size='18'></ClassStats>
+    </PackageStats>
+    <PackageStats total_size='12' package='com.aconex.security.util' total_bugs='0' total_types='1'>
+      <ClassStats sourceFile='PhoneticUtils.java' bugs='0' class='com.aconex.security.util.PhoneticUtils' interface='false' size='12'></ClassStats>
+    </PackageStats>
+    <PackageStats total_size='12' package='com.aconex.specification' total_bugs='0' total_types='2'>
+      <ClassStats sourceFile='OrSpecification.java' bugs='0' class='com.aconex.specification.OrSpecification' interface='false' size='10'></ClassStats>
+      <ClassStats sourceFile='Specification.java' bugs='0' class='com.aconex.specification.Specification' interface='true' size='2'></ClassStats>
+    </PackageStats>
+    <PackageStats total_size='264' package='com.aconex.test.hamcrest' total_bugs='0' total_types='19'>
+      <ClassStats sourceFile='CollectionMatchers.java' bugs='0' class='com.aconex.test.hamcrest.CollectionMatchers' interface='false' size='18'></ClassStats>
+      <ClassStats sourceFile='IsAnnotatedWithMatcher.java' bugs='0' class='com.aconex.test.hamcrest.IsAnnotatedWithMatcher' interface='false' size='18'></ClassStats>
+      <ClassStats sourceFile='IsCollectionContainingInAnyOrderMatcher.java' bugs='0' class='com.aconex.test.hamcrest.IsCollectionContainingInAnyOrderMatcher' interface='false' size='13'></ClassStats>
+      <ClassStats sourceFile='IsDeeplySerializableMatcher.java' bugs='0' class='com.aconex.test.hamcrest.IsDeeplySerializableMatcher' interface='false' size='12'></ClassStats>
+      <ClassStats sourceFile='IsImmutableMatcher.java' bugs='0' class='com.aconex.test.hamcrest.IsImmutableMatcher' interface='false' size='14'></ClassStats>
+      <ClassStats sourceFile='IsListContainingInOrderMatcher.java' bugs='0' class='com.aconex.test.hamcrest.IsListContainingInOrderMatcher' interface='false' size='17'></ClassStats>
+      <ClassStats sourceFile='IsListEmptyMatcher.java' bugs='0' class='com.aconex.test.hamcrest.IsListEmptyMatcher' interface='false' size='9'></ClassStats>
+      <ClassStats sourceFile='IsMapEmptyMatcher.java' bugs='0' class='com.aconex.test.hamcrest.IsMapEmptyMatcher' interface='false' size='9'></ClassStats>
+      <ClassStats sourceFile='IsMemberPackageProtectedMatcher.java' bugs='0' class='com.aconex.test.hamcrest.IsMemberPackageProtectedMatcher' interface='false' size='12'></ClassStats>
+      <ClassStats sourceFile='IsMemberPublicMatcher.java' bugs='0' class='com.aconex.test.hamcrest.IsMemberPublicMatcher' interface='false' size='11'></ClassStats>
+      <ClassStats sourceFile='IsOfLengthMatcher.java' bugs='0' class='com.aconex.test.hamcrest.IsOfLengthMatcher' interface='false' size='13'></ClassStats>
+      <ClassStats sourceFile='IsTransactionalMatcher.java' bugs='0' class='com.aconex.test.hamcrest.IsTransactionalMatcher' interface='false' size='30'></ClassStats>
+      <ClassStats sourceFile='IsUrlMatcher.java' bugs='0' class='com.aconex.test.hamcrest.IsUrlMatcher' interface='false' size='23'></ClassStats>
+      <ClassStats sourceFile='MapContainsEntriesMatcher.java' bugs='0' class='com.aconex.test.hamcrest.MapContainsEntriesMatcher' interface='false' size='18'></ClassStats>
+      <ClassStats sourceFile='MatchesRegexMatcher.java' bugs='0' class='com.aconex.test.hamcrest.MatchesRegexMatcher' interface='false' size='13'></ClassStats>
+      <ClassStats sourceFile='ReflectionMatchers.java' bugs='0' class='com.aconex.test.hamcrest.ReflectionMatchers' interface='false' size='14'></ClassStats>
+      <ClassStats sourceFile='StringMatchers.java' bugs='0' class='com.aconex.test.hamcrest.StringMatchers' interface='false' size='8'></ClassStats>
+      <ClassStats sourceFile='TransactionalMatchers.java' bugs='0' class='com.aconex.test.hamcrest.TransactionalMatchers' interface='false' size='6'></ClassStats>
+      <ClassStats sourceFile='UrlMatchers.java' bugs='0' class='com.aconex.test.hamcrest.UrlMatchers' interface='false' size='6'></ClassStats>
+    </PackageStats>
+    <PackageStats total_size='27' package='com.aconex.test.mockito' total_bugs='0' total_types='4'>
+      <ClassStats sourceFile='ReflectionMatchers.java' bugs='0' class='com.aconex.test.mockito.ReflectionMatchers' interface='false' size='6'></ClassStats>
+      <ClassStats sourceFile='ReflectionMatchers.java' bugs='0' class='com.aconex.test.mockito.ReflectionMatchers$1' interface='false' size='10'></ClassStats>
+      <ClassStats sourceFile='StringMatchers.java' bugs='0' class='com.aconex.test.mockito.StringMatchers' interface='false' size='6'></ClassStats>
+      <ClassStats sourceFile='StringMatchers.java' bugs='0' class='com.aconex.test.mockito.StringMatchers$1' interface='false' size='5'></ClassStats>
+    </PackageStats>
+    <PackageStats priority_2='1' priority_1='3' total_size='903' package='com.aconex.utilities' total_bugs='6' priority_3='2' total_types='28'>
+      <ClassStats sourceFile='AnnotationEqualityHelper.java' bugs='0' class='com.aconex.utilities.AnnotationEqualityHelper' interface='false' size='111'></ClassStats>
+      <ClassStats sourceFile='ArgumentValidator.java' bugs='0' class='com.aconex.utilities.ArgumentValidator' interface='false' size='34'></ClassStats>
+      <ClassStats sourceFile='ArgumentValidator.java' bugs='0' class='com.aconex.utilities.ArgumentValidator$1' interface='false' size='7'></ClassStats>
+      <ClassStats priority_1='1' sourceFile='BeanUtils.java' bugs='1' class='com.aconex.utilities.BeanUtils' interface='false' size='9'></ClassStats>
+      <ClassStats sourceFile='ConfigConstants.java' bugs='0' class='com.aconex.utilities.ConfigConstants' interface='false' size='6'></ClassStats>
+      <ClassStats sourceFile='CryptographyException.java' bugs='0' class='com.aconex.utilities.CryptographyException' interface='false' size='14'></ClassStats>
+      <ClassStats sourceFile='DataManipulation.java' bugs='0' class='com.aconex.utilities.DataManipulation' interface='false' size='92'></ClassStats>
+      <ClassStats sourceFile='EnumUtils.java' bugs='0' class='com.aconex.utilities.EnumUtils' interface='false' size='12'></ClassStats>
+      <ClassStats sourceFile='EqualityField.java' bugs='0' class='com.aconex.utilities.EqualityField' interface='true' size='1'></ClassStats>
+      <ClassStats sourceFile='FormUtils.java' bugs='0' class='com.aconex.utilities.FormUtils' interface='false' size='16'></ClassStats>
+      <ClassStats sourceFile='GuidGenerator.java' bugs='0' class='com.aconex.utilities.GuidGenerator' interface='false' size='5'></ClassStats>
+      <ClassStats sourceFile='HTMLFormat.java' bugs='0' class='com.aconex.utilities.HTMLFormat' interface='false' size='38'></ClassStats>
+      <ClassStats sourceFile='HTMLFormat.java' bugs='0' class='com.aconex.utilities.HTMLFormat$1' interface='false' size='6'></ClassStats>
+      <ClassStats sourceFile='HTMLFormat.java' bugs='0' class='com.aconex.utilities.HTMLFormat$2' interface='false' size='6'></ClassStats>
+      <ClassStats sourceFile='HTMLFormat.java' bugs='0' class='com.aconex.utilities.HTMLFormat$3' interface='false' size='6'></ClassStats>
+      <ClassStats sourceFile='HTMLFormatRules.java' bugs='0' class='com.aconex.utilities.HTMLFormatRules' interface='false' size='13'></ClassStats>
+      <ClassStats sourceFile='JMXUtils.java' bugs='0' class='com.aconex.utilities.JMXUtils' interface='false' size='25'></ClassStats>
+      <ClassStats priority_1='1' sourceFile='NumberUtils.java' bugs='1' class='com.aconex.utilities.NumberUtils' interface='false' size='10'></ClassStats>
+      <ClassStats sourceFile='SHA1.java' bugs='0' class='com.aconex.utilities.SHA1' interface='false' size='199'></ClassStats>
+      <ClassStats priority_1='1' sourceFile='StringEscapeUtils.java' bugs='1' class='com.aconex.utilities.StringEscapeUtils' interface='false' size='13'></ClassStats>
+      <ClassStats sourceFile='StringTrimingUtils.java' bugs='0' class='com.aconex.utilities.StringTrimingUtils' interface='false' size='20'></ClassStats>
+      <ClassStats priority_2='1' sourceFile='TimingStatistics.java' bugs='1' class='com.aconex.utilities.TimingStatistics' interface='false' size='49'></ClassStats>
+      <ClassStats sourceFile='TransientHolder.java' bugs='0' class='com.aconex.utilities.TransientHolder' interface='false' size='13'></ClassStats>
+      <ClassStats sourceFile='URLUtils.java' bugs='1' class='com.aconex.utilities.URLUtils' interface='false' priority_3='1' size='137'></ClassStats>
+      <ClassStats sourceFile='ValidationUtils.java' bugs='0' class='com.aconex.utilities.ValidationUtils' interface='false' size='11'></ClassStats>
+      <ClassStats sourceFile='XMLUtils.java' bugs='1' class='com.aconex.utilities.XMLUtils' interface='false' priority_3='1' size='26'></ClassStats>
+      <ClassStats sourceFile='XStreamUtils.java' bugs='0' class='com.aconex.utilities.XStreamUtils' interface='false' size='19'></ClassStats>
+      <ClassStats sourceFile='XStreamUtils.java' bugs='0' class='com.aconex.utilities.XStreamUtils$1' interface='false' size='5'></ClassStats>
+    </PackageStats>
+    <PackageStats total_size='235' package='com.aconex.utilities.browser' total_bugs='11' priority_3='11' total_types='2'>
+      <ClassStats sourceFile='BrowserProperties.java' bugs='3' class='com.aconex.utilities.browser.BrowserProperties' interface='false' priority_3='3' size='120'></ClassStats>
+      <ClassStats sourceFile='BrowserSniffer.java' bugs='8' class='com.aconex.utilities.browser.BrowserSniffer' interface='false' priority_3='8' size='115'></ClassStats>
+    </PackageStats>
+    <PackageStats priority_2='3' total_size='651' package='com.aconex.utilities.db' total_bugs='7' priority_3='4' total_types='17'>
+      <ClassStats sourceFile='ConnectionIdSource.java' bugs='0' class='com.aconex.utilities.db.ConnectionIdSource' interface='true' size='7'></ClassStats>
+      <ClassStats sourceFile='ConnectionIdSource.java' bugs='0' class='com.aconex.utilities.db.ConnectionIdSource$1' interface='false' size='5'></ClassStats>
+      <ClassStats sourceFile='ConnectionIdSource.java' bugs='0' class='com.aconex.utilities.db.ConnectionIdSource$2' interface='false' size='10'></ClassStats>
+      <ClassStats sourceFile='ConnectionIdSource.java' bugs='0' class='com.aconex.utilities.db.ConnectionIdSource$2$1' interface='false' size='7'></ClassStats>
+      <ClassStats sourceFile='LoggingDriver.java' bugs='0' class='com.aconex.utilities.db.LoggingDriver' interface='false' size='103'></ClassStats>
+      <ClassStats sourceFile='LoggingDriver.java' bugs='0' class='com.aconex.utilities.db.LoggingDriver$1' interface='false' size='6'></ClassStats>
+      <ClassStats sourceFile='LoggingDriver.java' bugs='1' class='com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler' interface='false' priority_3='1' size='76'></ClassStats>
+      <ClassStats priority_2='1' sourceFile='LoggingDriver.java' bugs='1' class='com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler$ResultSetInvocationHandler' interface='false' size='25'></ClassStats>
+      <ClassStats priority_2='1' sourceFile='LoggingDriver.java' bugs='1' class='com.aconex.utilities.db.LoggingDriver$ConnectionInvocationHandler$StatementInvocationHandler' interface='false' size='39'></ClassStats>
+      <ClassStats priority_2='1' sourceFile='LoggingDriver.java' bugs='1' class='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor' interface='false' size='162'></ClassStats>
+      <ClassStats sourceFile='LoggingDriver.java' bugs='0' class='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$1' interface='false' size='7'></ClassStats>
+      <ClassStats sourceFile='LoggingDriver.java' bugs='3' class='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog' interface='false' priority_3='3' size='103'></ClassStats>
+      <ClassStats sourceFile='LoggingDriver.java' bugs='0' class='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog$CpuWarningFilter' interface='false' size='11'></ClassStats>
+      <ClassStats sourceFile='LoggingDriver.java' bugs='0' class='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$QueryLog$IoWarningFilter' interface='false' size='12'></ClassStats>
+      <ClassStats sourceFile='LoggingDriver.java' bugs='0' class='com.aconex.utilities.db.LoggingDriver$LoggingDriverMonitor$WarningFilter' interface='false' size='16'></ClassStats>
+      <ClassStats sourceFile='MDCLoggerDataSource.java' bugs='0' class='com.aconex.utilities.db.MDCLoggerDataSource' interface='false' size='41'></ClassStats>
+      <ClassStats sourceFile='SQLServerUtils.java' bugs='0' class='com.aconex.utilities.db.SQLServerUtils' interface='false' size='21'></ClassStats>
+    </PackageStats>
+    <PackageStats total_size='24' package='com.aconex.utilities.decorators' total_bugs='0' total_types='4'>
+      <ClassStats sourceFile='AbstractDecorator.java' bugs='0' class='com.aconex.utilities.decorators.AbstractDecorator' interface='false' size='8'></ClassStats>
+      <ClassStats sourceFile='AbstractRunnableDecorator.java' bugs='0' class='com.aconex.utilities.decorators.AbstractRunnableDecorator' interface='false' size='4'></ClassStats>
+      <ClassStats sourceFile='Decorator.java' bugs='0' class='com.aconex.utilities.decorators.Decorator' interface='true' size='2'></ClassStats>
+      <ClassStats sourceFile='Decorator.java' bugs='0' class='com.aconex.utilities.decorators.Decorator$Helper' interface='false' size='10'></ClassStats>
+    </PackageStats>
+    <PackageStats total_size='21' package='com.aconex.utilities.encoder' total_bugs='0' total_types='1'>
+      <ClassStats sourceFile='DigestUtils.java' bugs='0' class='com.aconex.utilities.encoder.DigestUtils' interface='false' size='21'></ClassStats>
+    </PackageStats>
+    <PackageStats priority_2='1' total_size='118' package='com.aconex.utilities.message' total_bugs='1' total_types='5'>
+      <ClassStats priority_2='1' sourceFile='Message.java' bugs='1' class='com.aconex.utilities.message.Message' interface='false' size='35'></ClassStats>
+      <ClassStats sourceFile='MessageContainer.java' bugs='0' class='com.aconex.utilities.message.MessageContainer' interface='false' size='44'></ClassStats>
+      <ClassStats sourceFile='MessageContainer.java' bugs='0' class='com.aconex.utilities.message.MessageContainer$1' interface='false' size='8'></ClassStats>
+      <ClassStats sourceFile='MessageContainer.java' bugs='0' class='com.aconex.utilities.message.MessageContainer$2' interface='false' size='8'></ClassStats>
+      <ClassStats sourceFile='MessageType.java' bugs='0' class='com.aconex.utilities.message.MessageType' interface='false' size='23'></ClassStats>
+    </PackageStats>
+    <PackageStats total_size='67' package='com.aconex.utilities.tuples' total_bugs='0' total_types='1'>
+      <ClassStats sourceFile='Pair.java' bugs='0' class='com.aconex.utilities.tuples.Pair' interface='false' size='67'></ClassStats>
+    </PackageStats>
+    <PackageStats total_size='22' package='com.aconex.utilities.web.binding.editors' total_bugs='0' total_types='1'>
+      <ClassStats sourceFile='AbstractPropertyEditor.java' bugs='0' class='com.aconex.utilities.web.binding.editors.AbstractPropertyEditor' interface='false' size='22'></ClassStats>
+    </PackageStats>
+    <PackageStats total_size='36' package='com.aconex.velocity' total_bugs='3' priority_3='3' total_types='1'>
+      <ClassStats sourceFile='VelocityUtils.java' bugs='3' class='com.aconex.velocity.VelocityUtils' interface='false' priority_3='3' size='36'></ClassStats>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='84' maxMicrosecondsPerInvocation='868' name='edu.umd.cs.findbugs.detect.NumberConstructor' invocations='135' totalMilliseconds='11' standardDeviationMircosecondsPerInvocation='126'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='85' maxMicrosecondsPerInvocation='742' name='edu.umd.cs.findbugs.detect.FindFloatEquality' invocations='135' totalMilliseconds='11' standardDeviationMircosecondsPerInvocation='124'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='86' maxMicrosecondsPerInvocation='784' name='edu.umd.cs.findbugs.detect.AppendingToAnObjectOutputStream' invocations='135' totalMilliseconds='11' standardDeviationMircosecondsPerInvocation='131'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='87' maxMicrosecondsPerInvocation='2929' name='edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory' invocations='135' totalMilliseconds='11' standardDeviationMircosecondsPerInvocation='251'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='92' maxMicrosecondsPerInvocation='862' name='edu.umd.cs.findbugs.detect.CrossSiteScripting' invocations='135' totalMilliseconds='12' standardDeviationMircosecondsPerInvocation='137'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='92' maxMicrosecondsPerInvocation='996' name='edu.umd.cs.findbugs.detect.FindBadForLoop' invocations='135' totalMilliseconds='12' standardDeviationMircosecondsPerInvocation='144'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='93' maxMicrosecondsPerInvocation='850' name='edu.umd.cs.findbugs.detect.BadSyntaxForRegularExpression' invocations='135' totalMilliseconds='12' standardDeviationMircosecondsPerInvocation='138'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='93' maxMicrosecondsPerInvocation='846' name='edu.umd.cs.findbugs.detect.InfiniteRecursiveLoop' invocations='135' totalMilliseconds='12' standardDeviationMircosecondsPerInvocation='134'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='96' maxMicrosecondsPerInvocation='858' name='edu.umd.cs.findbugs.detect.LostLoggerDueToWeakReference' invocations='135' totalMilliseconds='12' standardDeviationMircosecondsPerInvocation='142'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='96' maxMicrosecondsPerInvocation='727' name='edu.umd.cs.findbugs.detect.SynchronizationOnSharedBuiltinConstant' invocations='135' totalMilliseconds='13' standardDeviationMircosecondsPerInvocation='123'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='96' maxMicrosecondsPerInvocation='3120' name='edu.umd.cs.findbugs.detect.FindSelfComparison2' invocations='135' totalMilliseconds='13' standardDeviationMircosecondsPerInvocation='278'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='24' maxMicrosecondsPerInvocation='469' name='edu.umd.cs.findbugs.classfile.engine.bcel.MethodFactory' invocations='541' totalMilliseconds='13' standardDeviationMircosecondsPerInvocation='36'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='98' maxMicrosecondsPerInvocation='4587' name='edu.umd.cs.findbugs.detect.FindUnsatisfiedObligation' invocations='135' totalMilliseconds='13' standardDeviationMircosecondsPerInvocation='414'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='98' maxMicrosecondsPerInvocation='765' name='edu.umd.cs.findbugs.detect.BadResultSetAccess' invocations='135' totalMilliseconds='13' standardDeviationMircosecondsPerInvocation='132'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='98' maxMicrosecondsPerInvocation='2717' name='edu.umd.cs.findbugs.detect.FindBadCast2' invocations='135' totalMilliseconds='13' standardDeviationMircosecondsPerInvocation='317'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='91' maxMicrosecondsPerInvocation='3544' name='edu.umd.cs.findbugs.classfile.engine.bcel.ObligationDataflowFactory' invocations='151' totalMilliseconds='13' standardDeviationMircosecondsPerInvocation='291'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='27' maxMicrosecondsPerInvocation='599' name='edu.umd.cs.findbugs.detect.NoteSuppressedWarnings' invocations='507' totalMilliseconds='14' standardDeviationMircosecondsPerInvocation='57'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='105' maxMicrosecondsPerInvocation='1555' name='edu.umd.cs.findbugs.detect.Naming' invocations='135' totalMilliseconds='14' standardDeviationMircosecondsPerInvocation='148'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='108' maxMicrosecondsPerInvocation='1174' name='edu.umd.cs.findbugs.detect.FindNonShortCircuit' invocations='135' totalMilliseconds='14' standardDeviationMircosecondsPerInvocation='166'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='113' maxMicrosecondsPerInvocation='754' name='edu.umd.cs.findbugs.detect.NoteUnconditionalParamDerefs' invocations='135' totalMilliseconds='15' standardDeviationMircosecondsPerInvocation='150'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='116' maxMicrosecondsPerInvocation='3319' name='edu.umd.cs.findbugs.detect.FormatStringChecker' invocations='135' totalMilliseconds='15' standardDeviationMircosecondsPerInvocation='308'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='121' maxMicrosecondsPerInvocation='1560' name='edu.umd.cs.findbugs.detect.InfiniteLoop' invocations='135' totalMilliseconds='16' standardDeviationMircosecondsPerInvocation='196'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='122' maxMicrosecondsPerInvocation='1138' name='edu.umd.cs.findbugs.detect.MethodReturnCheck' invocations='135' totalMilliseconds='16' standardDeviationMircosecondsPerInvocation='177'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='22' maxMicrosecondsPerInvocation='1458' name='edu.umd.cs.findbugs.classfile.engine.bcel.ReverseDepthFirstSearchFactory' invocations='741' totalMilliseconds='16' standardDeviationMircosecondsPerInvocation='65'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='128' maxMicrosecondsPerInvocation='1432' name='edu.umd.cs.findbugs.detect.RepeatedConditionals' invocations='135' totalMilliseconds='17' standardDeviationMircosecondsPerInvocation='203'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='137' maxMicrosecondsPerInvocation='4068' name='edu.umd.cs.findbugs.detect.DumbMethodInvocations' invocations='135' totalMilliseconds='18' standardDeviationMircosecondsPerInvocation='366'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='140' maxMicrosecondsPerInvocation='1355' name='edu.umd.cs.findbugs.detect.FindHEmismatch' invocations='135' totalMilliseconds='18' standardDeviationMircosecondsPerInvocation='195'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='11' maxMicrosecondsPerInvocation='7510' name='edu.umd.cs.findbugs.classfile.engine.asm.ClassReaderAnalysisEngine' invocations='1692' totalMilliseconds='19' standardDeviationMircosecondsPerInvocation='206'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='149' maxMicrosecondsPerInvocation='2491' name='edu.umd.cs.findbugs.detect.FindSelfComparison' invocations='135' totalMilliseconds='20' standardDeviationMircosecondsPerInvocation='285'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='22' maxMicrosecondsPerInvocation='1390' name='edu.umd.cs.findbugs.classfile.engine.bcel.DepthFirstSearchFactory' invocations='924' totalMilliseconds='20' standardDeviationMircosecondsPerInvocation='73'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='153' maxMicrosecondsPerInvocation='1846' name='edu.umd.cs.findbugs.detect.DuplicateBranches' invocations='135' totalMilliseconds='20' standardDeviationMircosecondsPerInvocation='280'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='162' maxMicrosecondsPerInvocation='3631' name='edu.umd.cs.findbugs.detect.FindUnrelatedTypesInGenericContainer' invocations='135' totalMilliseconds='22' standardDeviationMircosecondsPerInvocation='433'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='175' maxMicrosecondsPerInvocation='2584' name='edu.umd.cs.findbugs.detect.FindPuzzlers' invocations='135' totalMilliseconds='23' standardDeviationMircosecondsPerInvocation='318'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='181' maxMicrosecondsPerInvocation='12639' name='edu.umd.cs.findbugs.detect.SynchronizingOnContentsOfFieldToProtectField' invocations='135' totalMilliseconds='24' standardDeviationMircosecondsPerInvocation='1085'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='188' maxMicrosecondsPerInvocation='2056' name='edu.umd.cs.findbugs.detect.RuntimeExceptionCapture' invocations='135' totalMilliseconds='25' standardDeviationMircosecondsPerInvocation='368'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='191' maxMicrosecondsPerInvocation='2348' name='edu.umd.cs.findbugs.detect.SwitchFallthrough' invocations='135' totalMilliseconds='25' standardDeviationMircosecondsPerInvocation='305'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='198' maxMicrosecondsPerInvocation='5348' name='edu.umd.cs.findbugs.detect.FindOpenStream' invocations='135' totalMilliseconds='26' standardDeviationMircosecondsPerInvocation='723'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='4' maxMicrosecondsPerInvocation='92' name='edu.umd.cs.findbugs.NonReportingDetectorToDetector2Adapter' invocations='6861' totalMilliseconds='30' standardDeviationMircosecondsPerInvocation='3'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='224' maxMicrosecondsPerInvocation='2615' name='edu.umd.cs.findbugs.detect.FindNullDeref' invocations='135' totalMilliseconds='30' standardDeviationMircosecondsPerInvocation='341'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='229' maxMicrosecondsPerInvocation='6741' name='edu.umd.cs.findbugs.detect.FindSqlInjection' invocations='135' totalMilliseconds='31' standardDeviationMircosecondsPerInvocation='624'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='239' maxMicrosecondsPerInvocation='2404' name='edu.umd.cs.findbugs.detect.NoteNonnullReturnValues' invocations='135' totalMilliseconds='32' standardDeviationMircosecondsPerInvocation='361'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='240' maxMicrosecondsPerInvocation='1948' name='edu.umd.cs.findbugs.detect.UnreadFields' invocations='135' totalMilliseconds='32' standardDeviationMircosecondsPerInvocation='300'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='260' maxMicrosecondsPerInvocation='2327' name='edu.umd.cs.findbugs.detect.URLProblems' invocations='135' totalMilliseconds='35' standardDeviationMircosecondsPerInvocation='420'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='2' maxMicrosecondsPerInvocation='39' name='edu.umd.cs.findbugs.DetectorToDetector2Adapter' invocations='15222' totalMilliseconds='36' standardDeviationMircosecondsPerInvocation='1'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='277' maxMicrosecondsPerInvocation='3052' name='edu.umd.cs.findbugs.detect.DumbMethods' invocations='135' totalMilliseconds='37' standardDeviationMircosecondsPerInvocation='492'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='282' maxMicrosecondsPerInvocation='15160' name='edu.umd.cs.findbugs.detect.SerializableIdiom' invocations='135' totalMilliseconds='38' standardDeviationMircosecondsPerInvocation='1469'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='280' maxMicrosecondsPerInvocation='27589' name='edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory' invocations='140' totalMilliseconds='39' standardDeviationMircosecondsPerInvocation='2316'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='365' maxMicrosecondsPerInvocation='8705' name='edu.umd.cs.findbugs.detect.FindInconsistentSync2' invocations='135' totalMilliseconds='49' standardDeviationMircosecondsPerInvocation='855'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='70' maxMicrosecondsPerInvocation='8069' name='edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions' invocations='718' totalMilliseconds='50' standardDeviationMircosecondsPerInvocation='311'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='7' maxMicrosecondsPerInvocation='519' name='edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase' invocations='7982' totalMilliseconds='56' standardDeviationMircosecondsPerInvocation='14'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='441' maxMicrosecondsPerInvocation='12042' name='edu.umd.cs.findbugs.detect.FindDeadLocalStores' invocations='135' totalMilliseconds='59' standardDeviationMircosecondsPerInvocation='1390'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='470' maxMicrosecondsPerInvocation='7453' name='edu.umd.cs.findbugs.detect.FindRefComparison' invocations='135' totalMilliseconds='63' standardDeviationMircosecondsPerInvocation='876'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='570' maxMicrosecondsPerInvocation='28814' name='edu.umd.cs.findbugs.detect.LoadOfKnownNullValue' invocations='135' totalMilliseconds='77' standardDeviationMircosecondsPerInvocation='2535'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='569' maxMicrosecondsPerInvocation='5541' name='edu.umd.cs.findbugs.ba.obl.ObligationAnalysis' invocations='151' totalMilliseconds='85' standardDeviationMircosecondsPerInvocation='974'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='129' maxMicrosecondsPerInvocation='10767' name='edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory' invocations='687' totalMilliseconds='88' standardDeviationMircosecondsPerInvocation='455'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='207' maxMicrosecondsPerInvocation='4242' name='edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis' invocations='507' totalMilliseconds='104' standardDeviationMircosecondsPerInvocation='475'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='243' maxMicrosecondsPerInvocation='4836' name='edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase' invocations='507' totalMilliseconds='123' standardDeviationMircosecondsPerInvocation='476'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='257' maxMicrosecondsPerInvocation='6041' name='edu.umd.cs.findbugs.detect.ReflectiveClasses' invocations='507' totalMilliseconds='130' standardDeviationMircosecondsPerInvocation='676'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='176' maxMicrosecondsPerInvocation='12264' name='edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory' invocations='742' totalMilliseconds='131' standardDeviationMircosecondsPerInvocation='537'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='194' maxMicrosecondsPerInvocation='8433' name='edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine' invocations='709' totalMilliseconds='137' standardDeviationMircosecondsPerInvocation='469'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='212' maxMicrosecondsPerInvocation='30100' name='edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory' invocations='769' totalMilliseconds='163' standardDeviationMircosecondsPerInvocation='1146'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='328' maxMicrosecondsPerInvocation='6731' name='edu.umd.cs.findbugs.detect.CalledMethods' invocations='507' totalMilliseconds='166' standardDeviationMircosecondsPerInvocation='809'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='402' maxMicrosecondsPerInvocation='22130' name='edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical' invocations='507' totalMilliseconds='203' standardDeviationMircosecondsPerInvocation='1267'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='144' maxMicrosecondsPerInvocation='850' name='edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine' invocations='1866' totalMilliseconds='269' standardDeviationMircosecondsPerInvocation='54'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='548' maxMicrosecondsPerInvocation='12857' name='edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers' invocations='507' totalMilliseconds='278' standardDeviationMircosecondsPerInvocation='1538'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='377' maxMicrosecondsPerInvocation='24704' name='edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory' invocations='742' totalMilliseconds='279' standardDeviationMircosecondsPerInvocation='1171'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='567' maxMicrosecondsPerInvocation='26421' name='edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis' invocations='516' totalMilliseconds='292' standardDeviationMircosecondsPerInvocation='1776'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='230' maxMicrosecondsPerInvocation='17815' name='edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine' invocations='1858' totalMilliseconds='427' standardDeviationMircosecondsPerInvocation='692'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='564' maxMicrosecondsPerInvocation='32812' name='edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory' invocations='768' totalMilliseconds='433' standardDeviationMircosecondsPerInvocation='1543'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='618' maxMicrosecondsPerInvocation='59506' name='edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder' invocations='718' totalMilliseconds='443' standardDeviationMircosecondsPerInvocation='2514'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='628' maxMicrosecondsPerInvocation='48362' name='edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory' invocations='741' totalMilliseconds='466' standardDeviationMircosecondsPerInvocation='2085'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='534' maxMicrosecondsPerInvocation='41701' name='edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory' invocations='945' totalMilliseconds='505' standardDeviationMircosecondsPerInvocation='2069'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='694' maxMicrosecondsPerInvocation='55576' name='edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory' invocations='742' totalMilliseconds='514' standardDeviationMircosecondsPerInvocation='2309'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='1192' maxMicrosecondsPerInvocation='26705' name='edu.umd.cs.findbugs.detect.FieldItemSummary' invocations='507' totalMilliseconds='604' standardDeviationMircosecondsPerInvocation='2928'></ClassProfile>
+      <ClassProfile avgMicrosecondsPerInvocation='85' maxMicrosecondsPerInvocation='10128' name='edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory' invocations='7114' totalMilliseconds='611' standardDeviationMircosecondsPerInvocation='229'></ClassProfile>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

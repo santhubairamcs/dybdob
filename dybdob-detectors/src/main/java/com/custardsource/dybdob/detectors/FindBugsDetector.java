@@ -55,7 +55,8 @@ public class FindBugsDetector extends AbstractDetector {
     }
 
     private Integer getIntAttribute(Node node, String attributeName) {
-        return Integer.valueOf(node.getAttributes().getNamedItem(attributeName).getTextContent());
+        final Node attribute = node.getAttributes().getNamedItem(attributeName);
+        return attribute != null ? Integer.valueOf(attribute.getTextContent()) : 0;
     }
 
     private Node getSummaryNode(XPath xpath, Document document) throws XPathExpressionException {

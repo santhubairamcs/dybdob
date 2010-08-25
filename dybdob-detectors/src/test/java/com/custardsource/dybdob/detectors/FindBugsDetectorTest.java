@@ -10,6 +10,7 @@ import static org.hamcrest.Matchers.is;
 @Test
 public class FindBugsDetectorTest {
     private static final File FINDBUGS_XML = new File(ClassLoader.getSystemClassLoader().getResource("findbugsXml.xml").getPath());
+    private static final File FINDBUGS_XML_NO_HIGH_PRIORITY = new File(ClassLoader.getSystemClassLoader().getResource("findbugsXmlNoHighPriority.xml").getPath());
 
     public void shouldFind37BugsInTotal() {
         assertThat(new FindBugsDetector().getResultsFrom(FINDBUGS_XML).get("all"), is(37));
@@ -18,6 +19,11 @@ public class FindBugsDetectorTest {
     public void shouldFind3HighPriorityBugs() {
         assertThat(new FindBugsDetector().getResultsFrom(FINDBUGS_XML).get("high"), is(3));
     }
+
+    public void shouldFind0HighPriorityBugsWhenNoSuchAttributeExists() {
+        assertThat(new FindBugsDetector().getResultsFrom(FINDBUGS_XML_NO_HIGH_PRIORITY).get("high"), is(0));
+    }
+
 
     public void shouldFind11NormalPriorityBugs() {
         assertThat(new FindBugsDetector().getResultsFrom(FINDBUGS_XML).get("normal"), is(11));
