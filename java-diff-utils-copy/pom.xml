@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.custardsource.dybdob</groupId>
+  <artifactId>java-diff-utils-copy</artifactId>
+  <packaging>jar</packaging>
+  <name>A copy of the java diff utils library</name>
+  <description>A temporary copy of java diff utils from http://code.google.com/p/java-diff-utils to allow releasing dybdob</description>
+  <parent>
+    <groupId>com.custardsource</groupId>
+    <artifactId>dybdob</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.4</version>
+    </dependency>
+  </dependencies>
+</project>
