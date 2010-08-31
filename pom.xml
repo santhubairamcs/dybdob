@@ -9,7 +9,7 @@
   <groupId>com.custardsource</groupId>
   <artifactId>dybdob</artifactId>
   <packaging>pom</packaging>
-  <version>1.0.1</version>
+  <version>1.0.2-SNAPSHOT</version>
   <name>dybdob</name>
   <description>Libraries to help track project warning signs ('broken windows') over time and enforce their cleanup</description>
   <modules>
