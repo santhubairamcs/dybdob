@@ -31,6 +31,14 @@ public abstract class DybdobMojo extends AbstractMojo {
     org.apache.maven.project.MavenProject mavenProject;
 
     /**
+     * Skip is enabled
+     *
+     * @parameter default-value=false
+     * @required
+     */
+    private boolean skip;
+
+    /**
      * Which detectors are enabled
      *
      * @parameter
@@ -47,11 +55,15 @@ public abstract class DybdobMojo extends AbstractMojo {
             return;
         }
 
+        if (skip) {
+            getLog().info("Skipping warning count" + mavenProject.getPackaging());
+            return;
+        }
+
         initialize();
         checkWarningCounts();
         tearDown();
     }
-
     protected abstract void tearDown();
 
     private void checkWarningCounts() throws MojoExecutionException {
