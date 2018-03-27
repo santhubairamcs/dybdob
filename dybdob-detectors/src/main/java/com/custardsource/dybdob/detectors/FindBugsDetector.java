@@ -19,8 +19,8 @@ import java.io.IOException;
 import java.util.Map;
 
 public class FindBugsDetector extends AbstractDetector {
-    public FindBugsDetector() {
-        super("findbugs");
+    public FindBugsDetector(String id) {
+        super(id);
     }
 
     @Override

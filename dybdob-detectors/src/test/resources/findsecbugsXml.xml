@@ -1,0 +1,940 @@
+<BugCollection sequence='0' release='' analysisTimestamp='1521798814683' version='3.0.0' timestamp='1521700297000'>
+    <Project projectName='aconex-utils-unittest'>
+        <Plugin id='com.h3xstream.findsecbugs' enabled='true'></Plugin>
+    </Project>
+    <BugInstance instanceOccurrenceNum='0' instanceHash='1eb0b331c1e0e380ceac30bd1fccc830' cweid='89' rank='12'
+                 abbrev='SECSQLISPRJDBC' category='SECURITY' priority='2' type='SQL_INJECTION_SPRING_JDBC'
+                 instanceOccurrenceMax='0'>
+        <ShortMessage>Potential JDBC Injection (Spring JDBC)</ShortMessage>
+        <LongMessage>This use of org/springframework/jdbc/core/JdbcTemplate.queryForLong(Ljava/lang/String;)J can be
+            vulnerable to SQL injection
+        </LongMessage>
+        <Class classname='somepackage.DBUnitHelper' primary='true'>
+            <SourceLine classname='somepackage.DBUnitHelper' start='25' end='118'
+                        sourcepath='somepackage/AconexDBUnitHelper.java' sourcefile='AconexDBUnitHelper.java'>
+                <Message>At AconexAconexDBUnitHelper.java:[lines 25-118]</Message>
+            </SourceLine>
+            <Message>In class somepackage.DBUnitHelper</Message>
+        </Class>
+        <Method isStatic='false' classname='somepackage.DBUnitHelper'
+                signature='(Ljava/lang/String;Ljava/lang/String;)J' name='getLongValue' primary='true'>
+            <SourceLine endBytecode='156' classname='somepackage.DBUnitHelper' start='73' end='77'
+                        sourcepath='somepackage/AconexDBUnitHelper.java' sourcefile='AconexDBUnitHelper.java'
+                        startBytecode='0'></SourceLine>
+            <Message>In method somepackage.DBUnitHelper.getLongValue(String, String)</Message>
+        </Method>
+        <SourceLine endBytecode='23' classname='somepackage.DBUnitHelper' start='74' end='74'
+                    sourcepath='somepackage/AconexDBUnitHelper.java' sourcefile='AconexDBUnitHelper.java'
+                    startBytecode='23' primary='true'>
+            <Message>At AconexDBUnitHelper.java:[line 74]</Message>
+        </SourceLine>
+        <String role='Sink method' value='org/springframework/jdbc/core/JdbcTemplate.queryForLong(Ljava/lang/String;)J'>
+            <Message>Sink method org/springframework/jdbc/core/JdbcTemplate.queryForLong(Ljava/lang/String;)J</Message>
+        </String>
+        <String role='Unknown source'
+                value='java/lang/String.format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;'>
+            <Message>Unknown source java/lang/String.format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+            </Message>
+        </String>
+        <String role='Sink method' value='org/springframework/jdbc/core/JdbcTemplate.queryForLong(Ljava/lang/String;)J'>
+            <Message>Sink method org/springframework/jdbc/core/JdbcTemplate.queryForLong(Ljava/lang/String;)J</Message>
+        </String>
+        <String role='Method usage' value='not detected'>
+            <Message>Method usage not detected</Message>
+        </String>
+        <SourceLine endBytecode='14' classname='somepackage.DBUnitHelper' start='73' end='73'
+                    sourcepath='somepackage/AconexDBUnitHelper.java' sourcefile='AconexDBUnitHelper.java'
+                    startBytecode='14'>
+            <Message>At AconexDBUnitHelper.java:[line 73]</Message>
+        </SourceLine>
+        <SourceLine endBytecode='10' classname='somepackage.DummyKeyProvider' start='27' end='27'
+                    sourcepath='somepackage/DummyKeyProvider.java' sourcefile='DummyKeyProvider.java'
+                    startBytecode='10'>
+            <Message>At DummyKeyProvider.java:[line 27]</Message>
+        </SourceLine>
+        <SourceLine endBytecode='3' classname='somepackage.DummyKeyProvider' start='60' end='60'
+                    sourcepath='somepackage/DummyKeyProvider.java' sourcefile='DummyKeyProvider.java'
+                    startBytecode='3'>
+            <Message>At DummyKeyProvider.java:[line 60]</Message>
+        </SourceLine>
+        <SourceLine endBytecode='3' classname='somepackage.DummyKeyProvider' start='66' end='66'
+                    sourcepath='somepackage/DummyKeyProvider.java' sourcefile='DummyKeyProvider.java'
+                    startBytecode='3'>
+            <Message>At DummyKeyProvider.java:[line 66]</Message>
+        </SourceLine>
+        <SourceLine endBytecode='37' classname='somepackage.DummyKeyProvider' start='78' end='78'
+                    sourcepath='somepackage/DummyKeyProvider.java' sourcefile='DummyKeyProvider.java'
+                    startBytecode='37'>
+            <Message>At DummyKeyProvider.java:[line 78]</Message>
+        </SourceLine>
+        <SourceLine endBytecode='19' classname='somepackage.KeyProviderUtil' start='33' end='33'
+                    sourcepath='somepackage/KeyProviderUtil.java' sourcefile='KeyProviderUtil.java'
+                    startBytecode='19'>
+            <Message>At KeyProviderUtil.java:[line 33]</Message>
+        </SourceLine>
+    </BugInstance>
+    <BugInstance instanceOccurrenceNum='0' instanceHash='22eb9a89dd99454787de1550b70e437b' cweid='89' rank='12'
+                 abbrev='SECSQLISPRJDBC' category='SECURITY' priority='2' type='SQL_INJECTION_SPRING_JDBC'
+                 instanceOccurrenceMax='0'>
+        <ShortMessage>Potential JDBC Injection (Spring JDBC)</ShortMessage>
+        <LongMessage>This use of org/springframework/jdbc/core/JdbcTemplate.queryForInt(Ljava/lang/String;)I can be
+            vulnerable to SQL injection
+        </LongMessage>
+        <Class classname='somepackage.DBUnitHelper' primary='true'>
+            <SourceLine classname='somepackage.DBUnitHelper' start='25' end='118'
+                        sourcepath='somepackage/AconexDBUnitHelper.java' sourcefile='AconexDBUnitHelper.java'>
+                <Message>At AconexDBUnitHelper.java:[lines 25-118]</Message>
+            </SourceLine>
+            <Message>In class somepackage.DBUnitHelper</Message>
+        </Class>
+        <Method isStatic='false' classname='somepackage.DBUnitHelper'
+                signature='(Ljava/lang/String;Ljava/lang/String;)I' name='getValue' primary='true'>
+            <SourceLine endBytecode='156' classname='somepackage.DBUnitHelper' start='83' end='87'
+                        sourcepath='somepackage/AconexDBUnitHelper.java' sourcefile='AconexDBUnitHelper.java'
+                        startBytecode='0'></SourceLine>
+            <Message>In method somepackage.DBUnitHelper.getValue(String, String)</Message>
+        </Method>
+        <SourceLine endBytecode='23' classname='somepackage.DBUnitHelper' start='84' end='84'
+                    sourcepath='somepackage/AconexDBUnitHelper.java' sourcefile='AconexDBUnitHelper.java'
+                    startBytecode='23' primary='true'>
+            <Message>At AconexDBUnitHelper.java:[line 84]</Message>
+        </SourceLine>
+        <String role='Sink method' value='org/springframework/jdbc/core/JdbcTemplate.queryForInt(Ljava/lang/String;)I'>
+            <Message>Sink method org/springframework/jdbc/core/JdbcTemplate.queryForInt(Ljava/lang/String;)I</Message>
+        </String>
+        <String role='Unknown source'
+                value='java/lang/String.format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;'>
+            <Message>Unknown source java/lang/String.format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+            </Message>
+        </String>
+        <String role='Sink method' value='org/springframework/jdbc/core/JdbcTemplate.queryForInt(Ljava/lang/String;)I'>
+            <Message>Sink method org/springframework/jdbc/core/JdbcTemplate.queryForInt(Ljava/lang/String;)I</Message>
+        </String>
+        <String role='Method usage' value='not detected'>
+            <Message>Method usage not detected</Message>
+        </String>
+        <SourceLine endBytecode='14' classname='somepackage.DBUnitHelper' start='83' end='83'
+                    sourcepath='somepackage/AconexDBUnitHelper.java' sourcefile='AconexDBUnitHelper.java'
+                    startBytecode='14'>
+            <Message>At AconexDBUnitHelper.java:[line 83]</Message>
+        </SourceLine>
+        <SourceLine endBytecode='37' classname='somepackage.DummyKeyProvider' start='40' end='40'
+                    sourcepath='somepackage/DummyKeyProvider.java' sourcefile='DummyKeyProvider.java'
+                    startBytecode='37'>
+            <Message>At DummyKeyProvider.java:[line 40]</Message>
+        </SourceLine>
+        <SourceLine endBytecode='19' classname='somepackage.KeyProviderUtil' start='25' end='25'
+                    sourcepath='somepackage/KeyProviderUtil.java' sourcefile='KeyProviderUtil.java'
+                    startBytecode='19'>
+            <Message>At KeyProviderUtil.java:[line 25]</Message>
+        </SourceLine>
+    </BugInstance>
+    <BugInstance instanceOccurrenceNum='0' instanceHash='e6ca726bad2c77952d9e00c95dfb939' cweid='89' rank='15'
+                 abbrev='SECSQLIJDBC' category='SECURITY' priority='3' type='SQL_INJECTION_JDBC'
+                 instanceOccurrenceMax='0'>
+        <ShortMessage>Potential JDBC Injection</ShortMessage>
+        <LongMessage>This use of java/sql/Statement.execute(Ljava/lang/String;)Z can be vulnerable to SQL injection
+        </LongMessage>
+        <Class classname='somepackage.HsqlDBUnitHelper' primary='true'>
+            <SourceLine classname='somepackage.HsqlDBUnitHelper' start='19' end='65'
+                        sourcepath='somepackage/HsqlAconexDBUnitHelper.java' sourcefile='HsqlAconexDBUnitHelper.java'>
+                <Message>At HsqlAconexDBUnitHelper.java:[lines 19-65]</Message>
+            </SourceLine>
+            <Message>In class somepackage.HsqlDBUnitHelper</Message>
+        </Class>
+        <Method isStatic='false' classname='somepackage.HsqlDBUnitHelper' signature='(Ljava/lang/String;)V'
+                name='executeSql' primary='true'>
+            <SourceLine endBytecode='243' classname='somepackage.HsqlDBUnitHelper' start='54' end='65'
+                        sourcepath='somepackage/HsqlAconexDBUnitHelper.java' sourcefile='HsqlAconexDBUnitHelper.java'
+                        startBytecode='0'></SourceLine>
+            <Message>In method somepackage.HsqlDBUnitHelper.executeSql(String)</Message>
+        </Method>
+        <SourceLine endBytecode='19' classname='somepackage.HsqlDBUnitHelper' start='58' end='58'
+                    sourcepath='somepackage/HsqlAconexDBUnitHelper.java' sourcefile='HsqlAconexDBUnitHelper.java'
+                    startBytecode='19' primary='true'>
+            <Message>At HsqlAconexDBUnitHelper.java:[line 58]</Message>
+        </SourceLine>
+        <String role='Sink method' value='java/sql/Statement.execute(Ljava/lang/String;)Z'>
+            <Message>Sink method java/sql/Statement.execute(Ljava/lang/String;)Z</Message>
+        </String>
+        <String role='Sink method' value='java/sql/Statement.execute(Ljava/lang/String;)Z'>
+            <Message>Sink method java/sql/Statement.execute(Ljava/lang/String;)Z</Message>
+        </String>
+        <String role='Method usage' value='detected only with safe arguments'>
+            <Message>Method usage detected only with safe arguments</Message>
+        </String>
+    </BugInstance>
+    <BugInstance instanceOccurrenceNum='0' instanceHash='a9579b8071f4269c08914bed6425b5b1' cweid='89' rank='15'
+                 abbrev='SQL' category='SECURITY' priority='3' type='SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE'
+                 instanceOccurrenceMax='0'>
+        <ShortMessage>Nonconstant string passed to execute method on an SQL statement</ShortMessage>
+        <LongMessage>somepackage.HsqlDBUnitHelper.executeSql(String) passes a nonconstant String to an execute method
+            on an SQL statement
+        </LongMessage>
+        <Class classname='somepackage.HsqlDBUnitHelper' primary='true'>
+            <SourceLine classname='somepackage.HsqlDBUnitHelper' start='19' end='65'
+                        sourcepath='somepackage/HsqlAconexDBUnitHelper.java' sourcefile='HsqlAconexDBUnitHelper.java'>
+                <Message>At HsqlAconexDBUnitHelper.java:[lines 19-65]</Message>
+            </SourceLine>
+            <Message>In class somepackage.HsqlDBUnitHelper</Message>
+        </Class>
+        <Method isStatic='false' classname='somepackage.HsqlDBUnitHelper' signature='(Ljava/lang/String;)V'
+                name='executeSql' primary='true'>
+            <SourceLine endBytecode='27' classname='somepackage.HsqlDBUnitHelper' start='54' end='65'
+                        sourcepath='somepackage/HsqlAconexDBUnitHelper.java' sourcefile='HsqlAconexDBUnitHelper.java'
+                        startBytecode='0'></SourceLine>
+            <Message>In method somepackage.HsqlDBUnitHelper.executeSql(String)</Message>
+        </Method>
+        <SourceLine endBytecode='19' classname='somepackage.HsqlDBUnitHelper' start='58' end='58'
+                    sourcepath='somepackage/HsqlAconexDBUnitHelper.java' sourcefile='HsqlAconexDBUnitHelper.java'
+                    startBytecode='19' primary='true'>
+            <Message>At HsqlAconexDBUnitHelper.java:[line 58]</Message>
+        </SourceLine>
+    </BugInstance>
+    <BugInstance instanceOccurrenceNum='0' instanceHash='c933a095ae3c36494e8ae29a3244f318' cweid='89' rank='12'
+                 abbrev='SECSQLISPRJDBC' category='SECURITY' priority='2' type='SQL_INJECTION_SPRING_JDBC'
+                 instanceOccurrenceMax='0'>
+        <ShortMessage>Potential JDBC Injection (Spring JDBC)</ShortMessage>
+        <LongMessage>This use of org/springframework/jdbc/core/JdbcTemplate.queryForInt(Ljava/lang/String;)I can be
+            vulnerable to SQL injection
+        </LongMessage>
+        <Class classname='somepackage.BaseHibernateInMemTestCase' primary='true'>
+            <SourceLine classname='somepackage.BaseHibernateInMemTestCase' start='49' end='374'
+                        sourcepath='somepackage/BaseHibernateInMemTestCase.java'
+                        sourcefile='BaseHibernateInMemTestCase.java'>
+                <Message>At BaseHibernateInMemTestCase.java:[lines 49-374]</Message>
+            </SourceLine>
+            <Message>In class somepackage.BaseHibernateInMemTestCase</Message>
+        </Class>
+        <Method isStatic='false' classname='somepackage.BaseHibernateInMemTestCase'
+                signature='(Ljava/lang/String;)I' name='countRowsInTable' primary='true'>
+            <SourceLine endBytecode='90' classname='somepackage.BaseHibernateInMemTestCase' start='344' end='344'
+                        sourcepath='somepackage/BaseHibernateInMemTestCase.java'
+                        sourcefile='BaseHibernateInMemTestCase.java' startBytecode='0'></SourceLine>
+            <Message>In method somepackage.BaseHibernateInMemTestCase.countRowsInTable(String)</Message>
+        </Method>
+        <SourceLine endBytecode='35' classname='somepackage.BaseHibernateInMemTestCase' start='344' end='344'
+                    sourcepath='somepackage/BaseHibernateInMemTestCase.java'
+                    sourcefile='BaseHibernateInMemTestCase.java' startBytecode='35' primary='true'>
+            <Message>At BaseHibernateInMemTestCase.java:[line 344]</Message>
+        </SourceLine>
+        <String role='Sink method' value='org/springframework/jdbc/core/JdbcTemplate.queryForInt(Ljava/lang/String;)I'>
+            <Message>Sink method org/springframework/jdbc/core/JdbcTemplate.queryForInt(Ljava/lang/String;)I</Message>
+        </String>
+        <String role='Unknown source'
+                value='java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;'>
+            <Message>Unknown source java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+            </Message>
+        </String>
+        <String role='Unknown source' value='java/lang/StringBuilder.append(C)Ljava/lang/StringBuilder;'>
+            <Message>Unknown source java/lang/StringBuilder.append(C)Ljava/lang/StringBuilder;</Message>
+        </String>
+        <String role='Unknown source' value='java/lang/StringBuilder.toString()Ljava/lang/String;'>
+            <Message>Unknown source java/lang/StringBuilder.toString()Ljava/lang/String;</Message>
+        </String>
+        <String role='Sink method' value='org/springframework/jdbc/core/JdbcTemplate.queryForInt(Ljava/lang/String;)I'>
+            <Message>Sink method org/springframework/jdbc/core/JdbcTemplate.queryForInt(Ljava/lang/String;)I</Message>
+        </String>
+        <String role='Method usage' value='not detected'>
+            <Message>Method usage not detected</Message>
+        </String>
+        <SourceLine endBytecode='24' classname='somepackage.BaseHibernateInMemTestCase' start='344' end='344'
+                    sourcepath='somepackage/BaseHibernateInMemTestCase.java'
+                    sourcefile='BaseHibernateInMemTestCase.java' startBytecode='24'>
+            <Message>At BaseHibernateInMemTestCase.java:[line 344]</Message>
+        </SourceLine>
+    </BugInstance>
+    <BugInstance instanceOccurrenceNum='0' instanceHash='7e4e900e69d468d0876abbe5ff590218' cweid='89' rank='12'
+                 abbrev='SECSQLISPRJDBC' category='SECURITY' priority='2' type='SQL_INJECTION_SPRING_JDBC'
+                 instanceOccurrenceMax='0'>
+        <ShortMessage>Potential JDBC Injection (Spring JDBC)</ShortMessage>
+        <LongMessage>This use of
+            org/springframework/jdbc/core/JdbcTemplate.query(Ljava/lang/String;Lorg/springframework/jdbc/core/RowCallbackHandler;)V
+            can be vulnerable to SQL injection
+        </LongMessage>
+        <Class classname='somepackage.BaseHibernateInMemTestCase' primary='true'>
+            <SourceLine classname='somepackage.BaseHibernateInMemTestCase' start='49' end='374'
+                        sourcepath='somepackage/BaseHibernateInMemTestCase.java'
+                        sourcefile='BaseHibernateInMemTestCase.java'>
+                <Message>At BaseHibernateInMemTestCase.java:[lines 49-374]</Message>
+            </SourceLine>
+            <Message>In class somepackage.BaseHibernateInMemTestCase</Message>
+        </Class>
+        <Method isStatic='false' classname='somepackage.BaseHibernateInMemTestCase'
+                signature='(Ljava/lang/String;Ljava/lang/String;)V' name='dumpTable' primary='true'>
+            <SourceLine endBytecode='191' classname='somepackage.BaseHibernateInMemTestCase' start='241' end='252'
+                        sourcepath='somepackage/BaseHibernateInMemTestCase.java'
+                        sourcefile='BaseHibernateInMemTestCase.java' startBytecode='0'></SourceLine>
+            <Message>In method somepackage.BaseHibernateInMemTestCase.dumpTable(String, String)</Message>
+        </Method>
+        <SourceLine endBytecode='81' classname='somepackage.BaseHibernateInMemTestCase' start='243' end='243'
+                    sourcepath='somepackage/BaseHibernateInMemTestCase.java'
+                    sourcefile='BaseHibernateInMemTestCase.java' startBytecode='81' primary='true'>
+            <Message>At BaseHibernateInMemTestCase.java:[line 243]</Message>
+        </SourceLine>
+        <String role='Sink method'
+                value='org/springframework/jdbc/core/JdbcTemplate.query(Ljava/lang/String;Lorg/springframework/jdbc/core/RowCallbackHandler;)V'>
+            <Message>Sink method
+                org/springframework/jdbc/core/JdbcTemplate.query(Ljava/lang/String;Lorg/springframework/jdbc/core/RowCallbackHandler;)V
+            </Message>
+        </String>
+        <String role='Unknown source' value='java/lang/StringBuilder.toString()Ljava/lang/String;'>
+            <Message>Unknown source java/lang/StringBuilder.toString()Ljava/lang/String;</Message>
+        </String>
+        <String role='Unknown source' value='java/lang/StringBuilder.append(C)Ljava/lang/StringBuilder;'>
+            <Message>Unknown source java/lang/StringBuilder.append(C)Ljava/lang/StringBuilder;</Message>
+        </String>
+        <String role='Unknown source' value='java/lang/StringBuilder.toString()Ljava/lang/String;'>
+            <Message>Unknown source java/lang/StringBuilder.toString()Ljava/lang/String;</Message>
+        </String>
+        <String role='Unknown source'
+                value='java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;'>
+            <Message>Unknown source java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+            </Message>
+        </String>
+        <String role='Unknown source'
+                value='java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;'>
+            <Message>Unknown source java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+            </Message>
+        </String>
+        <String role='Unknown source'
+                value='java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;'>
+            <Message>Unknown source java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+            </Message>
+        </String>
+        <String role='Sink method'
+                value='org/springframework/jdbc/core/JdbcTemplate.query(Ljava/lang/String;Lorg/springframework/jdbc/core/RowCallbackHandler;)V'>
+            <Message>Sink method
+                org/springframework/jdbc/core/JdbcTemplate.query(Ljava/lang/String;Lorg/springframework/jdbc/core/RowCallbackHandler;)V
+            </Message>
+        </String>
+        <String role='Method usage' value='not detected'>
+            <Message>Method usage not detected</Message>
+        </String>
+        <SourceLine endBytecode='25' classname='somepackage.BaseHibernateInMemTestCase' start='241' end='241'
+                    sourcepath='somepackage/BaseHibernateInMemTestCase.java'
+                    sourcefile='BaseHibernateInMemTestCase.java' startBytecode='25'>
+            <Message>At BaseHibernateInMemTestCase.java:[line 241]</Message>
+        </SourceLine>
+        <SourceLine endBytecode='69' classname='somepackage.BaseHibernateInMemTestCase' start='243' end='243'
+                    sourcepath='somepackage/BaseHibernateInMemTestCase.java'
+                    sourcefile='BaseHibernateInMemTestCase.java' startBytecode='69'>
+            <Message>At BaseHibernateInMemTestCase.java:[line 243]</Message>
+        </SourceLine>
+    </BugInstance>
+    <BugInstance instanceOccurrenceNum='0' instanceHash='75615779358ac2c895d9de7450a1a3c8' cweid='564' rank='12'
+                 abbrev='SECSQLIHIB' category='SECURITY' priority='2' type='SQL_INJECTION_HIBERNATE'
+                 instanceOccurrenceMax='0'>
+        <ShortMessage>Potential SQL/HQL Injection (Hibernate)</ShortMessage>
+        <LongMessage>This use of org/hibernate/Session.createSQLQuery(Ljava/lang/String;)Lorg/hibernate/SQLQuery; can be
+            vulnerable to SQL/HQL injection
+        </LongMessage>
+        <Class classname='somepackage.BaseHibernateInMemTestCase$1' primary='true'>
+            <SourceLine classname='somepackage.BaseHibernateInMemTestCase$1' start='182' end='185'
+                        sourcepath='somepackage/BaseHibernateInMemTestCase.java'
+                        sourcefile='BaseHibernateInMemTestCase.java'>
+                <Message>At BaseHibernateInMemTestCase.java:[lines 182-185]</Message>
+            </SourceLine>
+            <Message>In class somepackage.BaseHibernateInMemTestCase$1</Message>
+        </Class>
+        <Method isStatic='false' classname='somepackage.BaseHibernateInMemTestCase$1'
+                signature='(Lorg/hibernate/Session;)Ljava/lang/Object;' name='doInHibernate' primary='true'>
+            <SourceLine endBytecode='70' classname='somepackage.BaseHibernateInMemTestCase$1' start='185' end='185'
+                        sourcepath='somepackage/BaseHibernateInMemTestCase.java'
+                        sourcefile='BaseHibernateInMemTestCase.java' startBytecode='0'></SourceLine>
+            <Message>In method somepackage.BaseHibernateInMemTestCase$1.doInHibernate(Session)</Message>
+        </Method>
+        <SourceLine endBytecode='5' classname='somepackage.BaseHibernateInMemTestCase$1' start='185' end='185'
+                    sourcepath='somepackage/BaseHibernateInMemTestCase.java'
+                    sourcefile='BaseHibernateInMemTestCase.java' startBytecode='5' primary='true'>
+            <Message>At BaseHibernateInMemTestCase.java:[line 185]</Message>
+        </SourceLine>
+        <String role='Sink method'
+                value='org/hibernate/Session.createSQLQuery(Ljava/lang/String;)Lorg/hibernate/SQLQuery;'>
+            <Message>Sink method org/hibernate/Session.createSQLQuery(Ljava/lang/String;)Lorg/hibernate/SQLQuery;
+            </Message>
+        </String>
+        <String role='Unknown source' value='Oups!!'>
+            <Message>Unknown source Oups!!</Message>
+        </String>
+        <String role='Sink method'
+                value='org/hibernate/Session.createSQLQuery(Ljava/lang/String;)Lorg/hibernate/SQLQuery;'>
+            <Message>Sink method org/hibernate/Session.createSQLQuery(Ljava/lang/String;)Lorg/hibernate/SQLQuery;
+            </Message>
+        </String>
+        <SourceLine endBytecode='2' classname='somepackage.BaseHibernateInMemTestCase$1' start='185' end='185'
+                    sourcepath='somepackage/BaseHibernateInMemTestCase.java'
+                    sourcefile='BaseHibernateInMemTestCase.java' startBytecode='2'>
+            <Message>At BaseHibernateInMemTestCase.java:[line 185]</Message>
+        </SourceLine>
+    </BugInstance>
+    <BugInstance instanceOccurrenceNum='0' instanceHash='6067c33235bac7f140e80b33bbb01b4a' cweid='117' rank='15'
+                 abbrev='SECCRLFLOG' category='SECURITY' priority='3' type='CRLF_INJECTION_LOGS'
+                 instanceOccurrenceMax='0'>
+        <ShortMessage>Potential CRLF Injection for logs</ShortMessage>
+        <LongMessage>This use of org/apache/log4j/Logger.debug(Ljava/lang/Object;)V might be used to include CRLF
+            characters into log messages
+        </LongMessage>
+        <Class classname='somepackage.BaseHibernateInMemTestCase$2' primary='true'>
+            <SourceLine classname='somepackage.BaseHibernateInMemTestCase$2' start='243' end='250'
+                        sourcepath='somepackage/BaseHibernateInMemTestCase.java'
+                        sourcefile='BaseHibernateInMemTestCase.java'>
+                <Message>At BaseHibernateInMemTestCase.java:[lines 243-250]</Message>
+            </SourceLine>
+            <Message>In class somepackage.BaseHibernateInMemTestCase$2</Message>
+        </Class>
+        <Method isStatic='false' classname='somepackage.BaseHibernateInMemTestCase$2'
+                signature='(Ljava/sql/ResultSet;)V' name='processRow' primary='true'>
+            <SourceLine endBytecode='215' classname='somepackage.BaseHibernateInMemTestCase$2' start='245'
+                        end='250' sourcepath='somepackage/BaseHibernateInMemTestCase.java'
+                        sourcefile='BaseHibernateInMemTestCase.java' startBytecode='0'></SourceLine>
+            <Message>In method somepackage.BaseHibernateInMemTestCase$2.processRow(ResultSet)</Message>
+        </Method>
+        <SourceLine endBytecode='102' classname='somepackage.BaseHibernateInMemTestCase$2' start='249' end='249'
+                    sourcepath='somepackage/BaseHibernateInMemTestCase.java'
+                    sourcefile='BaseHibernateInMemTestCase.java' startBytecode='102' primary='true'>
+            <Message>At BaseHibernateInMemTestCase.java:[line 249]</Message>
+        </SourceLine>
+        <String role='Sink method' value='org/apache/log4j/Logger.debug(Ljava/lang/Object;)V'>
+            <Message>Sink method org/apache/log4j/Logger.debug(Ljava/lang/Object;)V</Message>
+        </String>
+        <String role='Unknown source'
+                value='java/lang/StringBuilder.append(Ljava/lang/Object;)Ljava/lang/StringBuilder;'>
+            <Message>Unknown source java/lang/StringBuilder.append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+            </Message>
+        </String>
+        <String role='Unknown source'
+                value='java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;'>
+            <Message>Unknown source java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+            </Message>
+        </String>
+        <String role='Unknown source' value='java/lang/StringBuilder.toString()Ljava/lang/String;'>
+            <Message>Unknown source java/lang/StringBuilder.toString()Ljava/lang/String;</Message>
+        </String>
+        <String role='Unknown source'
+                value='java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;'>
+            <Message>Unknown source java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+            </Message>
+        </String>
+        <String role='Unknown source'
+                value='java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;'>
+            <Message>Unknown source java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+            </Message>
+        </String>
+        <String role='Unknown source'
+                value='java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;'>
+            <Message>Unknown source java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+            </Message>
+        </String>
+        <String role='Unknown source' value='java/sql/ResultSet.getObject(I)Ljava/lang/Object;'>
+            <Message>Unknown source java/sql/ResultSet.getObject(I)Ljava/lang/Object;</Message>
+        </String>
+        <String role='Unknown source'
+                value='java/lang/StringBuilder.append(Ljava/lang/Object;)Ljava/lang/StringBuilder;'>
+            <Message>Unknown source java/lang/StringBuilder.append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+            </Message>
+        </String>
+        <String role='Unknown source'
+                value='java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;'>
+            <Message>Unknown source java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+            </Message>
+        </String>
+        <String role='Unknown source' value='Oups!!'>
+            <Message>Unknown source Oups!!</Message>
+        </String>
+        <String role='Unknown source' value='java/sql/ResultSetMetaData.getColumnName(I)Ljava/lang/String;'>
+            <Message>Unknown source java/sql/ResultSetMetaData.getColumnName(I)Ljava/lang/String;</Message>
+        </String>
+        <String role='Sink method' value='org/apache/log4j/Logger.debug(Ljava/lang/Object;)V'>
+            <Message>Sink method org/apache/log4j/Logger.debug(Ljava/lang/Object;)V</Message>
+        </String>
+        <SourceLine endBytecode='53' classname='somepackage.BaseHibernateInMemTestCase$2' start='247' end='247'
+                    sourcepath='somepackage/BaseHibernateInMemTestCase.java'
+                    sourcefile='BaseHibernateInMemTestCase.java' startBytecode='53'>
+            <Message>At BaseHibernateInMemTestCase.java:[line 247]</Message>
+        </SourceLine>
+        <SourceLine endBytecode='99' classname='somepackage.BaseHibernateInMemTestCase$2' start='249' end='249'
+                    sourcepath='somepackage/BaseHibernateInMemTestCase.java'
+                    sourcefile='BaseHibernateInMemTestCase.java' startBytecode='99'>
+            <Message>At BaseHibernateInMemTestCase.java:[line 249]</Message>
+        </SourceLine>
+    </BugInstance>
+    <BugInstance instanceOccurrenceNum='0' instanceHash='df7b78397c117319e17ffeb5915e32d' cweid='89' rank='12'
+                 abbrev='SECSQLISPRJDBC' category='SECURITY' priority='2' type='SQL_INJECTION_SPRING_JDBC'
+                 instanceOccurrenceMax='0'>
+        <ShortMessage>Potential JDBC Injection (Spring JDBC)</ShortMessage>
+        <LongMessage>This use of org/springframework/jdbc/core/JdbcTemplate.execute(Ljava/lang/String;)V can be
+            vulnerable to SQL injection
+        </LongMessage>
+        <Class classname='somepackage.InMemoryDbTestCase' primary='true'>
+            <SourceLine classname='somepackage.InMemoryDbTestCase' start='18' end='64'
+                        sourcepath='somepackage/InMemoryDbTestCase.java' sourcefile='InMemoryDbTestCase.java'>
+                <Message>At InMemoryDbTestCase.java:[lines 18-64]</Message>
+            </SourceLine>
+            <Message>In class somepackage.InMemoryDbTestCase</Message>
+        </Class>
+        <Method isStatic='false' classname='somepackage.InMemoryDbTestCase' signature='([Ljava/lang/String;)V'
+                name='initializeTables' primary='true'>
+            <SourceLine endBytecode='309' classname='somepackage.InMemoryDbTestCase' start='40' end='53'
+                        sourcepath='somepackage/InMemoryDbTestCase.java' sourcefile='InMemoryDbTestCase.java'
+                        startBytecode='0'></SourceLine>
+            <Message>In method somepackage.InMemoryDbTestCase.initializeTables(String[])</Message>
+        </Method>
+        <SourceLine endBytecode='99' classname='somepackage.InMemoryDbTestCase' start='50' end='50'
+                    sourcepath='somepackage/InMemoryDbTestCase.java' sourcefile='InMemoryDbTestCase.java'
+                    startBytecode='99' primary='true'>
+            <Message>At InMemoryDbTestCase.java:[line 50]</Message>
+        </SourceLine>
+        <String role='Sink method' value='org/springframework/jdbc/core/JdbcTemplate.execute(Ljava/lang/String;)V'>
+            <Message>Sink method org/springframework/jdbc/core/JdbcTemplate.execute(Ljava/lang/String;)V</Message>
+        </String>
+        <String role='Unknown source'
+                value='org/apache/commons/io/IOUtils.toString(Ljava/io/InputStream;)Ljava/lang/String;'>
+            <Message>Unknown source org/apache/commons/io/IOUtils.toString(Ljava/io/InputStream;)Ljava/lang/String;
+            </Message>
+        </String>
+        <String role='Sink method' value='org/springframework/jdbc/core/JdbcTemplate.execute(Ljava/lang/String;)V'>
+            <Message>Sink method org/springframework/jdbc/core/JdbcTemplate.execute(Ljava/lang/String;)V</Message>
+        </String>
+        <SourceLine endBytecode='73' classname='somepackage.InMemoryDbTestCase' start='46' end='46'
+                    sourcepath='somepackage/InMemoryDbTestCase.java' sourcefile='InMemoryDbTestCase.java'
+                    startBytecode='73'>
+            <Message>At InMemoryDbTestCase.java:[line 46]</Message>
+        </SourceLine>
+    </BugInstance>
+    <BugCategory category='SECURITY'>
+        <Description>Security</Description>
+    </BugCategory>
+    <BugPattern cweid='89' abbrev='SECSQLIJDBC' category='SECURITY' type='SQL_INJECTION_JDBC'>
+        <ShortDescription>Potential JDBC Injection</ShortDescription>
+        <Details>
+
+            &lt;p&gt;
+            The input values included in SQL queries need to be passed in safely.
+            Bind variables in prepared statements can be used to easily mitigate the risk of SQL injection.
+            &lt;/p&gt;
+
+            &lt;p&gt;
+            &lt;b&gt;Vulnerable Code:&lt;/b&gt;&lt;br/&gt;
+            &lt;pre&gt;Connection conn = [...];
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("update COFFEES set SALES = "+nbSales+" where COF_NAME =
+            '"+coffeeName+"'");&lt;/pre&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+            &lt;b&gt;Solution:&lt;/b&gt;&lt;br/&gt;
+            &lt;pre&gt;Connection conn = [...];
+            conn.prepareStatement("update COFFEES set SALES = ? where COF_NAME = ?");
+            updateSales.setInt(1, nbSales);
+            updateSales.setString(2, coffeeName);&lt;/pre&gt;
+            &lt;/p&gt;
+            &lt;br/&gt;
+
+            &lt;b&gt;References (JDBC)&lt;/b&gt;&lt;br/&gt;
+            &lt;a href="http://docs.oracle.com/javase/tutorial/jdbc/basics/prepared.html"&gt;Oracle Documentation: The
+            Java Tutorials &amp;gt; Prepared Statements&lt;/a&gt;&lt;br/&gt;
+            &lt;b&gt;References (SQL injection)&lt;/b&gt;&lt;br/&gt;
+            &lt;a href="http://projects.webappsec.org/w/page/13246963/SQL%20Injection"&gt;WASC-19: SQL Injection&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="http://capec.mitre.org/data/definitions/66.html"&gt;CAPEC-66: SQL Injection&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="http://cwe.mitre.org/data/definitions/89.html"&gt;CWE-89: Improper Neutralization of Special
+            Elements used in an SQL Command ('SQL Injection')&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="https://www.owasp.org/index.php/Top_10_2013-A1-Injection"&gt;OWASP: Top 10 2013-A1-Injection&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet"&gt;OWASP: SQL Injection
+            Prevention Cheat Sheet&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="https://www.owasp.org/index.php/Query_Parameterization_Cheat_Sheet"&gt;OWASP: Query
+            Parameterization Cheat Sheet&lt;/a&gt;&lt;br/&gt;
+            &lt;/p&gt;
+
+        </Details>
+    </BugPattern>
+    <BugPattern cweid='117' abbrev='SECCRLFLOG' category='SECURITY' type='CRLF_INJECTION_LOGS'>
+        <ShortDescription>Potential CRLF Injection for logs</ShortDescription>
+        <Details>
+
+            &lt;p&gt;
+            When data from an untrusted source is put into a logger and not neutralized correctly,
+            an attacker could forge log entries or include malicious content.
+            Inserted false entries could be used to skew statistics, distract the administrator
+            or even to implicate another party in the commission of a malicious act.
+            If the log file is processed automatically, the attacker can render the file unusable
+            by corrupting the format of the file or injecting unexpected characters.
+            An attacker may also inject code or other commands into the log file and take advantage
+            of a vulnerability in the log processing utility (e.g. command injection or XSS).
+            &lt;/p&gt;
+            &lt;br/&gt;
+            &lt;p&gt;
+            &lt;b&gt;Code at risk:&lt;/b&gt;&lt;br/&gt;
+            &lt;pre&gt;String val = request.getParameter("user");
+            String metadata = request.getParameter("metadata");
+            [...]
+            if(authenticated) {
+            log.info("User " + val + " (" + metadata + ") was authenticated successfully");
+            }
+            else {
+            log.info("User " + val + " (" + metadata + ") was not authenticated");
+            }
+            &lt;/pre&gt;
+
+            A malicious user could send the metadata parameter with the value: &lt;code&gt;"Firefox) was authenticated
+            successfully\r\n[INFO] User bbb (Internet Explorer"&lt;/code&gt;.
+            &lt;/p&gt;
+
+            &lt;b&gt;Solution:&lt;/b&gt;&lt;br/&gt;
+            &lt;p&gt;
+            You can manually sanitize each parameter.
+            &lt;pre&gt;
+            log.info("User " + val.replaceAll("[\r\n]","") + " (" + userAgent.replaceAll("[\r\n]","") + ") was not
+            authenticated");
+            &lt;/pre&gt;
+            &lt;/p&gt;
+
+            &lt;p&gt;
+            You can also configure your logger service to replace new line for all message events. Here is sample
+            configuration for LogBack &lt;a href="https://logback.qos.ch/manual/layouts.html#replace"&gt;using the
+            replace function&lt;/a&gt;.
+            &lt;pre&gt;
+            &amp;lt;pattern&amp;gt;%-5level - %replace(%msg){'[\r\n]', ''}%n&amp;lt;/pattern&amp;gt;
+            &lt;/pre&gt;
+            &lt;/p&gt;
+
+            &lt;br/&gt;
+            &lt;p&gt;
+            &lt;b&gt;References&lt;/b&gt;&lt;br/&gt;
+            &lt;a href="http://cwe.mitre.org/data/definitions/117.html"&gt;CWE-117: Improper Output Neutralization for
+            Logs&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="http://cwe.mitre.org/data/definitions/93.html"&gt;CWE-93: Improper Neutralization of CRLF
+            Sequences ('CRLF Injection')&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="https://logback.qos.ch/manual/layouts.html#replace"&gt;CWE-93: Improper Neutralization of CRLF
+            Sequences ('CRLF Injection')&lt;/a&gt;&lt;br/&gt;
+            &lt;/p&gt;
+
+
+        </Details>
+    </BugPattern>
+    <BugPattern cweid='89' abbrev='SQL' category='SECURITY' type='SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE'>
+        <ShortDescription>Nonconstant string passed to execute method on an SQL statement</ShortDescription>
+        <Details>
+
+            &lt;p&gt;The method invokes the execute method on an SQL statement with a String that seems
+            to be dynamically generated. Consider using
+            a prepared statement instead. It is more efficient and less vulnerable to
+            SQL injection attacks.
+            &lt;/p&gt;
+
+        </Details>
+    </BugPattern>
+    <BugPattern cweid='89' abbrev='SECSQLISPRJDBC' category='SECURITY' type='SQL_INJECTION_SPRING_JDBC'>
+        <ShortDescription>Potential JDBC Injection (Spring JDBC)</ShortDescription>
+        <Details>
+
+            &lt;p&gt;
+            The input values included in SQL queries need to be passed in safely.
+            Bind variables in prepared statements can be used to easily mitigate the risk of SQL injection.
+            &lt;/p&gt;
+
+            &lt;p&gt;
+            &lt;b&gt;Vulnerable Code:&lt;/b&gt;&lt;br/&gt;
+            &lt;pre&gt;JdbcTemplate jdbc = new JdbcTemplate();
+            int count = jdbc.queryForObject("select count(*) from Users where name = '"+paramName+"'", Integer.class);
+            &lt;/pre&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+            &lt;b&gt;Solution:&lt;/b&gt;&lt;br/&gt;
+            &lt;pre&gt;JdbcTemplate jdbc = new JdbcTemplate();
+            int count = jdbc.queryForObject("select count(*) from Users where name = ?", Integer.class, paramName);&lt;/pre&gt;
+            &lt;/p&gt;
+            &lt;br/&gt;
+
+            &lt;b&gt;References (Spring JDBC)&lt;/b&gt;&lt;br/&gt;
+            &lt;a href="http://docs.spring.io/spring-framework/docs/current/spring-framework-reference/html/jdbc.html"&gt;Spring
+            Official Documentation: Data access with JDBC&lt;/a&gt;&lt;br/&gt;
+            &lt;b&gt;References (SQL injection)&lt;/b&gt;&lt;br/&gt;
+            &lt;a href="http://projects.webappsec.org/w/page/13246963/SQL%20Injection"&gt;WASC-19: SQL Injection&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="http://capec.mitre.org/data/definitions/66.html"&gt;CAPEC-66: SQL Injection&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="http://cwe.mitre.org/data/definitions/89.html"&gt;CWE-89: Improper Neutralization of Special
+            Elements used in an SQL Command ('SQL Injection')&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="https://www.owasp.org/index.php/Top_10_2013-A1-Injection"&gt;OWASP: Top 10 2013-A1-Injection&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet"&gt;OWASP: SQL Injection
+            Prevention Cheat Sheet&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="https://www.owasp.org/index.php/Query_Parameterization_Cheat_Sheet"&gt;OWASP: Query
+            Parameterization Cheat Sheet&lt;/a&gt;&lt;br/&gt;
+            &lt;/p&gt;
+
+        </Details>
+    </BugPattern>
+    <BugPattern cweid='564' abbrev='SECSQLIHIB' category='SECURITY' type='SQL_INJECTION_HIBERNATE'>
+        <ShortDescription>Potential SQL/HQL Injection (Hibernate)</ShortDescription>
+        <Details>
+
+            &lt;p&gt;
+            The input values included in SQL queries need to be passed in safely.
+            Bind variables in prepared statements can be used to easily mitigate the risk of SQL injection.
+            Alternatively to prepare statements, Hibernate Criteria can be used.
+            &lt;/p&gt;
+            &lt;p&gt;
+            &lt;b&gt;Vulnerable Code:&lt;/b&gt;&lt;br/&gt;
+            &lt;pre&gt;
+            Session session = sessionFactory.openSession();
+            Query q = session.createQuery("select t from UserEntity t where id = " + input);
+            q.execute();&lt;/pre&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+            &lt;b&gt;Solution:&lt;/b&gt;&lt;br/&gt;
+            &lt;pre&gt;
+            Session session = sessionFactory.openSession();
+            Query q = session.createQuery("select t from UserEntity t where id = :userId");
+            q.setString("userId",input);
+            q.execute();&lt;/pre&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+            &lt;b&gt;Solution for dynamic queries (with Hibernate Criteria):&lt;/b&gt;&lt;br/&gt;
+            &lt;pre&gt;
+            Session session = sessionFactory.openSession();
+            Query q = session.createCriteria(UserEntity.class)
+            .add( Restrictions.like("id", input) )
+            .list();
+            q.execute();&lt;/pre&gt;
+            &lt;/p&gt;
+            &lt;br/&gt;
+            &lt;p&gt;
+            &lt;b&gt;References (Hibernate)&lt;/b&gt;&lt;br/&gt;
+            &lt;a href="https://docs.jboss.org/hibernate/orm/3.3/reference/en/html/querycriteria.html"&gt;Hibernate
+            Documentation: Query Criteria&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="https://docs.jboss.org/hibernate/orm/3.2/api/org/hibernate/Query.html"&gt;Hibernate Javadoc:
+            Query Object&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="http://blog.h3xstream.com/2014/02/hql-for-pentesters.html"&gt;HQL for pentesters&lt;/a&gt;:
+            Guideline to test if the suspected code is exploitable.&lt;br/&gt;
+            &lt;b&gt;References (SQL injection)&lt;/b&gt;&lt;br/&gt;
+            &lt;a href="http://projects.webappsec.org/w/page/13246963/SQL%20Injection"&gt;WASC-19: SQL Injection&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="http://capec.mitre.org/data/definitions/66.html"&gt;CAPEC-66: SQL Injection&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="http://cwe.mitre.org/data/definitions/89.html"&gt;CWE-89: Improper Neutralization of Special
+            Elements used in an SQL Command ('SQL Injection')&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="https://www.owasp.org/index.php/Top_10_2013-A1-Injection"&gt;OWASP: Top 10 2013-A1-Injection&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet"&gt;OWASP: SQL Injection
+            Prevention Cheat Sheet&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="https://www.owasp.org/index.php/Query_Parameterization_Cheat_Sheet"&gt;OWASP: Query
+            Parameterization Cheat Sheet&lt;/a&gt;&lt;br/&gt;
+            &lt;/p&gt;
+
+        </Details>
+    </BugPattern>
+    <BugCode abbrev='SECSQLISPRJDBC'>
+        <Description>SQL Injection (Spring JDBC)</Description>
+    </BugCode>
+    <BugCode abbrev='SECCRLFLOG'>
+        <Description>CRLF Injection for logs</Description>
+    </BugCode>
+    <BugCode abbrev='SECSQLIHIB'>
+        <Description>HQL Injection</Description>
+    </BugCode>
+    <BugCode abbrev='SECSQLIJDBC'>
+        <Description>SQL Injection (JDBC)</Description>
+    </BugCode>
+    <BugCode abbrev='SQL'>
+        <Description>Potential SQL Problem</Description>
+    </BugCode>
+    <Errors missingClasses='0' errors='0'></Errors>
+    <FindBugsSummary num_packages='5' total_classes='21' priority_2='6' priority_3='3' total_size='548'
+                     clock_seconds='2.83' referenced_classes='130' vm_version='25.121-b13' total_bugs='9'
+                     java_version='1.8.0_121' gc_seconds='0.07' alloc_mbytes='1365.50' cpu_seconds='12.54'
+                     peak_mbytes='200.72' timestamp='Thu, 22 Mar 2018 12:01:37 +0530'>
+        <FileStats path='somepackage/JsonParser.java' size='11' bugCount='0'></FileStats>
+        <FileStats path='somepackage/builder/DataBuilder.java' size='10' bugCount='0'></FileStats>
+        <FileStats path='somepackage/AconexAconexDBUnitHelper.java' size='65' bugHash='b9a1e8cc143a2ccd602cd2db4b4acb4b'
+                   bugCount='2'></FileStats>
+        <FileStats path='somepackage/DummyKeyProvider.java' size='52' bugCount='0'></FileStats>
+        <FileStats path='somepackage/HsqlAconexDBUnitHelper.java' size='39' bugHash='c6a396ac4d4e0fcd2d843593fd6bfeaa'
+                   bugCount='2'></FileStats>
+        <FileStats path='somepackage/KeyProviderUtil.java' size='21' bugCount='0'></FileStats>
+        <FileStats path='somepackage/hibernate/testing/DummyIdentifierGenerator.java' size='10'
+                   bugCount='0'></FileStats>
+        <FileStats path='somepackage/hibernate/testing/DummyInstanceKeyIdentifierGenerator.java' size='10'
+                   bugCount='0'></FileStats>
+        <FileStats path='somepackage/hibernate/testing/DummyIntAsLongIdentifierGenerator.java' size='10'
+                   bugCount='0'></FileStats>
+        <FileStats path='somepackage/hibernate/testing/DummyLongAsLongIdentifierGenerator.java' size='10'
+                   bugCount='0'></FileStats>
+        <FileStats path='somepackage/hibernate/testing/package-info.java' size='1' bugCount='0'></FileStats>
+        <FileStats path='somepackage/AconexMatchers.java' size='16' bugCount='0'></FileStats>
+        <FileStats path='somepackage/BaseHibernateInMemTestCase.java' size='228'
+                   bugHash='4fef9fed3bca44e679fd779825300c68' bugCount='4'></FileStats>
+        <FileStats path='somepackage/InMemoryDbTestCase.java' size='38' bugHash='fe3a86c51a08938a106dcd3ce3664c1a'
+                   bugCount='1'></FileStats>
+        <FileStats path='somepackage/TestGroups.java' size='27' bugCount='0'></FileStats>
+        <PackageStats package='somepackage' total_bugs='0' total_size='11' total_types='2'>
+            <ClassStats bugs='0' size='8' interface='false' sourceFile='JsonParser.java'
+                        class='somepackage.JsonParser'></ClassStats>
+            <ClassStats bugs='0' size='3' interface='false' sourceFile='JsonParser.java'
+                        class='somepackage.JsonParser$1'></ClassStats>
+        </PackageStats>
+        <PackageStats package='somepackage.builder' total_bugs='0' total_size='10' total_types='1'>
+            <ClassStats bugs='0' size='10' interface='false' sourceFile='DataBuilder.java'
+                        class='somepackage.builder.DataBuilder'></ClassStats>
+        </PackageStats>
+        <PackageStats package='somepackage' total_bugs='4' priority_2='2' priority_3='2' total_size='177'
+                      total_types='5'>
+            <ClassStats bugs='2' size='65' priority_2='2' interface='false' sourceFile='AconexAconexDBUnitHelper.java'
+                        class='somepackage.DBUnitHelper'></ClassStats>
+            <ClassStats bugs='0' size='52' interface='false' sourceFile='DummyKeyProvider.java'
+                        class='somepackage.DummyKeyProvider'></ClassStats>
+            <ClassStats bugs='2' size='31' priority_3='2' interface='false' sourceFile='HsqlAconexDBUnitHelper.java'
+                        class='somepackage.HsqlDBUnitHelper'></ClassStats>
+            <ClassStats bugs='0' size='8' interface='false' sourceFile='HsqlAconexDBUnitHelper.java'
+                        class='somepackage.HsqlDBUnitHelper$1'></ClassStats>
+            <ClassStats bugs='0' size='21' interface='false' sourceFile='KeyProviderUtil.java'
+                        class='somepackage.KeyProviderUtil'></ClassStats>
+        </PackageStats>
+        <PackageStats package='somepackage.hibernate.testing' total_bugs='0' total_size='41' total_types='5'>
+            <ClassStats bugs='0' size='10' interface='false' sourceFile='DummyIdentifierGenerator.java'
+                        class='somepackage.hibernate.testing.DummyIdentifierGenerator'></ClassStats>
+            <ClassStats bugs='0' size='10' interface='false' sourceFile='DummyInstanceKeyIdentifierGenerator.java'
+                        class='somepackage.hibernate.testing.DummyInstanceKeyIdentifierGenerator'></ClassStats>
+            <ClassStats bugs='0' size='10' interface='false' sourceFile='DummyIntAsLongIdentifierGenerator.java'
+                        class='somepackage.hibernate.testing.DummyIntAsLongIdentifierGenerator'></ClassStats>
+            <ClassStats bugs='0' size='10' interface='false' sourceFile='DummyLongAsLongIdentifierGenerator.java'
+                        class='somepackage.hibernate.testing.DummyLongAsLongIdentifierGenerator'></ClassStats>
+            <ClassStats bugs='0' size='1' interface='true' sourceFile='package-info.java'
+                        class='somepackage.hibernate.testing.package-info'></ClassStats>
+        </PackageStats>
+        <PackageStats package='somepackage' total_bugs='5' priority_2='4' priority_3='1' total_size='309'
+                      total_types='8'>
+            <ClassStats bugs='0' size='6' interface='false' sourceFile='AconexMatchers.java'
+                        class='somepackage.AconexMatchers'></ClassStats>
+            <ClassStats bugs='0' size='10' interface='false' sourceFile='AconexMatchers.java'
+                        class='somepackage.AconexMatchers$1'></ClassStats>
+            <ClassStats bugs='2' size='199' priority_2='2' interface='false'
+                        sourceFile='BaseHibernateInMemTestCase.java'
+                        class='somepackage.BaseHibernateInMemTestCase'></ClassStats>
+            <ClassStats bugs='1' size='7' priority_2='1' interface='false' sourceFile='BaseHibernateInMemTestCase.java'
+                        class='somepackage.BaseHibernateInMemTestCase$1'></ClassStats>
+            <ClassStats bugs='1' size='11' priority_3='1' interface='false' sourceFile='BaseHibernateInMemTestCase.java'
+                        class='somepackage.BaseHibernateInMemTestCase$2'></ClassStats>
+            <ClassStats bugs='0' size='11' interface='false' sourceFile='BaseHibernateInMemTestCase.java'
+                        class='somepackage.BaseHibernateInMemTestCase$BatchingBehaviour'></ClassStats>
+            <ClassStats bugs='1' size='38' priority_2='1' interface='false' sourceFile='InMemoryDbTestCase.java'
+                        class='somepackage.InMemoryDbTestCase'></ClassStats>
+            <ClassStats bugs='0' size='27' interface='false' sourceFile='TestGroups.java'
+                        class='somepackage.TestGroups'></ClassStats>
+        </PackageStats>
+        <FindBugsProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='361' totalMilliseconds='368'
+                          name='edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine'
+                          standardDeviationMircosecondsPerInvocation='502' maxMicrosecondsPerInvocation='14872'
+                          invocations='1017'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='321' totalMilliseconds='325'
+                          name='edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine'
+                          standardDeviationMircosecondsPerInvocation='906' maxMicrosecondsPerInvocation='17972'
+                          invocations='1010'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='1038' totalMilliseconds='134'
+                          name='edu.umd.cs.findbugs.detect.FieldItemSummary'
+                          standardDeviationMircosecondsPerInvocation='2605' maxMicrosecondsPerInvocation='20357'
+                          invocations='130'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='82' totalMilliseconds='79'
+                          name='edu.umd.cs.findbugs.util.TopologicalSort'
+                          standardDeviationMircosecondsPerInvocation='727' maxMicrosecondsPerInvocation='22500'
+                          invocations='975'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='207' totalMilliseconds='70'
+                          name='edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory'
+                          standardDeviationMircosecondsPerInvocation='407' maxMicrosecondsPerInvocation='4244'
+                          invocations='338'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='260' totalMilliseconds='57'
+                          name='edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine'
+                          standardDeviationMircosecondsPerInvocation='1194' maxMicrosecondsPerInvocation='16798'
+                          invocations='223'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='437' totalMilliseconds='54'
+                          name='edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory'
+                          standardDeviationMircosecondsPerInvocation='758' maxMicrosecondsPerInvocation='5940'
+                          invocations='125'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='412' totalMilliseconds='51'
+                          name='com.h3xstream.findsecbugs.taintanalysis.TaintDataflowEngine'
+                          standardDeviationMircosecondsPerInvocation='771' maxMicrosecondsPerInvocation='6359'
+                          invocations='125'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='369' totalMilliseconds='48'
+                          name='edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase'
+                          standardDeviationMircosecondsPerInvocation='1356' maxMicrosecondsPerInvocation='13857'
+                          invocations='130'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='366' totalMilliseconds='47'
+                          name='edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory'
+                          standardDeviationMircosecondsPerInvocation='3052' maxMicrosecondsPerInvocation='34880'
+                          invocations='129'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='348' totalMilliseconds='44'
+                          name='edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory'
+                          standardDeviationMircosecondsPerInvocation='797' maxMicrosecondsPerInvocation='8231'
+                          invocations='129'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='345' totalMilliseconds='44'
+                          name='edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory'
+                          standardDeviationMircosecondsPerInvocation='873' maxMicrosecondsPerInvocation='9421'
+                          invocations='129'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='339' totalMilliseconds='43'
+                          name='edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory'
+                          standardDeviationMircosecondsPerInvocation='825' maxMicrosecondsPerInvocation='7953'
+                          invocations='129'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='330' totalMilliseconds='40'
+                          name='edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder'
+                          standardDeviationMircosecondsPerInvocation='491' maxMicrosecondsPerInvocation='3532'
+                          invocations='124'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='326' totalMilliseconds='40'
+                          name='edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory'
+                          standardDeviationMircosecondsPerInvocation='755' maxMicrosecondsPerInvocation='7902'
+                          invocations='125'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='297' totalMilliseconds='38'
+                          name='edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers'
+                          standardDeviationMircosecondsPerInvocation='1074' maxMicrosecondsPerInvocation='11263'
+                          invocations='130'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='267' totalMilliseconds='34'
+                          name='edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical'
+                          standardDeviationMircosecondsPerInvocation='1314' maxMicrosecondsPerInvocation='14578'
+                          invocations='130'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='240' totalMilliseconds='31'
+                          name='edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures'
+                          standardDeviationMircosecondsPerInvocation='675' maxMicrosecondsPerInvocation='4192'
+                          invocations='130'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='1210' totalMilliseconds='25'
+                          name='com.h3xstream.findsecbugs.injection.crlf.CrlfLogInjectionDetector'
+                          standardDeviationMircosecondsPerInvocation='4471' maxMicrosecondsPerInvocation='21123'
+                          invocations='21'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='215' totalMilliseconds='23'
+                          name='edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis'
+                          standardDeviationMircosecondsPerInvocation='295' maxMicrosecondsPerInvocation='2351'
+                          invocations='109'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='151' totalMilliseconds='19'
+                          name='edu.umd.cs.findbugs.detect.CalledMethods'
+                          standardDeviationMircosecondsPerInvocation='341' maxMicrosecondsPerInvocation='2768'
+                          invocations='130'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='168' totalMilliseconds='19'
+                          name='edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory'
+                          standardDeviationMircosecondsPerInvocation='386' maxMicrosecondsPerInvocation='3444'
+                          invocations='116'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='120' totalMilliseconds='15'
+                          name='edu.umd.cs.findbugs.detect.ExplicitSerialization'
+                          standardDeviationMircosecondsPerInvocation='741' maxMicrosecondsPerInvocation='7655'
+                          invocations='130'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='114' totalMilliseconds='14'
+                          name='edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis'
+                          standardDeviationMircosecondsPerInvocation='278' maxMicrosecondsPerInvocation='1874'
+                          invocations='130'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='107' totalMilliseconds='14'
+                          name='edu.umd.cs.findbugs.detect.ReflectiveClasses'
+                          standardDeviationMircosecondsPerInvocation='267' maxMicrosecondsPerInvocation='2313'
+                          invocations='130'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='594' totalMilliseconds='12'
+                          name='edu.umd.cs.findbugs.detect.FindOpenStream'
+                          standardDeviationMircosecondsPerInvocation='1139' maxMicrosecondsPerInvocation='3915'
+                          invocations='21'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='592' totalMilliseconds='12'
+                          name='edu.umd.cs.findbugs.detect.RuntimeExceptionCapture'
+                          standardDeviationMircosecondsPerInvocation='1790' maxMicrosecondsPerInvocation='8420'
+                          invocations='21'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='97' totalMilliseconds='12'
+                          name='edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory'
+                          standardDeviationMircosecondsPerInvocation='204' maxMicrosecondsPerInvocation='1609'
+                          invocations='125'></ClassProfile>
+            <ClassProfile avgMicrosecondsPerInvocation='437' totalMilliseconds='11'
+                          name='edu.umd.cs.findbugs.ba.obl.ObligationAnalysis'
+                          standardDeviationMircosecondsPerInvocation='618' maxMicrosecondsPerInvocation='2510'
+                          invocations='27'></ClassProfile>
+        </FindBugsProfile>
+    </FindBugsSummary>
+    <ClassFeatures></ClassFeatures>
+    <History></History>
+</BugCollection>

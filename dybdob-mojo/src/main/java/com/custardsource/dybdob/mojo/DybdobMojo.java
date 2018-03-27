@@ -22,7 +22,7 @@ import org.apache.maven.plugin.MojoFailureException;
 public abstract class DybdobMojo extends AbstractMojo {
     private static final List<WarningDetector> KNOWN_DETECTORS = ImmutableList.<WarningDetector>of(
             new JavacWarningDetector(), new CheckstyleDetector(), new CpdDetector(), new PmdDetector(),
-            new FindBugsDetector());
+            new FindBugsDetector("findbugs"), new FindBugsDetector("findsecbugs"));
 
     /**
      * @parameter default-value="${project}"
