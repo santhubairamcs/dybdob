@@ -1,5 +1,5 @@
 <BugCollection sequence='0' release='' analysisTimestamp='1521798814683' version='3.0.0' timestamp='1521700297000'>
-    <Project projectName='aconex-utils-unittest'>
+    <Project projectName='utils-unittest'>
         <Plugin id='com.h3xstream.findsecbugs' enabled='true'></Plugin>
     </Project>
     <BugInstance instanceOccurrenceNum='0' instanceHash='1eb0b331c1e0e380ceac30bd1fccc830' cweid='89' rank='12'
@@ -11,22 +11,22 @@
         </LongMessage>
         <Class classname='somepackage.DBUnitHelper' primary='true'>
             <SourceLine classname='somepackage.DBUnitHelper' start='25' end='118'
-                        sourcepath='somepackage/AconexDBUnitHelper.java' sourcefile='AconexDBUnitHelper.java'>
-                <Message>At AconexAconexDBUnitHelper.java:[lines 25-118]</Message>
+                        sourcepath='somepackage/DBUnitHelper.java' sourcefile='DBUnitHelper.java'>
+                <Message>At DBUnitHelper.java:[lines 25-118]</Message>
             </SourceLine>
             <Message>In class somepackage.DBUnitHelper</Message>
         </Class>
         <Method isStatic='false' classname='somepackage.DBUnitHelper'
                 signature='(Ljava/lang/String;Ljava/lang/String;)J' name='getLongValue' primary='true'>
             <SourceLine endBytecode='156' classname='somepackage.DBUnitHelper' start='73' end='77'
-                        sourcepath='somepackage/AconexDBUnitHelper.java' sourcefile='AconexDBUnitHelper.java'
+                        sourcepath='somepackage/DBUnitHelper.java' sourcefile='DBUnitHelper.java'
                         startBytecode='0'></SourceLine>
             <Message>In method somepackage.DBUnitHelper.getLongValue(String, String)</Message>
         </Method>
         <SourceLine endBytecode='23' classname='somepackage.DBUnitHelper' start='74' end='74'
-                    sourcepath='somepackage/AconexDBUnitHelper.java' sourcefile='AconexDBUnitHelper.java'
+                    sourcepath='somepackage/DBUnitHelper.java' sourcefile='DBUnitHelper.java'
                     startBytecode='23' primary='true'>
-            <Message>At AconexDBUnitHelper.java:[line 74]</Message>
+            <Message>At DBUnitHelper.java:[line 74]</Message>
         </SourceLine>
         <String role='Sink method' value='org/springframework/jdbc/core/JdbcTemplate.queryForLong(Ljava/lang/String;)J'>
             <Message>Sink method org/springframework/jdbc/core/JdbcTemplate.queryForLong(Ljava/lang/String;)J</Message>
@@ -43,9 +43,9 @@
             <Message>Method usage not detected</Message>
         </String>
         <SourceLine endBytecode='14' classname='somepackage.DBUnitHelper' start='73' end='73'
-                    sourcepath='somepackage/AconexDBUnitHelper.java' sourcefile='AconexDBUnitHelper.java'
+                    sourcepath='somepackage/DBUnitHelper.java' sourcefile='DBUnitHelper.java'
                     startBytecode='14'>
-            <Message>At AconexDBUnitHelper.java:[line 73]</Message>
+            <Message>At DBUnitHelper.java:[line 73]</Message>
         </SourceLine>
         <SourceLine endBytecode='10' classname='somepackage.DummyKeyProvider' start='27' end='27'
                     sourcepath='somepackage/DummyKeyProvider.java' sourcefile='DummyKeyProvider.java'
@@ -82,22 +82,22 @@
         </LongMessage>
         <Class classname='somepackage.DBUnitHelper' primary='true'>
             <SourceLine classname='somepackage.DBUnitHelper' start='25' end='118'
-                        sourcepath='somepackage/AconexDBUnitHelper.java' sourcefile='AconexDBUnitHelper.java'>
-                <Message>At AconexDBUnitHelper.java:[lines 25-118]</Message>
+                        sourcepath='somepackage/DBUnitHelper.java' sourcefile='DBUnitHelper.java'>
+                <Message>At DBUnitHelper.java:[lines 25-118]</Message>
             </SourceLine>
             <Message>In class somepackage.DBUnitHelper</Message>
         </Class>
         <Method isStatic='false' classname='somepackage.DBUnitHelper'
                 signature='(Ljava/lang/String;Ljava/lang/String;)I' name='getValue' primary='true'>
             <SourceLine endBytecode='156' classname='somepackage.DBUnitHelper' start='83' end='87'
-                        sourcepath='somepackage/AconexDBUnitHelper.java' sourcefile='AconexDBUnitHelper.java'
+                        sourcepath='somepackage/DBUnitHelper.java' sourcefile='DBUnitHelper.java'
                         startBytecode='0'></SourceLine>
             <Message>In method somepackage.DBUnitHelper.getValue(String, String)</Message>
         </Method>
         <SourceLine endBytecode='23' classname='somepackage.DBUnitHelper' start='84' end='84'
-                    sourcepath='somepackage/AconexDBUnitHelper.java' sourcefile='AconexDBUnitHelper.java'
+                    sourcepath='somepackage/DBUnitHelper.java' sourcefile='DBUnitHelper.java'
                     startBytecode='23' primary='true'>
-            <Message>At AconexDBUnitHelper.java:[line 84]</Message>
+            <Message>At DBUnitHelper.java:[line 84]</Message>
         </SourceLine>
         <String role='Sink method' value='org/springframework/jdbc/core/JdbcTemplate.queryForInt(Ljava/lang/String;)I'>
             <Message>Sink method org/springframework/jdbc/core/JdbcTemplate.queryForInt(Ljava/lang/String;)I</Message>
@@ -114,9 +114,9 @@
             <Message>Method usage not detected</Message>
         </String>
         <SourceLine endBytecode='14' classname='somepackage.DBUnitHelper' start='83' end='83'
-                    sourcepath='somepackage/AconexDBUnitHelper.java' sourcefile='AconexDBUnitHelper.java'
+                    sourcepath='somepackage/DBUnitHelper.java' sourcefile='DBUnitHelper.java'
                     startBytecode='14'>
-            <Message>At AconexDBUnitHelper.java:[line 83]</Message>
+            <Message>At DBUnitHelper.java:[line 83]</Message>
         </SourceLine>
         <SourceLine endBytecode='37' classname='somepackage.DummyKeyProvider' start='40' end='40'
                     sourcepath='somepackage/DummyKeyProvider.java' sourcefile='DummyKeyProvider.java'
@@ -137,22 +137,22 @@
         </LongMessage>
         <Class classname='somepackage.HsqlDBUnitHelper' primary='true'>
             <SourceLine classname='somepackage.HsqlDBUnitHelper' start='19' end='65'
-                        sourcepath='somepackage/HsqlAconexDBUnitHelper.java' sourcefile='HsqlAconexDBUnitHelper.java'>
-                <Message>At HsqlAconexDBUnitHelper.java:[lines 19-65]</Message>
+                        sourcepath='somepackage/HsqlDBUnitHelper.java' sourcefile='HsqlDBUnitHelper.java'>
+                <Message>At HsqlDBUnitHelper.java:[lines 19-65]</Message>
             </SourceLine>
             <Message>In class somepackage.HsqlDBUnitHelper</Message>
         </Class>
         <Method isStatic='false' classname='somepackage.HsqlDBUnitHelper' signature='(Ljava/lang/String;)V'
                 name='executeSql' primary='true'>
             <SourceLine endBytecode='243' classname='somepackage.HsqlDBUnitHelper' start='54' end='65'
-                        sourcepath='somepackage/HsqlAconexDBUnitHelper.java' sourcefile='HsqlAconexDBUnitHelper.java'
+                        sourcepath='somepackage/HsqlDBUnitHelper.java' sourcefile='HsqlDBUnitHelper.java'
                         startBytecode='0'></SourceLine>
             <Message>In method somepackage.HsqlDBUnitHelper.executeSql(String)</Message>
         </Method>
         <SourceLine endBytecode='19' classname='somepackage.HsqlDBUnitHelper' start='58' end='58'
-                    sourcepath='somepackage/HsqlAconexDBUnitHelper.java' sourcefile='HsqlAconexDBUnitHelper.java'
+                    sourcepath='somepackage/HsqlDBUnitHelper.java' sourcefile='HsqlDBUnitHelper.java'
                     startBytecode='19' primary='true'>
-            <Message>At HsqlAconexDBUnitHelper.java:[line 58]</Message>
+            <Message>At HsqlDBUnitHelper.java:[line 58]</Message>
         </SourceLine>
         <String role='Sink method' value='java/sql/Statement.execute(Ljava/lang/String;)Z'>
             <Message>Sink method java/sql/Statement.execute(Ljava/lang/String;)Z</Message>
@@ -173,22 +173,22 @@
         </LongMessage>
         <Class classname='somepackage.HsqlDBUnitHelper' primary='true'>
             <SourceLine classname='somepackage.HsqlDBUnitHelper' start='19' end='65'
-                        sourcepath='somepackage/HsqlAconexDBUnitHelper.java' sourcefile='HsqlAconexDBUnitHelper.java'>
-                <Message>At HsqlAconexDBUnitHelper.java:[lines 19-65]</Message>
+                        sourcepath='somepackage/HsqlDBUnitHelper.java' sourcefile='HsqlDBUnitHelper.java'>
+                <Message>At HsqlDBUnitHelper.java:[lines 19-65]</Message>
             </SourceLine>
             <Message>In class somepackage.HsqlDBUnitHelper</Message>
         </Class>
         <Method isStatic='false' classname='somepackage.HsqlDBUnitHelper' signature='(Ljava/lang/String;)V'
                 name='executeSql' primary='true'>
             <SourceLine endBytecode='27' classname='somepackage.HsqlDBUnitHelper' start='54' end='65'
-                        sourcepath='somepackage/HsqlAconexDBUnitHelper.java' sourcefile='HsqlAconexDBUnitHelper.java'
+                        sourcepath='somepackage/HsqlDBUnitHelper.java' sourcefile='HsqlDBUnitHelper.java'
                         startBytecode='0'></SourceLine>
             <Message>In method somepackage.HsqlDBUnitHelper.executeSql(String)</Message>
         </Method>
         <SourceLine endBytecode='19' classname='somepackage.HsqlDBUnitHelper' start='58' end='58'
-                    sourcepath='somepackage/HsqlAconexDBUnitHelper.java' sourcefile='HsqlAconexDBUnitHelper.java'
+                    sourcepath='somepackage/HsqlDBUnitHelper.java' sourcefile='HsqlDBUnitHelper.java'
                     startBytecode='19' primary='true'>
-            <Message>At HsqlAconexDBUnitHelper.java:[line 58]</Message>
+            <Message>At HsqlDBUnitHelper.java:[line 58]</Message>
         </SourceLine>
     </BugInstance>
     <BugInstance instanceOccurrenceNum='0' instanceHash='c933a095ae3c36494e8ae29a3244f318' cweid='89' rank='12'
@@ -740,10 +740,10 @@
                      peak_mbytes='200.72' timestamp='Thu, 22 Mar 2018 12:01:37 +0530'>
         <FileStats path='somepackage/JsonParser.java' size='11' bugCount='0'></FileStats>
         <FileStats path='somepackage/builder/DataBuilder.java' size='10' bugCount='0'></FileStats>
-        <FileStats path='somepackage/AconexAconexDBUnitHelper.java' size='65' bugHash='b9a1e8cc143a2ccd602cd2db4b4acb4b'
+        <FileStats path='somepackage/DBUnitHelper.java' size='65' bugHash='b9a1e8cc143a2ccd602cd2db4b4acb4b'
                    bugCount='2'></FileStats>
         <FileStats path='somepackage/DummyKeyProvider.java' size='52' bugCount='0'></FileStats>
-        <FileStats path='somepackage/HsqlAconexDBUnitHelper.java' size='39' bugHash='c6a396ac4d4e0fcd2d843593fd6bfeaa'
+        <FileStats path='somepackage/HsqlDBUnitHelper.java' size='39' bugHash='c6a396ac4d4e0fcd2d843593fd6bfeaa'
                    bugCount='2'></FileStats>
         <FileStats path='somepackage/KeyProviderUtil.java' size='21' bugCount='0'></FileStats>
         <FileStats path='somepackage/hibernate/testing/DummyIdentifierGenerator.java' size='10'
@@ -755,7 +755,7 @@
         <FileStats path='somepackage/hibernate/testing/DummyLongAsLongIdentifierGenerator.java' size='10'
                    bugCount='0'></FileStats>
         <FileStats path='somepackage/hibernate/testing/package-info.java' size='1' bugCount='0'></FileStats>
-        <FileStats path='somepackage/AconexMatchers.java' size='16' bugCount='0'></FileStats>
+        <FileStats path='somepackage/Matchers.java' size='16' bugCount='0'></FileStats>
         <FileStats path='somepackage/BaseHibernateInMemTestCase.java' size='228'
                    bugHash='4fef9fed3bca44e679fd779825300c68' bugCount='4'></FileStats>
         <FileStats path='somepackage/InMemoryDbTestCase.java' size='38' bugHash='fe3a86c51a08938a106dcd3ce3664c1a'
@@ -773,13 +773,13 @@
         </PackageStats>
         <PackageStats package='somepackage' total_bugs='4' priority_2='2' priority_3='2' total_size='177'
                       total_types='5'>
-            <ClassStats bugs='2' size='65' priority_2='2' interface='false' sourceFile='AconexAconexDBUnitHelper.java'
+            <ClassStats bugs='2' size='65' priority_2='2' interface='false' sourceFile='DBUnitHelper.java'
                         class='somepackage.DBUnitHelper'></ClassStats>
             <ClassStats bugs='0' size='52' interface='false' sourceFile='DummyKeyProvider.java'
                         class='somepackage.DummyKeyProvider'></ClassStats>
-            <ClassStats bugs='2' size='31' priority_3='2' interface='false' sourceFile='HsqlAconexDBUnitHelper.java'
+            <ClassStats bugs='2' size='31' priority_3='2' interface='false' sourceFile='HsqlDBUnitHelper.java'
                         class='somepackage.HsqlDBUnitHelper'></ClassStats>
-            <ClassStats bugs='0' size='8' interface='false' sourceFile='HsqlAconexDBUnitHelper.java'
+            <ClassStats bugs='0' size='8' interface='false' sourceFile='HsqlDBUnitHelper.java'
                         class='somepackage.HsqlDBUnitHelper$1'></ClassStats>
             <ClassStats bugs='0' size='21' interface='false' sourceFile='KeyProviderUtil.java'
                         class='somepackage.KeyProviderUtil'></ClassStats>
@@ -798,10 +798,10 @@
         </PackageStats>
         <PackageStats package='somepackage' total_bugs='5' priority_2='4' priority_3='1' total_size='309'
                       total_types='8'>
-            <ClassStats bugs='0' size='6' interface='false' sourceFile='AconexMatchers.java'
-                        class='somepackage.AconexMatchers'></ClassStats>
-            <ClassStats bugs='0' size='10' interface='false' sourceFile='AconexMatchers.java'
-                        class='somepackage.AconexMatchers$1'></ClassStats>
+            <ClassStats bugs='0' size='6' interface='false' sourceFile='Matchers.java'
+                        class='somepackage.Matchers'></ClassStats>
+            <ClassStats bugs='0' size='10' interface='false' sourceFile='Matchers.java'
+                        class='somepackage.Matchers$1'></ClassStats>
             <ClassStats bugs='2' size='199' priority_2='2' interface='false'
                         sourceFile='BaseHibernateInMemTestCase.java'
                         class='somepackage.BaseHibernateInMemTestCase'></ClassStats>
